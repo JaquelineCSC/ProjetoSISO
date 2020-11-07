@@ -136,10 +136,10 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::ProjetoSISO.Properties.Resources.print_60px;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(16, 253);
+            this.button3.Location = new System.Drawing.Point(16, 264);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(196, 49);
+            this.button3.Size = new System.Drawing.Size(278, 55);
             this.button3.TabIndex = 0;
             this.button3.Text = "     Relatório";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -170,7 +170,7 @@
             this.button2.Location = new System.Drawing.Point(18, 184);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 49);
+            this.button2.Size = new System.Drawing.Size(279, 62);
             this.button2.TabIndex = 0;
             this.button2.Text = "     Agendamento";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -187,10 +187,10 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::ProjetoSISO.Properties.Resources.user_60px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(23, 108);
+            this.button1.Location = new System.Drawing.Point(23, 118);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 51);
+            this.button1.Size = new System.Drawing.Size(274, 62);
             this.button1.TabIndex = 0;
             this.button1.Text = "     Pacientes";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -210,7 +210,7 @@
             this.cmdDentista.Location = new System.Drawing.Point(23, 42);
             this.cmdDentista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdDentista.Name = "cmdDentista";
-            this.cmdDentista.Size = new System.Drawing.Size(199, 53);
+            this.cmdDentista.Size = new System.Drawing.Size(271, 53);
             this.cmdDentista.TabIndex = 0;
             this.cmdDentista.Text = "     Dentistas";
             this.cmdDentista.TextAlign = System.Drawing.ContentAlignment.BottomRight;

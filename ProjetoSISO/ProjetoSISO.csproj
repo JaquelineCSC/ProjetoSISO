@@ -57,17 +57,35 @@
   <ItemGroup>
     <Compile Include="conexao.cs" />
     <Compile Include="dados.cs" />
+    <Compile Include="frmAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgendamento.Designer.cs">
+      <DependentUpon>frmAgendamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDentista.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDentista.Designer.cs">
       <DependentUpon>frmDentista.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPacientes.Designer.cs">
+      <DependentUpon>frmPacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorio.Designer.cs">
+      <DependentUpon>frmRelatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
