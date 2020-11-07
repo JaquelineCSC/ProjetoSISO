@@ -12,9 +12,51 @@ namespace ProjetoSISO
 {
     public partial class FrmConsulta : Form
     {
-        public FrmConsulta()
+        dadosDentista dentista;
+        dadosPacientes paciente;
+        int tipo;
+        public FrmConsulta(int t)
         {
             InitializeComponent();
+            tipo = t;
+        }
+
+        private void FrmConsulta_Load(object sender, EventArgs e)
+        {
+            if(tipo == 0)
+            {
+                dentista.NomeDentista = "";
+                dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
+            }
+            else
+            {
+                paciente.NomePacientes = "";
+                dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(tipo==0)
+            {
+                dentista.NomeDentista = txtxNome.Text;
+                dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
+            }
+            else
+            {
+                paciente.NomePacientes = txtxNome.Text;
+                dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
+            }
+        }
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
