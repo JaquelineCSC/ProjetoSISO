@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ProjetoSISO
+{
+    public partial class frmPrincipal : Form
+    {
+        public frmPrincipal()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmdDentista_Click(object sender, EventArgs e)
+        {
+            frmDentista janela = new frmDentista();
+            janela.TopLevel = false;
+            janela.Visible = true;
+            panelForm.Controls.Add(janela);
+        }
+
+        private void panelForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
+}

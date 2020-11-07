@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjetoSISO
 {
-    public partial class Form1 : Form
+    public partial class frmDentista : Form
     {
-        public Form1()
+        public frmDentista()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
