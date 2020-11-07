@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="conexao.cs" />
     <Compile Include="dados.cs" />
+    <Compile Include="dadosDentista.cs" />
     <Compile Include="frmAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
