@@ -42,23 +42,23 @@ namespace ProjetoSISO
         public void IncluirDadosDentista()
         {
             string sql = "";
-            sql += "Insert into Pessoas (CPFDentista,CRODentista,nomeDentista,enderecoDentista,estadoDentista,CEPDentista,cidadeDentista,dataNascDentista,sexoDentista,telefoneDentista,celularDentista,especializacaoDentista) " +
-                "values ('" + CpfDentista + "','" + CroDentista.ToString() + "','" + NomeDentista + "','" + EnderecoDentista + "','" + EstadoDentista + "','" + CepDentista + "','" + CidadeDentista + "','" + DataNascimentoDentista + "''" + SexoDentista + "','" + TelefoneDentista + "','" + CelularDentista + "','" + EspecializacaoDentista + "')";
-
+            sql += "Insert into Dentistas (CPFDentista,CRODentista,nomeDentista,enderecoDentista,estadoDentista,CEPDentista,cidadeDentista,dataNascDentista,sexoDentista,telefoneDentista,celularDentista,especializacaoDentista) " +
+                "values ('" + CpfDentista + "','" + CroDentista.ToString() + "','" + NomeDentista + "','" + EnderecoDentista + "','" + EstadoDentista + "','" + CepDentista + "','" + CidadeDentista + "','" + DataNascimentoDentista + "','" + SexoDentista + "','" + TelefoneDentista + "','" + CelularDentista + "','" + EspecializacaoDentista + "')";
+            c.Executar(sql);
         }
 
 
         public void AlterarDadosDentista()
         {
             string sql = "";
-            sql = "Update Pessoas set CPFDentista = '" + CpfDentista + "', CROdentista = '" + CroDentista + "', nomeDentista = '" + NomeDentista + "', enderecoDentista = '" + EnderecoDentista + "', esatadoDentista = '" + EstadoDentista + "', CEPDentista = '" + CepDentista + "', cidadeDentista = '" + CidadeDentista + "',dataNascDentista = '" + dataNascimentoDentista + "', sexoDentista = '" + SexoDentista + "', telefoneDentista = '" + TelefoneDentista + "', celularDentista = '" + CelularDentista + "', especializacaoDentista = '" +EspecializacaoDentista + "'  where idDentista = " + IdDentista.ToString();
+            sql += "Update Dentistas set CPFDentista = '" + CpfDentista + "', CROdentista = '" + CroDentista + "', nomeDentista = '" + NomeDentista + "', enderecoDentista = '" + EnderecoDentista + "', esatadoDentista = '" + EstadoDentista + "', CEPDentista = '" + CepDentista + "', cidadeDentista = '" + CidadeDentista + "',dataNascDentista = '" + dataNascimentoDentista + "', sexoDentista = '" + SexoDentista + "', telefoneDentista = '" + TelefoneDentista + "', celularDentista = '" + CelularDentista + "', especializacaoDentista = '" +EspecializacaoDentista + "'  where idDentista = " + IdDentista.ToString();
             c.Executar(sql);
         }
 
         public void ExcluirDadosDentista()
         {
             string sql = "";
-            sql += "Delete from Pessoas where idDentista = " + IdDentista.ToString();
+            sql += "Delete from Dentistas where idDentista = " + IdDentista.ToString();
             c.Executar(sql);
         }
 
@@ -66,7 +66,7 @@ namespace ProjetoSISO
         public void ConsultarDadosDentista()
         {
             string sql = "";
-            sql = "Select * from Pessoas where idDentista = " + IdDentista.ToString();
+            sql += "Select * from Dentistas where idDentista = " + IdDentista.ToString();
             c.Consultar(sql);
             string[] auxiliar = c.Campos.Split(';');
             CpfDentista = auxiliar[1];
