@@ -16,5 +16,10 @@ namespace ProjetoSISO
         {
             InitializeComponent();
         }
+
+        private void frmDentista_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

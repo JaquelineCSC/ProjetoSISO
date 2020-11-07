@@ -89,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDentista.resx">
+      <DependentUpon>frmDentista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +125,7 @@
     <None Include="imgs\calendar_60px.png" />
     <None Include="imgs\print_60px.png" />
     <None Include="imgs\tooth_64px.png" />
+    <None Include="imgs\search.png" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
