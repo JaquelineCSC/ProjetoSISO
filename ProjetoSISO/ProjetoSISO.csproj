@@ -55,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="conexao.cs" />
+    <Compile Include="dados.cs" />
     <Compile Include="frmDentista.cs">
       <SubType>Form</SubType>
     </Compile>
