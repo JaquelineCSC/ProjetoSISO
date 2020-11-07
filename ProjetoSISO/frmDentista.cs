@@ -39,7 +39,8 @@ namespace ProjetoSISO
         private void cmdSalvar_Click(object sender, EventArgs e)
         {
             dados.NomeDentista = txtNome.Text;
-            dados.SexoDentista = gbSexo.Controls.OfType<RadioButton>().SingleOrDefault(rad => rad.Checked == true).Text;
+            bool condition = radioButton1.Checked;
+            dados.SexoDentista = condition ? "F" : "M";
             dados.DataNascimentoDentista = dateTimePicker1.Value.ToString("yyyy/MM/dd");
             dados.CpfDentista = txtCPF.Text;
             dados.EnderecoDentista = txtEndereco.Text;
