@@ -139,7 +139,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::ProjetoSISO.Properties.Resources.print_60px;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(16, 264);
+            this.button3.Location = new System.Drawing.Point(16, 299);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(204, 55);
@@ -171,7 +171,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::ProjetoSISO.Properties.Resources.calendar_60px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(14, 197);
+            this.button2.Location = new System.Drawing.Point(15, 209);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(207, 62);
@@ -191,7 +191,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::ProjetoSISO.Properties.Resources.user_60px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(23, 118);
+            this.button1.Location = new System.Drawing.Point(16, 120);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(199, 62);
@@ -212,7 +212,7 @@
             this.cmdDentista.ForeColor = System.Drawing.Color.White;
             this.cmdDentista.Image = global::ProjetoSISO.Properties.Resources.tooth_64px;
             this.cmdDentista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdDentista.Location = new System.Drawing.Point(17, 34);
+            this.cmdDentista.Location = new System.Drawing.Point(16, 45);
             this.cmdDentista.Margin = new System.Windows.Forms.Padding(2);
             this.cmdDentista.Name = "cmdDentista";
             this.cmdDentista.Size = new System.Drawing.Size(206, 53);

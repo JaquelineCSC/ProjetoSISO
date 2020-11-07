@@ -29,5 +29,10 @@ namespace ProjetoSISO
             this.Close();
             p.Enabled = true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,5 +21,10 @@ namespace ProjetoSISO {
             this.Close();
             p.Enabled = true;
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
