@@ -41,20 +41,20 @@ namespace ProjetoSISO {
             sql += "Insert into Pessoas (CPFPessoa, nomePessoa, ruaPessoa, bairroPessoa, numeroRuaPessoa, cidadePessoa, cepPessoa, estadoPessoa, dataNascPessoa, celularPessoa, paisPessoa, sexoPessoa, CRO, especializacao) " +
                 "values " +
                 "('" + cpf.ToString() + "', '" + Nome + "', '" + Rua + "', '" + Bairro + "', '" + Numero + "', '" + Cidade + "', '" + Cep + "', '" + Estado + "', '" + DataNasc + "', '" + Celular + "', '" + Pais + "', '" + Sexo + "', '" + "NULL" + "', '" + "NULL" + "')";
-            conexao.Incluir(sql);
+            conexao.Executar(sql);
         }
 
 
         public void AlterarDados() {
             string sql = "";
             sql = "Update Pessoas set nomePessoa = '" + Nome + "', ruaPessoa = '" + Rua + "', bairroPessoa = '" + Bairro + "', numeroRuaPessoa = '" + Numero + "', cidadePessoa = '" + Cidade + "', cepPessoa = '" + Cep + "', estadoPessoa = '" + Estado + "', dataNascPessoa = '" + dataNasc + "', celularPessoa = '" + Celular + "', paisPessoa = '" + Pais + "'  where CPFPessoa = " + Cpf.ToString();
-            conexao.Alterar(sql);
+            conexao.Executar(sql);
         }
 
         public void ExcluirDados() {
             string sql = "";
             sql += "Delete from Pessoas where CPFPessoa = " + Cpf.ToString();
-            conexao.Excluir(sql);
+            conexao.Executar(sql);
         }
 
 

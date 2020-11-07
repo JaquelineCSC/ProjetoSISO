@@ -22,7 +22,7 @@ namespace ProjetoSISO {
             cn.Open();
         }
 
-        public void Incluir(string sql) {
+        public void Executar(string sql) {
             Conectar();
             cd.Connection = cn;
             cd.CommandText = sql;
@@ -30,21 +30,8 @@ namespace ProjetoSISO {
             cn.Close();
         }
 
-        public void Excluir(string sql) {
-            Conectar();
-            cd.Connection = cn;
-            cd.CommandText = sql;
-            cd.ExecuteNonQuery();
-            cn.Close();
-        }
+       
 
-        public void Alterar(string sql) {
-            Conectar();
-            cd.Connection = cn;
-            cd.CommandText = sql;
-            cd.ExecuteNonQuery();
-            cn.Close();
-        }
 
         public void Consultar(string sql) {
             Conectar();
