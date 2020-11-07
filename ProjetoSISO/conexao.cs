@@ -33,7 +33,7 @@ namespace ProjetoSISO {
        
 
 
-        public void Consultar(string sql) {
+        public void ConsultarPacientes(string sql) {
             Conectar();
             cd.Connection = cn;
             cd.CommandText = sql;
@@ -41,18 +41,40 @@ namespace ProjetoSISO {
 
 
             if (dr.Read()) {
-                Campos += dr["nomePessoa"].ToString() + ";";
-                Campos += dr["ruaPessoa"].ToString() + ";";
-                Campos += dr["bairroPessoa"].ToString() + ";";
-                Campos += dr["numeroRuaPessoa"].ToString() + ";";
-                Campos += dr["cidadePessoa"].ToString() + ";";
-                Campos += dr["cepPessoa"].ToString() + ";";
-                Campos += dr["dataNascPessoa"].ToString() + ";";
-                Campos += dr["celularPessoa"].ToString() + "; ";
-                Campos += dr["paisPessoa"].ToString() + ";";
-                Campos += dr["sexoPessoa"].ToString() + ";";
-                Campos += dr["CRO"].ToString() + ";";
-                Campos += dr["especializacao"].ToString();
+                Campos += dr["nomePaciente"].ToString() + ";";
+                Campos += dr["CPFPaciente"].ToString() + ";";
+                Campos += dr["enderecoPaciente"].ToString() + ";";
+                Campos += dr["estadoPaciente"].ToString() + ";";
+                Campos += dr["CEPPaciente"].ToString() + ";";
+                Campos += dr["cidadePaciente"].ToString() + ";";
+                Campos += dr["dataNascPaciente"].ToString() + ";";
+                Campos += dr["sexoPaciente"].ToString() + "; ";
+                Campos += dr["telefonePaciente"].ToString() + ";";
+                Campos += dr["celularPaciente"].ToString() + ";";
+                cn.Close();
+            }
+        }
+
+        public void ConsultarDentistas(string sql) {
+            Conectar();
+            cd.Connection = cn;
+            cd.CommandText = sql;
+            SqlDataReader dr = cd.ExecuteReader();
+
+
+            if (dr.Read()) {
+                Campos += dr["CPFDentista"].ToString() + ";";
+                Campos += dr["CRODentista"].ToString() + ";";
+                Campos += dr["nomeDentista"].ToString() + ";";
+                Campos += dr["enderecoDentista"].ToString() + ";";
+                Campos += dr["estadoDentista"].ToString() + ";";
+                Campos += dr["cepDentista"].ToString() + ";";
+                Campos += dr["cidadeDentista"].ToString() + ";";
+                Campos += dr["dataNascDentista"].ToString() + "; ";
+                Campos += dr["sexoDentista"].ToString() + ";";
+                Campos += dr["telefoneDentista"].ToString() + ";";
+                Campos += dr["celularDentista"].ToString() + ";";
+                Campos += dr["especializacaoDentista"].ToString();
                 cn.Close();
             }
         }

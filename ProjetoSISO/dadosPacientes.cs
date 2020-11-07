@@ -58,7 +58,7 @@ namespace ProjetoSISO {
         public void ConsultarDadosPacientes() {
             string sql = "";
             sql += "Select * from Pacientes where idPaciente = " + idPacientes;
-            c.Consultar(sql);
+            c.ConsultarPacientes(sql);
             string[] auxiliar = c.Campos.Split(';');
             nomePacientes = auxiliar[1];
             CpfPacientes = auxiliar[2];

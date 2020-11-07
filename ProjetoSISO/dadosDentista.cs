@@ -67,7 +67,7 @@ namespace ProjetoSISO
         {
             string sql = "";
             sql += "Select * from Dentistas where idDentista = " + IdDentista.ToString();
-            c.Consultar(sql);
+            c.ConsultarDentistas(sql);
             string[] auxiliar = c.Campos.Split(';');
             CpfDentista = auxiliar[1];
             CroDentista = auxiliar[2];
