@@ -92,6 +92,9 @@
     <EmbeddedResource Include="frmDentista.resx">
       <DependentUpon>frmDentista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPacientes.resx">
+      <DependentUpon>frmPacientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +129,10 @@
     <None Include="imgs\print_60px.png" />
     <None Include="imgs\tooth_64px.png" />
     <None Include="imgs\search.png" />
+    <None Include="imgs\save.png" />
+    <None Include="imgs\new.png" />
+    <None Include="imgs\closeBlue.png" />
+    <None Include="imgs\back.png" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

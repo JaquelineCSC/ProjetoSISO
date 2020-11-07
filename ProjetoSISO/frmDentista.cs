@@ -17,9 +17,14 @@ namespace ProjetoSISO
             InitializeComponent();
         }
 
-        private void frmDentista_Load(object sender, EventArgs e)
+        private void metroButton1_Click(object sender, EventArgs e)
         {
+           
+        }
 
+        private void cmdBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace ProjetoSISO
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -29,10 +29,11 @@ namespace ProjetoSISO
 
         private void cmdDentista_Click(object sender, EventArgs e)
         {
+            panelMenuEsquerda.Enabled = false;
             frmDentista janela = new frmDentista();
             janela.TopLevel = false;
             janela.Visible = true;
-           // panelForm.Controls.Add(janela);
+            panelForm.Controls.Add(janela);
         }
 
         private void panelForm_Paint(object sender, PaintEventArgs e)
@@ -43,6 +44,15 @@ namespace ProjetoSISO
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPacientes janela = new frmPacientes();
+            janela.TopLevel = false;
+            janela.Visible = true;
+            panelForm.Controls.Add(janela);
+            panelMenuEsquerda.Enabled = false;
         }
     }
 }
