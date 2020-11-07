@@ -32,7 +32,7 @@ namespace ProjetoSISO
             frmDentista janela = new frmDentista();
             janela.TopLevel = false;
             janela.Visible = true;
-            panelForm.Controls.Add(janela);
+           // panelForm.Controls.Add(janela);
         }
 
         private void panelForm_Paint(object sender, PaintEventArgs e)
