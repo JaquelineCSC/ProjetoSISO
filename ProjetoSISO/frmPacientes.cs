@@ -13,5 +13,11 @@ namespace ProjetoSISO {
         public frmPacientes() {
             InitializeComponent();
         }
+
+        private void cmdBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+   
+        }
     }
 }
