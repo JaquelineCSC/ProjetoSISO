@@ -10,14 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjetoSISO {
     public partial class frmPacientes : Form {
-        public frmPacientes() {
+        Panel p;
+        public frmPacientes(Panel pnPaciente) {
             InitializeComponent();
+            p = pnPaciente;
         }
 
         private void cmdBack_Click(object sender, EventArgs e)
         {
             this.Close();
-   
+            p.Enabled = true;
         }
     }
 }

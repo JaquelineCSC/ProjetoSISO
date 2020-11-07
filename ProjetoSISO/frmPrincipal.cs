@@ -30,7 +30,7 @@ namespace ProjetoSISO
         private void cmdDentista_Click(object sender, EventArgs e)
         {
             panelMenuEsquerda.Enabled = false;
-            frmDentista janela = new frmDentista();
+            frmDentista janela = new frmDentista(panelMenuEsquerda);
             janela.TopLevel = false;
             janela.Visible = true;
             panelForm.Controls.Add(janela);
@@ -48,11 +48,16 @@ namespace ProjetoSISO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmPacientes janela = new frmPacientes();
+            frmPacientes janela = new frmPacientes(panelMenuEsquerda);
             janela.TopLevel = false;
             janela.Visible = true;
             panelForm.Controls.Add(janela);
             panelMenuEsquerda.Enabled = false;
+        }
+
+        public void HabilitarMenu()
+        {
+            panelMenuEsquerda.Enabled = true;
         }
     }
 }

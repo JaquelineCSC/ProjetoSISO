@@ -30,16 +30,16 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.panelMenuEsquerda = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panelForm = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.cmdDentista = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.panelForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelMenuEsquerda.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,28 @@
             this.label1.Size = new System.Drawing.Size(188, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Projeto SISO";
+            // 
+            // button4
+            // 
+            this.button4.AutoSize = true;
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::ProjetoSISO.Properties.Resources.close;
+            this.button4.Location = new System.Drawing.Point(982, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(58, 59);
+            this.button4.TabIndex = 0;
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panelMenuEsquerda
             // 
@@ -106,27 +128,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "TwoJeitos";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(14, 835);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Developed by";
-            // 
-            // panelForm
-            // 
-            this.panelForm.Location = new System.Drawing.Point(225, 63);
-            this.panelForm.Margin = new System.Windows.Forms.Padding(2);
-            this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(951, 869);
-            this.panelForm.TabIndex = 2;
-            this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(49)))), ((int)(((byte)(74)))));
@@ -141,11 +142,23 @@
             this.button3.Location = new System.Drawing.Point(16, 264);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(278, 55);
+            this.button3.Size = new System.Drawing.Size(204, 55);
             this.button3.TabIndex = 0;
             this.button3.Text = "     Relatório";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(14, 835);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 18);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Developed by";
             // 
             // button2
             // 
@@ -161,7 +174,7 @@
             this.button2.Location = new System.Drawing.Point(14, 197);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(279, 62);
+            this.button2.Size = new System.Drawing.Size(207, 62);
             this.button2.TabIndex = 0;
             this.button2.Text = "     Agendamento";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -181,7 +194,7 @@
             this.button1.Location = new System.Drawing.Point(23, 118);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(274, 62);
+            this.button1.Size = new System.Drawing.Size(199, 62);
             this.button1.TabIndex = 0;
             this.button1.Text = "     Pacientes";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -202,34 +215,21 @@
             this.cmdDentista.Location = new System.Drawing.Point(17, 34);
             this.cmdDentista.Margin = new System.Windows.Forms.Padding(2);
             this.cmdDentista.Name = "cmdDentista";
-            this.cmdDentista.Size = new System.Drawing.Size(271, 53);
+            this.cmdDentista.Size = new System.Drawing.Size(206, 53);
             this.cmdDentista.TabIndex = 0;
             this.cmdDentista.Text = "     Dentistas";
             this.cmdDentista.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.cmdDentista.UseVisualStyleBackColor = false;
             this.cmdDentista.Click += new System.EventHandler(this.cmdDentista_Click);
             // 
-            // button4
+            // panelForm
             // 
-            this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::ProjetoSISO.Properties.Resources.close;
-            this.button4.Location = new System.Drawing.Point(982, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(58, 59);
-            this.button4.TabIndex = 0;
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.panelForm.Location = new System.Drawing.Point(225, 63);
+            this.panelForm.Margin = new System.Windows.Forms.Padding(2);
+            this.panelForm.Name = "panelForm";
+            this.panelForm.Size = new System.Drawing.Size(951, 869);
+            this.panelForm.TabIndex = 2;
+            this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
             // 
             // frmPrincipal
             // 

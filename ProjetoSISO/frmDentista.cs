@@ -12,9 +12,11 @@ namespace ProjetoSISO
 {
     public partial class frmDentista : Form
     {
-        public frmDentista()
+        Panel p;
+        public frmDentista(Panel pnDentista)
         {
             InitializeComponent();
+            p = pnDentista;
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -25,6 +27,7 @@ namespace ProjetoSISO
         private void cmdBack_Click(object sender, EventArgs e)
         {
             this.Close();
+            p.Enabled = true;
         }
     }
 }
