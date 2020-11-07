@@ -13,6 +13,7 @@ namespace ProjetoSISO
     public partial class frmDentista : Form
     {
         Panel p;
+        dadosDentista dados = new dadosDentista();
         public frmDentista(Panel pnDentista)
         {
             InitializeComponent();
@@ -32,6 +33,24 @@ namespace ProjetoSISO
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void cmdSalvar_Click(object sender, EventArgs e)
+        {
+            dados.NomeDentista = txtNome.Text;
+            dados.SexoDentista = gbSexo.Controls.OfType<RadioButton>().SingleOrDefault(rad => rad.Checked == true).Text;
+            dados.DataNascimentoDentista = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+            dados.CpfDentista = txtCPF.Text;
+            dados.EnderecoDentista = txtEndereco.Text;
+            dados.CidadeDentista = txtCidade.Text;
+            dados.EstadoDentista = txtEstado.Text;
+            dados.CepDentista = cbCep.SelectedIndex.ToString();
+            dados.CelularDentista = txtCelular.Text;
+            dados.TelefoneDentista = txtTelefone.Text;
+            dados.CroDentista = txtCRO.Text;
+            dados.EspecializacaoDentista = txtEspecializacao.Text;
+            dados.IncluirDadosDentista();
 
         }
     }
