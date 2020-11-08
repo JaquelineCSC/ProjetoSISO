@@ -12,8 +12,8 @@ namespace ProjetoSISO
 {
     public partial class FrmConsulta : Form
     {
-        dadosDentista dentista;
-        dadosPacientes paciente;
+        dadosDentista dentista = new dadosDentista();
+        dadosPacientes paciente= new dadosPacientes();
         int tipo;
         public FrmConsulta(int t)
         {
@@ -27,11 +27,21 @@ namespace ProjetoSISO
             {
                 dentista.NomeDentista = "";
                 dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
+                dataGridView1.Columns[0].Visible = false;
+                dataGridView1.ReadOnly = true;
+                dataGridView1.MultiSelect = false;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dataGridView1.Rows[0].Selected = true;
             }
-            else
+            if(tipo==1)
             {
                 paciente.NomePacientes = "";
                 dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
+                dataGridView1.Columns[0].Visible = false;
+                dataGridView1.ReadOnly = true;
+                dataGridView1.MultiSelect = false;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dataGridView1.Rows[0].Selected = true;
             }
         }
 

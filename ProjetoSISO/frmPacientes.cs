@@ -45,7 +45,59 @@ namespace ProjetoSISO {
             dp.CidadePacientes = txtCidade.Text;
             bool condition = radioButtonFem.Checked;
             dp.SexoPacientes = condition ? "F" : "M";
-            dp.IncluirDadosPacientes();
+            if (Conferir())
+            {
+                dp.IncluirDadosPacientes();
+                MessageBox.Show("Cadastro feito com sucesso!");
+                Limpar();
+            }
+            else
+                MessageBox.Show("Preencha todas informações!");
+            
+        }
+
+        private void cmdLimpar_Click(object sender, EventArgs e)
+        {
+            Limpar();
+        }
+
+        public bool Conferir()
+        {
+            int i = 0;
+            foreach (Control item in this.groupBox1.Controls)
+            {
+                if ((item is TextBox) && (item.Text == ""))
+                    i++;
+            }
+            if ((radioButtonFem.Checked == false) && (radioButtonMasc.Checked == false))
+                i++;
+            if (i == 0)
+                return true;
+            else
+                return false;
+        }
+
+        public void Limpar()
+        {
+            foreach (Control item in this.groupBox1.Controls)
+            {
+                if (item is TextBox)
+                    item.Text = "";
+               cboEstado.SelectedIndex = 0;
+                radioButtonMasc.Checked = false;
+                radioButtonFem.Checked = false;
+            }
+        }
+
+        private void cmdAdicionar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+        }
+
+        private void cmdPesquisar_Click(object sender, EventArgs e)
+        {
+            FrmConsulta frm = new FrmConsulta(1);
+            frm.Show();
         }
     }
 }

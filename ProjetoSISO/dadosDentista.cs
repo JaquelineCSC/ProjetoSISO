@@ -85,7 +85,7 @@ namespace ProjetoSISO
 
         public DataSet ListarDadosDentista()
         {
-            string sql = "SELECT * FROM Dentistas";
+            string sql = "SELECT * FROM Dentistas where nomeDentista like '%'"+NomeDentista+"'%'";
             return c.Listar(sql);
         }
     }

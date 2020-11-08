@@ -33,7 +33,7 @@ namespace ProjetoSISO
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            groupBox1.Enabled = true;
         }
 
         private void cmdSalvar_Click(object sender, EventArgs e)
@@ -51,8 +51,54 @@ namespace ProjetoSISO
             dados.TelefoneDentista = txtTelefone.Text;
             dados.CroDentista = txtCRO.Text;
             dados.EspecializacaoDentista = txtEspecializacao.Text;
-            dados.IncluirDadosDentista();
+            
+            if (Conferir())
+            {
+                dados.IncluirDadosDentista();
+                MessageBox.Show("Cadastro feito com sucesso!");
+                Limpar();
+            }
+            else
+                MessageBox.Show("Preencha todas informações!");
+        }
 
+            public bool Conferir()
+        {
+            int i = 0;
+            foreach (Control item in this.groupBox1.Controls)
+            {
+                if ((item is TextBox) && (item.Text == ""))
+                    i++;
+            }
+            if ((radioButton1.Checked == false) && (radioButton2.Checked == false))
+                i++;
+            if (i == 0)
+                return true;
+            else
+                return false;
+        }
+
+        public void Limpar()
+        {
+            foreach (Control item in this.groupBox1.Controls)
+            {
+                if (item is TextBox)
+                    item.Text = "";
+                cbEstado.SelectedIndex = 0;
+                radioButton1.Checked = false;
+                radioButton2.Checked = false;
+            }
+        }
+
+        private void cmdLimpar_Click(object sender, EventArgs e)
+        {
+            Limpar();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmConsulta frm = new FrmConsulta(0);
+            frm.Show();
         }
     }
 }
