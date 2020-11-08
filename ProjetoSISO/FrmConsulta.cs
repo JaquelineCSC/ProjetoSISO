@@ -167,7 +167,7 @@ namespace ProjetoSISO
             else
             {
                 paciente.IdPacientes = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                dentista.ConsultarDadosDentista();
+                paciente.ConsultarDadosPacientes();
                 txtNome.Text = paciente.NomePacientes;
                 if (paciente.SexoPacientes == "F")
                     radioButton1.Checked = true;

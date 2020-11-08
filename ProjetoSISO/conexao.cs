@@ -17,7 +17,7 @@ namespace ProjetoSISO {
 
         private void Conectar() {
             string s = "";
-            s = "Server=DESKTOP-44I6E3P\\SQLEXPRESS;Database=ProjetoSISO;UID=sa;PWD=123;";
+            s= @"Server=.\SQLEXPRESS;Database=ProjetoSISO;UID=sa;PWD=123;";
             cn.ConnectionString = s;
             cn.Open();
         }
