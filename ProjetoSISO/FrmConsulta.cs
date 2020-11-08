@@ -12,14 +12,13 @@ namespace ProjetoSISO
 {
     public partial class FrmConsulta : Form
     {
-        dadosDentista dentista;
-        dadosPacientes paciente;
+        dadosDentista dentista = new dadosDentista();
+        dadosPacientes paciente = new dadosPacientes();
         int tipo;
-        public FrmConsulta(dadosDentista dentista, int t)
+        public FrmConsulta(int t)
         {
             InitializeComponent();
             tipo = t;
-            this.dentista = dentista;
         }
 
         private void FrmConsulta_Load(object sender, EventArgs e)
@@ -36,6 +35,10 @@ namespace ProjetoSISO
             }
             else
             {
+                label12.Visible = false;
+                label11.Visible = false;
+                txtCRO.Visible = false;
+                txtEspecializacao.Visible = false;
                 paciente.NomePacientes = "";
                 dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
                 dataGridView1.Columns[0].Visible = false;
@@ -60,24 +63,142 @@ namespace ProjetoSISO
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dentista.IdDentista = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-        }
-
         private void cmdExcluir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja excluir?", "Projeto SISO", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
-                dentista.ExcluirDadosDentista();
-                dentista.NomeDentista = "";
-                dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
+                if (tipo == 0)
+                {
+                    dentista.ExcluirDadosDentista();
+                    dentista.NomeDentista = "";
+                    dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
+                }
+                else
+                {
+                    paciente.ExcluirDadosPacientes();
+                    paciente.NomePacientes = "";
+                    dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
+                }
             }
         }
 
         private void cmdAlterar_Click(object sender, EventArgs e)
         {
+            if (tipo==0)
+            {
+                dentista.NomeDentista = txtNome.Text;
+                bool condition = radioButton1.Checked;
+                dentista.SexoDentista = condition ? "F" : "M";
+                dentista.DataNascimentoDentista = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+                dentista.CpfDentista = txtCPF.Text;
+                dentista.EnderecoDentista = txtEndereco.Text;
+                dentista.CidadeDentista = txtCidade.Text;
+                dentista.EstadoDentista = cbEstado.SelectedIndex.ToString();
+                dentista.CepDentista = txtCep.Text;
+                dentista.CelularDentista = txtCelular.Text;
+                dentista.TelefoneDentista = txtTelefone.Text;
+                dentista.CroDentista = txtCRO.Text;
+                dentista.EspecializacaoDentista = txtEspecializacao.Text;
 
+                if (Conferir())
+                {
+                    dentista.AlterarDadosDentista();
+                    MessageBox.Show("Alteração efetuada com sucesso!");
+                    dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
+                    groupBox1.Enabled = false;
+                }
+                else
+                    MessageBox.Show("Preencha todas informações!");
+            }
+            else
+            {
+                paciente.NomePacientes = txtNome.Text;
+                bool condition = radioButton1.Checked;
+                paciente.SexoPacientes = condition ? "F" : "M";
+                paciente.DataNascimentoPacientes = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+                paciente.CpfPacientes = txtCPF.Text;
+                paciente.EnderecoPacientes = txtEndereco.Text;
+                paciente.CidadePacientes = txtCidade.Text;
+                paciente.EstadoPacientes = cbEstado.SelectedIndex.ToString();
+                paciente.CepPacientes = txtCep.Text;
+                paciente.CelularPacientes = txtCelular.Text;
+                paciente.TelefonePacientes = txtTelefone.Text;
+
+                if (Conferir())
+                {
+                    paciente.AlterarDadosPacientes();
+                    MessageBox.Show("Alteração efetuada com sucesso!");
+                    dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
+                    groupBox1.Enabled = false;
+                }
+                else
+                    MessageBox.Show("Preencha todas informações!");
+            }
+            
         }
+
+        private void cmdClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (tipo == 0)
+            {
+                dentista.IdDentista = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                dentista.ConsultarDadosDentista();
+                txtNome.Text = dentista.NomeDentista;
+                if (dentista.SexoDentista == "F")
+                    radioButton1.Checked = true;
+                else
+                    radioButton2.Checked = true;
+                dateTimePicker1.Value = Convert.ToDateTime(dentista.DataNascimentoDentista);
+                txtCPF.Text = dentista.CpfDentista;
+                txtEndereco.Text = dentista.EnderecoDentista;
+                txtCidade.Text = dentista.CidadeDentista;
+                txtCep.Text = dentista.CepDentista;
+                cbEstado.SelectedItem = dentista.EstadoDentista;
+                txtCelular.Text = dentista.CelularDentista;
+                txtTelefone.Text = dentista.TelefoneDentista;
+                txtCRO.Text = dentista.CroDentista;
+                txtEspecializacao.Text = dentista.EspecializacaoDentista;
+            }
+            else
+            {
+                paciente.IdPacientes = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                dentista.ConsultarDadosDentista();
+                txtNome.Text = paciente.NomePacientes;
+                if (paciente.SexoPacientes == "F")
+                    radioButton1.Checked = true;
+                else
+                    radioButton2.Checked = true;
+                dateTimePicker1.Value = Convert.ToDateTime(paciente.DataNascimentoPacientes);
+                txtCPF.Text = paciente.CpfPacientes;
+                txtEndereco.Text = paciente.EnderecoPacientes;
+                txtCidade.Text = paciente.CidadePacientes;
+                txtCep.Text = paciente.CepPacientes;
+                cbEstado.SelectedItem = paciente.EstadoPacientes;
+                txtCelular.Text = paciente.CelularPacientes;
+                txtTelefone.Text = paciente.TelefonePacientes;
+            }
+        }
+
+        public bool Conferir()
+        {
+            int i = 0;
+            foreach (Control item in this.groupBox1.Controls)
+            {
+                if ((item is TextBox) && (item.Text == ""))
+                    i++;
+            }
+            if ((radioButton1.Checked == false) && (radioButton2.Checked == false))
+                i++;
+            if (i == 0)
+                return true;
+            else
+                return false;
+        }
+
     }
 }

@@ -60,7 +60,7 @@ namespace ProjetoSISO
                 MessageBox.Show("Preencha todas informações!");
         }
 
-            public bool Conferir()
+        public bool Conferir()
         {
             int i = 0;
             foreach (Control item in this.groupBox1.Controls)
@@ -95,7 +95,7 @@ namespace ProjetoSISO
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmConsulta frm = new FrmConsulta(dados, 0);
+            FrmConsulta frm = new FrmConsulta(0);
             frm.Show();
         }
 
