@@ -79,9 +79,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(52, 116);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(900, 617);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
@@ -102,18 +102,18 @@
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone.Location = new System.Drawing.Point(268, 462);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(5);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(585, 32);
-            this.txtTelefone.TabIndex = 14;
+            this.txtTelefone.TabIndex = 10;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(268, 108);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(585, 38);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker1.TabIndex = 3;
             // 
             // label8
             // 
@@ -130,7 +130,7 @@
             // 
             this.txtNome.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(268, 25);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(5);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(585, 32);
             this.txtNome.TabIndex = 1;
@@ -142,18 +142,18 @@
             this.gpSexo.Controls.Add(this.radioButtonFem);
             this.gpSexo.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpSexo.Location = new System.Drawing.Point(268, 57);
-            this.gpSexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpSexo.Margin = new System.Windows.Forms.Padding(4);
             this.gpSexo.Name = "gpSexo";
-            this.gpSexo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpSexo.Padding = new System.Windows.Forms.Padding(4);
             this.gpSexo.Size = new System.Drawing.Size(311, 44);
-            this.gpSexo.TabIndex = 10;
+            this.gpSexo.TabIndex = 2;
             this.gpSexo.TabStop = false;
             // 
             // radioButtonMasc
             // 
             this.radioButtonMasc.AutoSize = true;
             this.radioButtonMasc.Location = new System.Drawing.Point(151, 20);
-            this.radioButtonMasc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButtonMasc.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonMasc.Name = "radioButtonMasc";
             this.radioButtonMasc.Size = new System.Drawing.Size(114, 25);
             this.radioButtonMasc.TabIndex = 1;
@@ -165,7 +165,7 @@
             // 
             this.radioButtonFem.AutoSize = true;
             this.radioButtonFem.Location = new System.Drawing.Point(8, 20);
-            this.radioButtonFem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButtonFem.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonFem.Name = "radioButtonFem";
             this.radioButtonFem.Size = new System.Drawing.Size(107, 25);
             this.radioButtonFem.TabIndex = 0;
@@ -216,7 +216,7 @@
             "SE",
             "TO"});
             this.cboEstado.Location = new System.Drawing.Point(268, 358);
-            this.cboEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(87, 31);
             this.cboEstado.TabIndex = 8;
@@ -247,16 +247,16 @@
             // 
             this.txtCep.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCep.Location = new System.Drawing.Point(268, 304);
-            this.txtCep.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCep.Margin = new System.Windows.Forms.Padding(5);
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(585, 32);
-            this.txtCep.TabIndex = 5;
+            this.txtCep.TabIndex = 7;
             // 
             // txtCidade
             // 
             this.txtCidade.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(268, 252);
-            this.txtCidade.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(5);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(585, 32);
             this.txtCidade.TabIndex = 6;
@@ -281,10 +281,10 @@
             this.cmdSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdSalvar.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdSalvar.Location = new System.Drawing.Point(752, 519);
-            this.cmdSalvar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cmdSalvar.Margin = new System.Windows.Forms.Padding(5);
             this.cmdSalvar.Name = "cmdSalvar";
             this.cmdSalvar.Size = new System.Drawing.Size(103, 89);
-            this.cmdSalvar.TabIndex = 2;
+            this.cmdSalvar.TabIndex = 12;
             this.cmdSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdSalvar.UseVisualStyleBackColor = false;
             this.cmdSalvar.Click += new System.EventHandler(this.cmdSalvar_Click);
@@ -326,28 +326,28 @@
             // 
             this.txtEndereco.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(268, 203);
-            this.txtEndereco.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEndereco.Margin = new System.Windows.Forms.Padding(5);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(585, 32);
-            this.txtEndereco.TabIndex = 1;
+            this.txtEndereco.TabIndex = 5;
             // 
             // txtCelular
             // 
             this.txtCelular.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelular.Location = new System.Drawing.Point(268, 411);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(5);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(585, 32);
-            this.txtCelular.TabIndex = 1;
+            this.txtCelular.TabIndex = 9;
             // 
             // txtCPF
             // 
             this.txtCPF.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPF.Location = new System.Drawing.Point(268, 156);
-            this.txtCPF.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(5);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(585, 32);
-            this.txtCPF.TabIndex = 1;
+            this.txtCPF.TabIndex = 4;
             // 
             // label1
             // 
@@ -367,7 +367,7 @@
             this.cmdBack.FlatAppearance.BorderSize = 0;
             this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdBack.Location = new System.Drawing.Point(52, 31);
-            this.cmdBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdBack.Margin = new System.Windows.Forms.Padding(4);
             this.cmdBack.Name = "cmdBack";
             this.cmdBack.Size = new System.Drawing.Size(67, 54);
             this.cmdBack.TabIndex = 10;
@@ -382,7 +382,7 @@
             this.cmdPesquisar.FlatAppearance.BorderSize = 0;
             this.cmdPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdPesquisar.Location = new System.Drawing.Point(731, 16);
-            this.cmdPesquisar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cmdPesquisar.Margin = new System.Windows.Forms.Padding(5);
             this.cmdPesquisar.Name = "cmdPesquisar";
             this.cmdPesquisar.Size = new System.Drawing.Size(104, 91);
             this.cmdPesquisar.TabIndex = 7;
@@ -396,7 +396,7 @@
             this.cmdAdicionar.FlatAppearance.BorderSize = 0;
             this.cmdAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAdicionar.Location = new System.Drawing.Point(845, 16);
-            this.cmdAdicionar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cmdAdicionar.Margin = new System.Windows.Forms.Padding(5);
             this.cmdAdicionar.Name = "cmdAdicionar";
             this.cmdAdicionar.Size = new System.Drawing.Size(107, 91);
             this.cmdAdicionar.TabIndex = 6;
@@ -413,7 +413,7 @@
             this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.cmdAdicionar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPacientes";
             this.Text = "frmPacientes";
             this.Load += new System.EventHandler(this.frmPacientes_Load);
