@@ -12,13 +12,14 @@ namespace ProjetoSISO
 {
     public partial class FrmConsulta : Form
     {
-        dadosDentista dentista = new dadosDentista();
-        dadosPacientes paciente= new dadosPacientes();
+        dadosDentista dentista;
+        dadosPacientes paciente;
         int tipo;
-        public FrmConsulta(int t)
+        public FrmConsulta(dadosDentista dentista, int t)
         {
             InitializeComponent();
             tipo = t;
+            this.dentista = dentista;
         }
 
         private void FrmConsulta_Load(object sender, EventArgs e)
@@ -33,7 +34,7 @@ namespace ProjetoSISO
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataGridView1.Rows[0].Selected = true;
             }
-            if(tipo==1)
+            else
             {
                 paciente.NomePacientes = "";
                 dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
@@ -59,12 +60,22 @@ namespace ProjetoSISO
             }
         }
 
-        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            dentista.IdDentista = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void cmdExcluir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja excluir?", "Projeto SISO", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                dentista.ExcluirDadosDentista();
+                dentista.NomeDentista = "";
+                dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
+            }
+        }
+
+        private void cmdAlterar_Click(object sender, EventArgs e)
         {
 
         }

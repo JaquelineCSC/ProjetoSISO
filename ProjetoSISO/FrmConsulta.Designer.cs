@@ -31,6 +31,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtxNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmdExcluir = new System.Windows.Forms.Button();
+            this.cmdAlterar = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -47,7 +49,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1065, 474);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
             // txtxNome
             // 
@@ -67,6 +68,38 @@
             this.label1.Size = new System.Drawing.Size(176, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Procure pelo nome";
+            // 
+            // cmdExcluir
+            // 
+            this.cmdExcluir.FlatAppearance.BorderSize = 0;
+            this.cmdExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdExcluir.Image = global::ProjetoSISO.Properties.Resources.trash_52px;
+            this.cmdExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdExcluir.Location = new System.Drawing.Point(353, 695);
+            this.cmdExcluir.Name = "cmdExcluir";
+            this.cmdExcluir.Size = new System.Drawing.Size(149, 66);
+            this.cmdExcluir.TabIndex = 6;
+            this.cmdExcluir.Text = "Excluir";
+            this.cmdExcluir.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.cmdExcluir.UseVisualStyleBackColor = true;
+            this.cmdExcluir.Click += new System.EventHandler(this.cmdExcluir_Click);
+            // 
+            // cmdAlterar
+            // 
+            this.cmdAlterar.FlatAppearance.BorderSize = 0;
+            this.cmdAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAlterar.Image = global::ProjetoSISO.Properties.Resources.edit_52px;
+            this.cmdAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdAlterar.Location = new System.Drawing.Point(692, 695);
+            this.cmdAlterar.Name = "cmdAlterar";
+            this.cmdAlterar.Size = new System.Drawing.Size(145, 66);
+            this.cmdAlterar.TabIndex = 5;
+            this.cmdAlterar.Text = "Alterar";
+            this.cmdAlterar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.cmdAlterar.UseVisualStyleBackColor = true;
+            this.cmdAlterar.Click += new System.EventHandler(this.cmdAlterar_Click);
             // 
             // cmdClose
             // 
@@ -101,7 +134,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(200)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(1200, 798);
+            this.Controls.Add(this.cmdExcluir);
+            this.Controls.Add(this.cmdAlterar);
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -127,5 +162,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cmdClose;
+        private System.Windows.Forms.Button cmdAlterar;
+        private System.Windows.Forms.Button cmdExcluir;
     }
 }

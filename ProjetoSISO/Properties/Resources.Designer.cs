@@ -113,6 +113,16 @@ namespace ProjetoSISO.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit_52px {
+            get {
+                object obj = ResourceManager.GetObject("edit_52px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap erase {
             get {
                 object obj = ResourceManager.GetObject("erase", resourceCulture);
@@ -156,6 +166,16 @@ namespace ProjetoSISO.Properties {
         internal static System.Drawing.Bitmap tooth_64px {
             get {
                 object obj = ResourceManager.GetObject("tooth_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash_52px {
+            get {
+                object obj = ResourceManager.GetObject("trash_52px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

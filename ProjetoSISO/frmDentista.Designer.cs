@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmdLimpar = new System.Windows.Forms.Button();
             this.txtEspecializacao = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.cmdBack = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.cmdLimpar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gbSexo.SuspendLayout();
             this.SuspendLayout();
@@ -101,6 +101,19 @@
             this.groupBox1.Size = new System.Drawing.Size(1083, 902);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
+            // 
+            // cmdLimpar
+            // 
+            this.cmdLimpar.BackgroundImage = global::ProjetoSISO.Properties.Resources.erase;
+            this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdLimpar.FlatAppearance.BorderSize = 0;
+            this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLimpar.Location = new System.Drawing.Point(287, 781);
+            this.cmdLimpar.Name = "cmdLimpar";
+            this.cmdLimpar.Size = new System.Drawing.Size(108, 113);
+            this.cmdLimpar.TabIndex = 36;
+            this.cmdLimpar.UseVisualStyleBackColor = true;
+            this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
             // 
             // txtEspecializacao
             // 
@@ -460,19 +473,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cmdLimpar
-            // 
-            this.cmdLimpar.BackgroundImage = global::ProjetoSISO.Properties.Resources.erase;
-            this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdLimpar.FlatAppearance.BorderSize = 0;
-            this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLimpar.Location = new System.Drawing.Point(287, 781);
-            this.cmdLimpar.Name = "cmdLimpar";
-            this.cmdLimpar.Size = new System.Drawing.Size(108, 113);
-            this.cmdLimpar.TabIndex = 36;
-            this.cmdLimpar.UseVisualStyleBackColor = true;
-            this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
-            // 
             // frmDentista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -487,6 +487,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmDentista";
             this.Text = "frmDentista";
+            this.Load += new System.EventHandler(this.frmDentista_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbSexo.ResumeLayout(false);

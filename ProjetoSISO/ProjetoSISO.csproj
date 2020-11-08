@@ -144,6 +144,8 @@
     <None Include="imgs\closeBlue.png" />
     <None Include="imgs\back.png" />
     <None Include="imgs\erase.png" />
+    <None Include="imgs\trash_52px.png" />
+    <None Include="imgs\edit_52px.png" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

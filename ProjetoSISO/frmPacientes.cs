@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoSISO {
-    public partial class frmPacientes : Form {
+    public partial class frmPacientes : Form 
+    {
         Panel p;
-        dadosPacientes dp = new dadosPacientes();
+        dadosPacientes dp;
 
-        public frmPacientes(Panel pnPaciente) {
+        public frmPacientes(Panel pnPaciente) 
+        {
             InitializeComponent();
             p = pnPaciente;
         }
@@ -29,11 +31,13 @@ namespace ProjetoSISO {
 
         }
 
-        private void frmPacientes_Load(object sender, EventArgs e) {
+        private void frmPacientes_Load(object sender, EventArgs e)
+        {
 
         }
 
-        private void cmdSalvar_Click(object sender, EventArgs e) {
+        private void cmdSalvar_Click(object sender, EventArgs e) 
+        {
             dp.NomePacientes = txtNome.Text;
             dp.CpfPacientes = txtCPF.Text;
             dp.EnderecoPacientes = txtEndereco.Text;
@@ -50,6 +54,7 @@ namespace ProjetoSISO {
                 dp.IncluirDadosPacientes();
                 MessageBox.Show("Cadastro feito com sucesso!");
                 Limpar();
+                groupBox1.Enabled = false;
             }
             else
                 MessageBox.Show("Preencha todas informações!");
@@ -92,12 +97,14 @@ namespace ProjetoSISO {
         private void cmdAdicionar_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
+            dp = new dadosPacientes();
+            Limpar();
         }
 
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
-            FrmConsulta frm = new FrmConsulta(1);
-            frm.Show();
+            //FrmConsulta frm = new FrmConsulta();
+            //frm.Show();
         }
     }
 }

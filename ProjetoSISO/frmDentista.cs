@@ -13,16 +13,11 @@ namespace ProjetoSISO
     public partial class frmDentista : Form
     {
         Panel p;
-        dadosDentista dados = new dadosDentista();
+        dadosDentista dados;
         public frmDentista(Panel pnDentista)
         {
             InitializeComponent();
             p = pnDentista;
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-           
         }
 
         private void cmdBack_Click(object sender, EventArgs e)
@@ -34,6 +29,8 @@ namespace ProjetoSISO
         private void button1_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
+            dados = new dadosDentista();
+            Limpar();
         }
 
         private void cmdSalvar_Click(object sender, EventArgs e)
@@ -57,6 +54,7 @@ namespace ProjetoSISO
                 dados.IncluirDadosDentista();
                 MessageBox.Show("Cadastro feito com sucesso!");
                 Limpar();
+                groupBox1.Enabled = false;
             }
             else
                 MessageBox.Show("Preencha todas informações!");
@@ -97,8 +95,13 @@ namespace ProjetoSISO
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmConsulta frm = new FrmConsulta(0);
+            FrmConsulta frm = new FrmConsulta(dados, 0);
             frm.Show();
+        }
+
+        private void frmDentista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
