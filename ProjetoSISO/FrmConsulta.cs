@@ -160,45 +160,48 @@ namespace ProjetoSISO
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (tipo == 0)
+            if (dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
             {
-                groupBox1.Enabled = true;
-                dentista.IdDentista = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                dentista.ConsultarDadosDentista();
-                txtNome.Text = dentista.NomeDentista;
-                if (dentista.SexoDentista == "F")
-                    radioButton1.Checked = true;
+                if (tipo == 0)
+                {
+                    groupBox1.Enabled = true;
+                    dentista.IdDentista = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    dentista.ConsultarDadosDentista();
+                    txtNome.Text = dentista.NomeDentista;
+                    if (dentista.SexoDentista == "F")
+                        radioButton1.Checked = true;
+                    else
+                        radioButton2.Checked = true;
+                    dateTimePicker1.Value = Convert.ToDateTime(dentista.DataNascimentoDentista);
+                    txtCPF.Text = dentista.CpfDentista;
+                    txtEndereco.Text = dentista.EnderecoDentista;
+                    txtCidade.Text = dentista.CidadeDentista;
+                    txtCep.Text = dentista.CepDentista;
+                    cbEstado.SelectedItem = dentista.EstadoDentista;
+                    txtCelular.Text = dentista.CelularDentista;
+                    txtTelefone.Text = dentista.TelefoneDentista;
+                    txtCRO.Text = dentista.CroDentista;
+                    txtEspecializacao.Text = dentista.EspecializacaoDentista;
+                }
                 else
-                    radioButton2.Checked = true;
-                dateTimePicker1.Value = Convert.ToDateTime(dentista.DataNascimentoDentista);
-                txtCPF.Text = dentista.CpfDentista;
-                txtEndereco.Text = dentista.EnderecoDentista;
-                txtCidade.Text = dentista.CidadeDentista;
-                txtCep.Text = dentista.CepDentista;
-                cbEstado.SelectedItem = dentista.EstadoDentista;
-                txtCelular.Text = dentista.CelularDentista;
-                txtTelefone.Text = dentista.TelefoneDentista;
-                txtCRO.Text = dentista.CroDentista;
-                txtEspecializacao.Text = dentista.EspecializacaoDentista;
-            }
-            else
-            {
-                groupBox1.Enabled = true;
-                paciente.IdPacientes = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                paciente.ConsultarDadosPacientes();
-                txtNome.Text = paciente.NomePacientes;
-                if (paciente.SexoPacientes == "F")
-                    radioButton1.Checked = true;
-                else
-                    radioButton2.Checked = true;
-                dateTimePicker1.Value = Convert.ToDateTime(paciente.DataNascimentoPacientes);
-                txtCPF.Text = paciente.CpfPacientes;
-                txtEndereco.Text = paciente.EnderecoPacientes;
-                txtCidade.Text = paciente.CidadePacientes;
-                txtCep.Text = paciente.CepPacientes;
-                cbEstado.SelectedItem = paciente.EstadoPacientes;
-                txtCelular.Text = paciente.CelularPacientes;
-                txtTelefone.Text = paciente.TelefonePacientes;
+                {
+                    groupBox1.Enabled = true;
+                    paciente.IdPacientes = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    paciente.ConsultarDadosPacientes();
+                    txtNome.Text = paciente.NomePacientes;
+                    if (paciente.SexoPacientes == "F")
+                        radioButton1.Checked = true;
+                    else
+                        radioButton2.Checked = true;
+                    dateTimePicker1.Value = Convert.ToDateTime(paciente.DataNascimentoPacientes);
+                    txtCPF.Text = paciente.CpfPacientes;
+                    txtEndereco.Text = paciente.EnderecoPacientes;
+                    txtCidade.Text = paciente.CidadePacientes;
+                    txtCep.Text = paciente.CepPacientes;
+                    cbEstado.SelectedItem = paciente.EstadoPacientes;
+                    txtCelular.Text = paciente.CelularPacientes;
+                    txtTelefone.Text = paciente.TelefonePacientes;
+                }
             }
         }
 
