@@ -142,7 +142,23 @@ namespace ProjetoSISO
             this.Close();
         }
 
-        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        public bool Conferir()
+        {
+            int i = 0;
+            foreach (Control item in this.groupBox1.Controls)
+            {
+                if ((item is TextBox) && (item.Text == ""))
+                    i++;
+            }
+            if ((radioButton1.Checked == false) && (radioButton2.Checked == false))
+                i++;
+            if (i == 0)
+                return true;
+            else
+                return false;
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (tipo == 0)
             {
@@ -163,6 +179,7 @@ namespace ProjetoSISO
                 txtTelefone.Text = dentista.TelefoneDentista;
                 txtCRO.Text = dentista.CroDentista;
                 txtEspecializacao.Text = dentista.EspecializacaoDentista;
+                groupBox1.Enabled = true;
             }
             else
             {
@@ -181,24 +198,8 @@ namespace ProjetoSISO
                 cbEstado.SelectedItem = paciente.EstadoPacientes;
                 txtCelular.Text = paciente.CelularPacientes;
                 txtTelefone.Text = paciente.TelefonePacientes;
+                groupBox1.Enabled = true;
             }
         }
-
-        public bool Conferir()
-        {
-            int i = 0;
-            foreach (Control item in this.groupBox1.Controls)
-            {
-                if ((item is TextBox) && (item.Text == ""))
-                    i++;
-            }
-            if ((radioButton1.Checked == false) && (radioButton2.Checked == false))
-                i++;
-            if (i == 0)
-                return true;
-            else
-                return false;
-        }
-
     }
 }

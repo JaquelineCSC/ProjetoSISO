@@ -103,8 +103,8 @@ namespace ProjetoSISO {
 
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
-            //FrmConsulta frm = new FrmConsulta();
-            //frm.Show();
+            FrmConsulta frm = new FrmConsulta(1);
+            frm.Show();
         }
     }
 }

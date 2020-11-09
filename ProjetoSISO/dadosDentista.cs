@@ -66,26 +66,26 @@ namespace ProjetoSISO
         public void ConsultarDadosDentista()
         {
             string sql = "";
-            sql += "Select * from Dentistas where idDentista = " + IdDentista.ToString();
+            sql += "Select * from Dentistas where idDentista = " + IdDentista;
             c.ConsultarDentistas(sql);
             string[] auxiliar = c.Campos.Split(';');
-            CpfDentista = auxiliar[1];
-            CroDentista = auxiliar[2];
-            NomeDentista = auxiliar[3];
-            EnderecoDentista = auxiliar[4];
-            EstadoDentista = auxiliar[5];
-            cepDentista = auxiliar[6];
-            cidadeDentista = auxiliar[7];
-            dataNascimentoDentista = auxiliar[8];
-            sexoDentista = auxiliar[9];
-            telefoneDentista = auxiliar[10];
-            celularDentista = auxiliar[11];
-            especializacaoDentista = auxiliar[12];
+            CpfDentista = auxiliar[0];
+            CroDentista = auxiliar[1];
+            NomeDentista = auxiliar[2];
+            EnderecoDentista = auxiliar[3];
+            EstadoDentista = auxiliar[4];
+            cepDentista = auxiliar[5];
+            cidadeDentista = auxiliar[6];
+            dataNascimentoDentista = auxiliar[7];
+            sexoDentista = auxiliar[8];
+            telefoneDentista = auxiliar[9];
+            celularDentista = auxiliar[10];
+            especializacaoDentista = auxiliar[11];
         }
 
         public DataSet ListarDadosDentista()
         {
-            string sql = "SELECT * FROM Dentistas where nomeDentista like '%'"+NomeDentista+"'%'";
+            string sql = "SELECT * FROM Dentistas where nomeDentista like '%" + NomeDentista + "%'";
             return c.Listar(sql);
         }
     }

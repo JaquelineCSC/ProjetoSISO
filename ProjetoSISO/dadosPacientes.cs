@@ -60,20 +60,20 @@ namespace ProjetoSISO {
             sql += "Select * from Pacientes where idPaciente = " + idPacientes;
             c.ConsultarPacientes(sql);
             string[] auxiliar = c.Campos.Split(';');
-            nomePacientes = auxiliar[1];
-            CpfPacientes = auxiliar[2];
-            enderecoPacientes = auxiliar[3];
-            estadoPacientes = auxiliar[4];
-            cepPacientes = auxiliar[5];
-            cidadePacientes = auxiliar[6];
-            dataNascimentoPacientes = auxiliar[7];
-            sexoPacientes = auxiliar[8];
-            telefonePacientes = auxiliar[9];
-            celularPacientes = auxiliar[10];
+            nomePacientes = auxiliar[0];
+            CpfPacientes = auxiliar[1];
+            enderecoPacientes = auxiliar[2];
+            estadoPacientes = auxiliar[3];
+            cepPacientes = auxiliar[4];
+            cidadePacientes = auxiliar[5];
+            dataNascimentoPacientes = auxiliar[6];
+            sexoPacientes = auxiliar[7];
+            telefonePacientes = auxiliar[8];
+            celularPacientes = auxiliar[9];
         }
 
         public DataSet ListarDadosPacientes() {
-            string sql = "SELECT * FROM Pacientes where nomePaciente like '%"+NomePacientes+"%'";
+            string sql = "SELECT * FROM Pacientes where nomePaciente like '%" + NomePacientes + "%'";
             return c.Listar(sql);
         }
     }
