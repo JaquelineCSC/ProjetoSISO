@@ -162,6 +162,7 @@ namespace ProjetoSISO
         {
             if (tipo == 0)
             {
+                groupBox1.Enabled = true;
                 dentista.IdDentista = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                 dentista.ConsultarDadosDentista();
                 txtNome.Text = dentista.NomeDentista;
@@ -179,10 +180,10 @@ namespace ProjetoSISO
                 txtTelefone.Text = dentista.TelefoneDentista;
                 txtCRO.Text = dentista.CroDentista;
                 txtEspecializacao.Text = dentista.EspecializacaoDentista;
-                groupBox1.Enabled = true;
             }
             else
             {
+                groupBox1.Enabled = true;
                 paciente.IdPacientes = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                 paciente.ConsultarDadosPacientes();
                 txtNome.Text = paciente.NomePacientes;
@@ -198,8 +199,12 @@ namespace ProjetoSISO
                 cbEstado.SelectedItem = paciente.EstadoPacientes;
                 txtCelular.Text = paciente.CelularPacientes;
                 txtTelefone.Text = paciente.TelefonePacientes;
-                groupBox1.Enabled = true;
             }
+        }
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

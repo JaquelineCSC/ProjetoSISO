@@ -42,7 +42,7 @@ namespace ProjetoSISO
             dados.CpfDentista = txtCPF.Text;
             dados.EnderecoDentista = txtEndereco.Text;
             dados.CidadeDentista = txtCidade.Text;
-            dados.EstadoDentista = cbEstado.SelectedIndex.ToString();
+            dados.EstadoDentista = cbEstado.SelectedItem.ToString();
             dados.CepDentista = txtCep.Text;
             dados.CelularDentista = txtCelular.Text;
             dados.TelefoneDentista = txtTelefone.Text;
