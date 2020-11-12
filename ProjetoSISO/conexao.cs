@@ -39,7 +39,7 @@ namespace ProjetoSISO {
             cd.CommandText = sql;
             SqlDataReader dr = cd.ExecuteReader();
 
-
+            Campos = "";
             if (dr.Read()) {
                 Campos += dr["nomePaciente"].ToString() + ";";
                 Campos += dr["CPFPaciente"].ToString() + ";";
@@ -61,7 +61,7 @@ namespace ProjetoSISO {
             cd.CommandText = sql;
             SqlDataReader dr = cd.ExecuteReader();
 
-
+            Campos = "";
             if (dr.Read()) {
                 Campos += dr["CPFDentista"].ToString() + ";";
                 Campos += dr["CRODentista"].ToString() + ";";

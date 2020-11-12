@@ -160,6 +160,11 @@ namespace ProjetoSISO
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
             if (tipo == 0)
             {
                 groupBox1.Enabled = true;
@@ -202,7 +207,12 @@ namespace ProjetoSISO
             }
         }
 
-        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
 
         }

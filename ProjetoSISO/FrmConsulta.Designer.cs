@@ -75,10 +75,12 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1065, 474);
+            this.dataGridView1.Size = new System.Drawing.Size(916, 416);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // txtxNome
             // 
@@ -122,7 +124,7 @@
             this.cmdAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAlterar.Image = global::ProjetoSISO.Properties.Resources.edit_52px;
             this.cmdAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdAlterar.Location = new System.Drawing.Point(790, 792);
+            this.cmdAlterar.Location = new System.Drawing.Point(681, 792);
             this.cmdAlterar.Name = "cmdAlterar";
             this.cmdAlterar.Size = new System.Drawing.Size(146, 66);
             this.cmdAlterar.TabIndex = 14;
@@ -138,7 +140,7 @@
             this.cmdClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdClose.FlatAppearance.BorderSize = 0;
             this.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdClose.Location = new System.Drawing.Point(2336, 12);
+            this.cmdClose.Location = new System.Drawing.Point(1824, 9);
             this.cmdClose.Name = "cmdClose";
             this.cmdClose.Size = new System.Drawing.Size(74, 62);
             this.cmdClose.TabIndex = 4;
@@ -190,11 +192,11 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(1194, 79);
+            this.groupBox1.Location = new System.Drawing.Point(1027, 79);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(1083, 902);
+            this.groupBox1.Size = new System.Drawing.Size(871, 896);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
@@ -204,7 +206,7 @@
             this.txtEspecializacao.Location = new System.Drawing.Point(286, 706);
             this.txtEspecializacao.Margin = new System.Windows.Forms.Padding(6);
             this.txtEspecializacao.Name = "txtEspecializacao";
-            this.txtEspecializacao.Size = new System.Drawing.Size(658, 37);
+            this.txtEspecializacao.Size = new System.Drawing.Size(541, 37);
             this.txtEspecializacao.TabIndex = 12;
             // 
             // label11
@@ -235,7 +237,7 @@
             this.txtTelefone.Location = new System.Drawing.Point(286, 575);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(6);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(658, 37);
+            this.txtTelefone.Size = new System.Drawing.Size(541, 37);
             this.txtTelefone.TabIndex = 10;
             // 
             // dateTimePicker1
@@ -243,7 +245,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(286, 134);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(658, 44);
+            this.dateTimePicker1.Size = new System.Drawing.Size(541, 44);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // label8
@@ -263,7 +265,7 @@
             this.txtNome.Location = new System.Drawing.Point(286, 29);
             this.txtNome.Margin = new System.Windows.Forms.Padding(6);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(658, 37);
+            this.txtNome.Size = new System.Drawing.Size(541, 37);
             this.txtNome.TabIndex = 1;
             // 
             // gbSexo
@@ -381,7 +383,7 @@
             this.txtCep.Location = new System.Drawing.Point(286, 378);
             this.txtCep.Margin = new System.Windows.Forms.Padding(6);
             this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(658, 37);
+            this.txtCep.Size = new System.Drawing.Size(541, 37);
             this.txtCep.TabIndex = 7;
             // 
             // txtCidade
@@ -390,7 +392,7 @@
             this.txtCidade.Location = new System.Drawing.Point(286, 314);
             this.txtCidade.Margin = new System.Windows.Forms.Padding(6);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(658, 37);
+            this.txtCidade.Size = new System.Drawing.Size(541, 37);
             this.txtCidade.TabIndex = 6;
             // 
             // label6
@@ -443,7 +445,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(286, 252);
             this.txtEndereco.Margin = new System.Windows.Forms.Padding(6);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(658, 37);
+            this.txtEndereco.Size = new System.Drawing.Size(541, 37);
             this.txtEndereco.TabIndex = 5;
             // 
             // txtCelular
@@ -452,7 +454,7 @@
             this.txtCelular.Location = new System.Drawing.Point(286, 512);
             this.txtCelular.Margin = new System.Windows.Forms.Padding(6);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(658, 37);
+            this.txtCelular.Size = new System.Drawing.Size(541, 37);
             this.txtCelular.TabIndex = 9;
             // 
             // txtCPF
@@ -461,7 +463,7 @@
             this.txtCPF.Location = new System.Drawing.Point(286, 194);
             this.txtCPF.Margin = new System.Windows.Forms.Padding(6);
             this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(658, 37);
+            this.txtCPF.Size = new System.Drawing.Size(541, 37);
             this.txtCPF.TabIndex = 4;
             // 
             // label10
@@ -481,7 +483,7 @@
             this.txtCRO.Location = new System.Drawing.Point(286, 642);
             this.txtCRO.Margin = new System.Windows.Forms.Padding(6);
             this.txtCRO.Name = "txtCRO";
-            this.txtCRO.Size = new System.Drawing.Size(658, 37);
+            this.txtCRO.Size = new System.Drawing.Size(541, 37);
             this.txtCRO.TabIndex = 11;
             // 
             // label12
@@ -500,7 +502,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(183)))), ((int)(((byte)(234)))));
-            this.ClientSize = new System.Drawing.Size(2484, 1078);
+            this.ClientSize = new System.Drawing.Size(1947, 1012);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.label1);
@@ -513,7 +515,6 @@
             this.MinimizeBox = false;
             this.Name = "FrmConsulta";
             this.Text = "Consultar";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
