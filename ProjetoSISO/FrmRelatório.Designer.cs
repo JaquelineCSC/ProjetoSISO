@@ -45,16 +45,16 @@
             // 
             // cmdPacientes
             // 
-            this.cmdPacientes.Location = new System.Drawing.Point(305, 216);
+            this.cmdPacientes.Location = new System.Drawing.Point(305, 204);
             this.cmdPacientes.Name = "cmdPacientes";
-            this.cmdPacientes.Size = new System.Drawing.Size(185, 56);
+            this.cmdPacientes.Size = new System.Drawing.Size(185, 64);
             this.cmdPacientes.TabIndex = 3;
             this.cmdPacientes.Text = "&Pacientes";
             this.cmdPacientes.Click += new System.EventHandler(this.cmdPacientes_Click);
             // 
             // cmdDentista
             // 
-            this.cmdDentista.Location = new System.Drawing.Point(305, 290);
+            this.cmdDentista.Location = new System.Drawing.Point(305, 274);
             this.cmdDentista.Name = "cmdDentista";
             this.cmdDentista.Size = new System.Drawing.Size(185, 64);
             this.cmdDentista.TabIndex = 5;

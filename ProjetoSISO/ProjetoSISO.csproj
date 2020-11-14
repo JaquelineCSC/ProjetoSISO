@@ -138,6 +138,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Dentistas.rdlc" />
     <EmbeddedResource Include="frmAgendamento.resx">
       <DependentUpon>frmAgendamento.cs</DependentUpon>
     </EmbeddedResource>
