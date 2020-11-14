@@ -10,8 +10,6 @@
 
 #pragma warning disable 1591
 
-using System;
-
 namespace ProjetoSISO {
     
     
@@ -22,9 +20,9 @@ namespace ProjetoSISO {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ProjetoSISODataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ProjetoSISO2DataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ProjetoSISODataSet : global::System.Data.DataSet {
+    public partial class ProjetoSISO2DataSet : global::System.Data.DataSet {
         
         private AgendamentoDataTable tableAgendamento;
         
@@ -44,7 +42,7 @@ namespace ProjetoSISO {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public ProjetoSISODataSet() {
+        public ProjetoSISO2DataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -55,7 +53,7 @@ namespace ProjetoSISO {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected ProjetoSISODataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ProjetoSISO2DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -180,7 +178,7 @@ namespace ProjetoSISO {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ProjetoSISODataSet cln = ((ProjetoSISODataSet)(base.Clone()));
+            ProjetoSISO2DataSet cln = ((ProjetoSISO2DataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -282,9 +280,9 @@ namespace ProjetoSISO {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ProjetoSISODataSet";
+            this.DataSetName = "ProjetoSISO2DataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ProjetoSISODataSet.xsd";
+            this.Namespace = "http://tempuri.org/ProjetoSISO2DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableAgendamento = new AgendamentoDataTable();
@@ -344,7 +342,7 @@ namespace ProjetoSISO {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ProjetoSISODataSet ds = new ProjetoSISODataSet();
+            ProjetoSISO2DataSet ds = new ProjetoSISO2DataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -527,7 +525,7 @@ namespace ProjetoSISO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AgendamentoRow AddAgendamentoRow(System.DateTime dataAgendamento, System.TimeSpan horaAgendamento, PacientesRow parentPacientesRowByFK_Agendamento_Pacientes, DentistasRow parentDentistasRowByFK_Agendamento_Dentistas) {
+            public AgendamentoRow AddAgendamentoRow(System.DateTime dataAgendamento, string horaAgendamento, PacientesRow parentPacientesRowByFK_Agendamento_Pacientes, DentistasRow parentDentistasRowByFK_Agendamento_Dentistas) {
                 AgendamentoRow rowAgendamentoRow = ((AgendamentoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -584,7 +582,7 @@ namespace ProjetoSISO {
                 base.Columns.Add(this.columnidAgendamento);
                 this.columndataAgendamento = new global::System.Data.DataColumn("dataAgendamento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndataAgendamento);
-                this.columnhoraAgendamento = new global::System.Data.DataColumn("horaAgendamento", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                this.columnhoraAgendamento = new global::System.Data.DataColumn("horaAgendamento", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnhoraAgendamento);
                 this.columnidPaciente = new global::System.Data.DataColumn("idPaciente", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidPaciente);
@@ -600,6 +598,7 @@ namespace ProjetoSISO {
                 this.columnidAgendamento.Unique = true;
                 this.columndataAgendamento.AllowDBNull = false;
                 this.columnhoraAgendamento.AllowDBNull = false;
+                this.columnhoraAgendamento.MaxLength = 50;
                 this.columnidPaciente.AllowDBNull = false;
                 this.columnidDentista.AllowDBNull = false;
             }
@@ -669,7 +668,7 @@ namespace ProjetoSISO {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ProjetoSISODataSet ds = new ProjetoSISODataSet();
+                ProjetoSISO2DataSet ds = new ProjetoSISO2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -980,7 +979,7 @@ namespace ProjetoSISO {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ProjetoSISODataSet ds = new ProjetoSISODataSet();
+                ProjetoSISO2DataSet ds = new ProjetoSISO2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1432,7 +1431,7 @@ namespace ProjetoSISO {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ProjetoSISODataSet ds = new ProjetoSISODataSet();
+                ProjetoSISO2DataSet ds = new ProjetoSISO2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1852,7 +1851,7 @@ namespace ProjetoSISO {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ProjetoSISODataSet ds = new ProjetoSISODataSet();
+                ProjetoSISO2DataSet ds = new ProjetoSISO2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1949,9 +1948,9 @@ namespace ProjetoSISO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.TimeSpan horaAgendamento {
+            public string horaAgendamento {
                 get {
-                    return ((global::System.TimeSpan)(this[this.tableAgendamento.horaAgendamentoColumn]));
+                    return ((string)(this[this.tableAgendamento.horaAgendamentoColumn]));
                 }
                 set {
                     this[this.tableAgendamento.horaAgendamentoColumn] = value;
@@ -2571,7 +2570,7 @@ namespace ProjetoSISO {
         }
     }
 }
-namespace ProjetoSISO.ProjetoSISODataSetTableAdapters {
+namespace ProjetoSISO.ProjetoSISO2DataSetTableAdapters {
     
     
     /// <summary>
@@ -2707,7 +2706,7 @@ namespace ProjetoSISO.ProjetoSISODataSetTableAdapters {
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idAgendamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idAgendamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dataAgendamento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataAgendamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_horaAgendamento", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horaAgendamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_horaAgendamento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horaAgendamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idDentista", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDentista", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -2716,7 +2715,7 @@ namespace ProjetoSISO.ProjetoSISODataSetTableAdapters {
 SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista FROM Agendamento WHERE (idAgendamento = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dataAgendamento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataAgendamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@horaAgendamento", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horaAgendamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@horaAgendamento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horaAgendamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idDentista", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDentista", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -2725,12 +2724,12 @@ SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista F
 SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista FROM Agendamento WHERE (idAgendamento = @idAgendamento)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dataAgendamento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataAgendamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@horaAgendamento", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horaAgendamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@horaAgendamento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horaAgendamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idDentista", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDentista", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idAgendamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idAgendamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dataAgendamento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataAgendamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_horaAgendamento", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horaAgendamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_horaAgendamento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horaAgendamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idDentista", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDentista", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idAgendamento", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idAgendamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2740,7 +2739,7 @@ SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISOConnectionString;
+            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2758,7 +2757,7 @@ SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ProjetoSISODataSet.AgendamentoDataTable dataTable) {
+        public virtual int Fill(ProjetoSISO2DataSet.AgendamentoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2771,9 +2770,9 @@ SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ProjetoSISODataSet.AgendamentoDataTable GetData() {
+        public virtual ProjetoSISO2DataSet.AgendamentoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ProjetoSISODataSet.AgendamentoDataTable dataTable = new ProjetoSISODataSet.AgendamentoDataTable();
+            ProjetoSISO2DataSet.AgendamentoDataTable dataTable = new ProjetoSISO2DataSet.AgendamentoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2781,14 +2780,14 @@ SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista F
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProjetoSISODataSet.AgendamentoDataTable dataTable) {
+        public virtual int Update(ProjetoSISO2DataSet.AgendamentoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProjetoSISODataSet dataSet) {
+        public virtual int Update(ProjetoSISO2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Agendamento");
         }
         
@@ -2811,10 +2810,15 @@ SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_idAgendamento, System.DateTime Original_dataAgendamento, System.TimeSpan Original_horaAgendamento, int Original_idPaciente, int Original_idDentista) {
+        public virtual int Delete(int Original_idAgendamento, System.DateTime Original_dataAgendamento, string Original_horaAgendamento, int Original_idPaciente, int Original_idDentista) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idAgendamento));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_dataAgendamento));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.TimeSpan)(Original_horaAgendamento));
+            if ((Original_horaAgendamento == null)) {
+                throw new global::System.ArgumentNullException("Original_horaAgendamento");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_horaAgendamento));
+            }
             this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_idPaciente));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_idDentista));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
@@ -2837,9 +2841,14 @@ SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime dataAgendamento, System.TimeSpan horaAgendamento, int idPaciente, int idDentista) {
+        public virtual int Insert(System.DateTime dataAgendamento, string horaAgendamento, int idPaciente, int idDentista) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(dataAgendamento));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((System.TimeSpan)(horaAgendamento));
+            if ((horaAgendamento == null)) {
+                throw new global::System.ArgumentNullException("horaAgendamento");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(horaAgendamento));
+            }
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(idPaciente));
             this.Adapter.InsertCommand.Parameters[3].Value = ((int)(idDentista));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
@@ -2862,14 +2871,24 @@ SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime dataAgendamento, System.TimeSpan horaAgendamento, int idPaciente, int idDentista, int Original_idAgendamento, System.DateTime Original_dataAgendamento, System.TimeSpan Original_horaAgendamento, int Original_idPaciente, int Original_idDentista, int idAgendamento) {
+        public virtual int Update(System.DateTime dataAgendamento, string horaAgendamento, int idPaciente, int idDentista, int Original_idAgendamento, System.DateTime Original_dataAgendamento, string Original_horaAgendamento, int Original_idPaciente, int Original_idDentista, int idAgendamento) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(dataAgendamento));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.TimeSpan)(horaAgendamento));
+            if ((horaAgendamento == null)) {
+                throw new global::System.ArgumentNullException("horaAgendamento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(horaAgendamento));
+            }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(idPaciente));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(idDentista));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_idAgendamento));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_dataAgendamento));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.TimeSpan)(Original_horaAgendamento));
+            if ((Original_horaAgendamento == null)) {
+                throw new global::System.ArgumentNullException("Original_horaAgendamento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_horaAgendamento));
+            }
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_idPaciente));
             this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_idDentista));
             this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(idAgendamento));
@@ -2893,7 +2912,7 @@ SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime dataAgendamento, System.TimeSpan horaAgendamento, int idPaciente, int idDentista, int Original_idAgendamento, System.DateTime Original_dataAgendamento, System.TimeSpan Original_horaAgendamento, int Original_idPaciente, int Original_idDentista) {
+        public virtual int Update(System.DateTime dataAgendamento, string horaAgendamento, int idPaciente, int idDentista, int Original_idAgendamento, System.DateTime Original_dataAgendamento, string Original_horaAgendamento, int Original_idPaciente, int Original_idDentista) {
             return this.Update(dataAgendamento, horaAgendamento, idPaciente, idDentista, Original_idAgendamento, Original_dataAgendamento, Original_horaAgendamento, Original_idPaciente, Original_idDentista, Original_idAgendamento);
         }
     }
@@ -3062,7 +3081,7 @@ SELECT idConsulta, descricaoProcedimentoConsulta, valorConsulta, idAgendamento F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISOConnectionString;
+            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3080,7 +3099,7 @@ SELECT idConsulta, descricaoProcedimentoConsulta, valorConsulta, idAgendamento F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ProjetoSISODataSet.ConsultaDataTable dataTable) {
+        public virtual int Fill(ProjetoSISO2DataSet.ConsultaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3093,9 +3112,9 @@ SELECT idConsulta, descricaoProcedimentoConsulta, valorConsulta, idAgendamento F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ProjetoSISODataSet.ConsultaDataTable GetData() {
+        public virtual ProjetoSISO2DataSet.ConsultaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ProjetoSISODataSet.ConsultaDataTable dataTable = new ProjetoSISODataSet.ConsultaDataTable();
+            ProjetoSISO2DataSet.ConsultaDataTable dataTable = new ProjetoSISO2DataSet.ConsultaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3103,14 +3122,14 @@ SELECT idConsulta, descricaoProcedimentoConsulta, valorConsulta, idAgendamento F
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProjetoSISODataSet.ConsultaDataTable dataTable) {
+        public virtual int Update(ProjetoSISO2DataSet.ConsultaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProjetoSISODataSet dataSet) {
+        public virtual int Update(ProjetoSISO2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Consulta");
         }
         
@@ -3444,7 +3463,7 @@ SELECT idDentista, CPFDentista, CRODentista, nomeDentista, enderecoDentista, est
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISOConnectionString;
+            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3463,7 +3482,7 @@ SELECT idDentista, CPFDentista, CRODentista, nomeDentista, enderecoDentista, est
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ProjetoSISODataSet.DentistasDataTable dataTable) {
+        public virtual int Fill(ProjetoSISO2DataSet.DentistasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3476,9 +3495,9 @@ SELECT idDentista, CPFDentista, CRODentista, nomeDentista, enderecoDentista, est
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ProjetoSISODataSet.DentistasDataTable GetData() {
+        public virtual ProjetoSISO2DataSet.DentistasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ProjetoSISODataSet.DentistasDataTable dataTable = new ProjetoSISODataSet.DentistasDataTable();
+            ProjetoSISO2DataSet.DentistasDataTable dataTable = new ProjetoSISO2DataSet.DentistasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3486,14 +3505,14 @@ SELECT idDentista, CPFDentista, CRODentista, nomeDentista, enderecoDentista, est
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProjetoSISODataSet.DentistasDataTable dataTable) {
+        public virtual int Update(ProjetoSISO2DataSet.DentistasDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProjetoSISODataSet dataSet) {
+        public virtual int Update(ProjetoSISO2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Dentistas");
         }
         
@@ -4108,7 +4127,7 @@ SELECT idPaciente, nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISOConnectionString;
+            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4127,7 +4146,7 @@ SELECT idPaciente, nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ProjetoSISODataSet.PacientesDataTable dataTable) {
+        public virtual int Fill(ProjetoSISO2DataSet.PacientesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4140,9 +4159,9 @@ SELECT idPaciente, nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ProjetoSISODataSet.PacientesDataTable GetData() {
+        public virtual ProjetoSISO2DataSet.PacientesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ProjetoSISODataSet.PacientesDataTable dataTable = new ProjetoSISODataSet.PacientesDataTable();
+            ProjetoSISO2DataSet.PacientesDataTable dataTable = new ProjetoSISO2DataSet.PacientesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4150,14 +4169,14 @@ SELECT idPaciente, nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProjetoSISODataSet.PacientesDataTable dataTable) {
+        public virtual int Update(ProjetoSISO2DataSet.PacientesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ProjetoSISODataSet dataSet) {
+        public virtual int Update(ProjetoSISO2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Pacientes");
         }
         
@@ -4516,11 +4535,6 @@ SELECT idPaciente, nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, 
                     string Original_celularPaciente) {
             return this.Update(nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, CEPPaciente, cidadePaciente, dataNascPaciente, sexoPaciente, telefonePaciente, celularPaciente, Original_idPaciente, Original_nomePaciente, Original_CPFPaciente, Original_enderecoPaciente, Original_estadoPaciente, Original_CEPPaciente, Original_cidadePaciente, Original_dataNascPaciente, Original_sexoPaciente, Original_telefonePaciente, Original_celularPaciente, Original_idPaciente);
         }
-
-        internal void Fill(ProjetoSISO2DataSet.PacientesDataTable pacientes)
-        {
-            throw new NotImplementedException();
-        }
     }
     
     /// <summary>
@@ -4683,7 +4697,7 @@ SELECT idPaciente, nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(ProjetoSISODataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ProjetoSISO2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._dentistasTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Dentistas.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -4729,7 +4743,7 @@ SELECT idPaciente, nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(ProjetoSISODataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ProjetoSISO2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._dentistasTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Dentistas.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -4771,7 +4785,7 @@ SELECT idPaciente, nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(ProjetoSISODataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ProjetoSISO2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._consultaTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Consulta.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -4837,7 +4851,7 @@ SELECT idPaciente, nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(ProjetoSISODataSet dataSet) {
+        public virtual int UpdateAll(ProjetoSISO2DataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

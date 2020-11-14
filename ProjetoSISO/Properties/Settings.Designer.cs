@@ -33,5 +33,16 @@ namespace ProjetoSISO.Properties {
                 return ((string)(this["ProjetoSISOConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-ISROAM49\\SQLEXPRESS;Initial Catalog=ProjetoSISO2;Integrated Se" +
+            "curity=True")]
+        public string ProjetoSISO2ConnectionString {
+            get {
+                return ((string)(this["ProjetoSISO2ConnectionString"]));
+            }
+        }
     }
 }

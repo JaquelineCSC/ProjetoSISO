@@ -28,18 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ProjetoSISODataSet = new ProjetoSISO.ProjetoSISODataSet();
             this.cmdAgenda = new System.Windows.Forms.Button();
             this.cmdPacientes = new System.Windows.Forms.Button();
             this.cmdDentista = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISODataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ProjetoSISODataSet
-            // 
-            this.ProjetoSISODataSet.DataSetName = "ProjetoSISODataSet";
-            this.ProjetoSISODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cmdAgenda
             // 
@@ -89,7 +82,6 @@
             this.Controls.Add(this.cmdAgenda);
             this.Name = "FrmRelatório";
             this.Text = "FrmRelatório";
-            ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISODataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,7 +89,6 @@
 
         #endregion
         private System.Windows.Forms.Button cmdAgenda;
-        private ProjetoSISODataSet ProjetoSISODataSet;
         private System.Windows.Forms.Button cmdPacientes;
         private System.Windows.Forms.Button cmdDentista;
         private System.Windows.Forms.Label label1;

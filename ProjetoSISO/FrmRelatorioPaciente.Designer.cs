@@ -31,11 +31,13 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ProjetoSISODataSet = new ProjetoSISO.ProjetoSISODataSet();
+            this.ProjetoSISO2DataSet = new ProjetoSISO.ProjetoSISO2DataSet();
             this.PacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProjetoSISODataSet = new ProjetoSISO.ProjetoSISODataSet();
             this.PacientesTableAdapter = new ProjetoSISO.ProjetoSISODataSetTableAdapters.PacientesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISODataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISO2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PacientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISODataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -50,16 +52,22 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
-            // ProjetoSISODataSet
+            // ProjetoSISO2DataSet
             // 
-            this.ProjetoSISODataSet.DataSetName = "ProjetoSISODataSet";
-            this.ProjetoSISODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.ProjetoSISO2DataSet.DataSetName = "ProjetoSISO2DataSet";
+            this.ProjetoSISO2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // PacientesBindingSource
             // 
             this.PacientesBindingSource.DataMember = "Pacientes";
             this.PacientesBindingSource.DataSource = this.ProjetoSISODataSet;
+            // 
+            // ProjetoSISODataSet
+            // 
+            this.ProjetoSISODataSet.DataSetName = "ProjetoSISODataSet";
+            this.ProjetoSISODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // PacientesTableAdapter
             // 
@@ -74,8 +82,9 @@
             this.Name = "FrmRelatorioPaciente";
             this.Text = "FrmRelatorioPaciente";
             this.Load += new System.EventHandler(this.FrmRelatorioPaciente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISODataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISO2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PacientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISODataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -86,5 +95,6 @@
         private System.Windows.Forms.BindingSource PacientesBindingSource;
         private ProjetoSISODataSet ProjetoSISODataSet;
         private ProjetoSISODataSetTableAdapters.PacientesTableAdapter PacientesTableAdapter;
+        private ProjetoSISO2DataSet ProjetoSISO2DataSet;
     }
 }

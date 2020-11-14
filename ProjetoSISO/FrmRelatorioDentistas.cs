@@ -19,10 +19,7 @@ namespace ProjetoSISO
 
         private void FrmRelatorioDentistas_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'ProjetoSISODataSet.Dentistas'. Você pode movê-la ou removê-la conforme necessário.
-            this.DentistasTableAdapter.Fill(this.ProjetoSISODataSet.Dentistas);
 
-            this.reportViewer1.RefreshReport();
         }
     }
 }
