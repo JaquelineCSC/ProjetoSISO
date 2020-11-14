@@ -60,10 +60,10 @@ namespace ProjetoSISO {
 
         private void Calendar_DateChanged(object sender, DateRangeEventArgs e)
         {
-            agendamento.DataAgendamento = Calendar.SelectionRange.Start.Date.ToString("dd/MM/yy");
+            agendamento.DataAgendamento = Calendar.SelectionRange.Start.Date;
             agendamento.ConsultarDadosAgendamento();
             dgAgendamentos.DataSource = agendamento.ListarDadosAgendamentos().Tables[0];
-            lbDataAg.Text = Calendar.SelectionRange.Start.ToString();
+            lbDataAg.Text = Calendar.SelectionRange.Start.Date.ToString("d");
         }
 
         private void dgDentista_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -82,12 +82,12 @@ namespace ProjetoSISO {
             paciente.ConsultarDadosPacientes();
             lbNomePac.Text = paciente.NomePacientes;
             lbCpfPac.Text = paciente.CpfPacientes;
-            lbNascPac.Text = paciente.DataNascimentoPacientes;
+            lbNascPac.Text = paciente.DataNascimentoPacientes.ToString("d");
         }
 
-        private void txtHora_TextChanged(object sender, EventArgs e)
+        private void cbHora_SelectedValueChanged(object sender, EventArgs e)
         {
-            lbHora.Text = txtHora.Text;
+            lbHora.Text = cbHora.SelectedItem.ToString();
         }
     }
 }

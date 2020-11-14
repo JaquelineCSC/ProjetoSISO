@@ -16,7 +16,7 @@ namespace ProjetoSISO {
         private string estadoPacientes;
         private string cepPacientes;
         private string cidadePacientes;
-        private string dataNascimentoPacientes;
+        private DateTime dataNascimentoPacientes;
         private string sexoPacientes;
         private string telefonePacientes;
         private string celularPacientes;
@@ -28,7 +28,7 @@ namespace ProjetoSISO {
         public string EstadoPacientes { get => estadoPacientes; set => estadoPacientes = value; }
         public string CepPacientes { get => cepPacientes; set => cepPacientes = value; }
         public string CidadePacientes { get => cidadePacientes; set => cidadePacientes = value; }
-        public string DataNascimentoPacientes { get => dataNascimentoPacientes; set => dataNascimentoPacientes = value; }
+        public DateTime DataNascimentoPacientes { get => dataNascimentoPacientes; set => dataNascimentoPacientes = value; }
         public string SexoPacientes { get => sexoPacientes; set => sexoPacientes = value; }
         public string TelefonePacientes { get => telefonePacientes; set => telefonePacientes = value; }
         public string CelularPacientes { get => celularPacientes; set => celularPacientes = value; }
@@ -66,7 +66,7 @@ namespace ProjetoSISO {
             estadoPacientes = auxiliar[3];
             cepPacientes = auxiliar[4];
             cidadePacientes = auxiliar[5];
-            dataNascimentoPacientes = auxiliar[6];
+            dataNascimentoPacientes = DateTime.Parse(auxiliar[6]);
             sexoPacientes = auxiliar[7];
             telefonePacientes = auxiliar[8];
             celularPacientes = auxiliar[9];

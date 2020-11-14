@@ -31,36 +31,36 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDentista = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtHora = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgAgendamentos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lbNomePac = new System.Windows.Forms.Label();
-            this.lbCpfPac = new System.Windows.Forms.Label();
-            this.lbNascPac = new System.Windows.Forms.Label();
-            this.lbNomeDent = new System.Windows.Forms.Label();
-            this.lbEspDent = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lbDataAg = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lbHora = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lbHora = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lbDataAg = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbEspDent = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbNomeDent = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbNascPac = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbCpfPac = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbNomePac = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbHora = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgDentista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgAgendamentos)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -144,16 +144,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Data de agendamento";
             // 
-            // txtHora
-            // 
-            this.txtHora.Location = new System.Drawing.Point(918, 703);
-            this.txtHora.Mask = "00:00";
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(116, 26);
-            this.txtHora.TabIndex = 5;
-            this.txtHora.ValidatingType = typeof(System.DateTime);
-            this.txtHora.TextChanged += new System.EventHandler(this.txtHora_TextChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -196,56 +186,81 @@
             this.groupBox1.Size = new System.Drawing.Size(560, 866);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Confirmação de dados";
             // 
-            // button1
+            // groupBox4
             // 
-            this.button1.Location = new System.Drawing.Point(129, 511);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(264, 44);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Confirmar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.groupBox4.Controls.Add(this.lbHora);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.lbDataAg);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Location = new System.Drawing.Point(39, 349);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(446, 127);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
             // 
-            // label6
+            // lbHora
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(219, 29);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Nome do Paciente:";
+            this.lbHora.AutoSize = true;
+            this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHora.Location = new System.Drawing.Point(287, 74);
+            this.lbHora.Name = "lbHora";
+            this.lbHora.Size = new System.Drawing.Size(117, 29);
+            this.lbHora.TabIndex = 5;
+            this.lbHora.Text = "00000000";
             // 
-            // label7
+            // label12
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 72);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 29);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "CPF:";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(24, 74);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(232, 29);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Horário da Consulta:";
             // 
-            // label8
+            // lbDataAg
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(28, 116);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(236, 29);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Data de Nascimento:";
+            this.lbDataAg.AutoSize = true;
+            this.lbDataAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDataAg.Location = new System.Drawing.Point(287, 29);
+            this.lbDataAg.Name = "lbDataAg";
+            this.lbDataAg.Size = new System.Drawing.Size(117, 29);
+            this.lbDataAg.TabIndex = 5;
+            this.lbDataAg.Text = "00000000";
             // 
-            // label9
+            // label11
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(25, 29);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(212, 29);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Nome do Dentista:";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(24, 29);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(196, 29);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Data da consulta:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lbEspDent);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.lbNomeDent);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Location = new System.Drawing.Point(39, 224);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(446, 119);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            // 
+            // lbEspDent
+            // 
+            this.lbEspDent.AutoSize = true;
+            this.lbEspDent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEspDent.Location = new System.Drawing.Point(288, 74);
+            this.lbEspDent.Name = "lbEspDent";
+            this.lbEspDent.Size = new System.Drawing.Size(117, 29);
+            this.lbEspDent.TabIndex = 5;
+            this.lbEspDent.Text = "00000000";
             // 
             // label10
             // 
@@ -257,36 +272,6 @@
             this.label10.TabIndex = 5;
             this.label10.Text = "Especialização:";
             // 
-            // lbNomePac
-            // 
-            this.lbNomePac.AutoSize = true;
-            this.lbNomePac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomePac.Location = new System.Drawing.Point(291, 27);
-            this.lbNomePac.Name = "lbNomePac";
-            this.lbNomePac.Size = new System.Drawing.Size(117, 29);
-            this.lbNomePac.TabIndex = 1;
-            this.lbNomePac.Text = "00000000";
-            // 
-            // lbCpfPac
-            // 
-            this.lbCpfPac.AutoSize = true;
-            this.lbCpfPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCpfPac.Location = new System.Drawing.Point(291, 72);
-            this.lbCpfPac.Name = "lbCpfPac";
-            this.lbCpfPac.Size = new System.Drawing.Size(117, 29);
-            this.lbCpfPac.TabIndex = 2;
-            this.lbCpfPac.Text = "00000000";
-            // 
-            // lbNascPac
-            // 
-            this.lbNascPac.AutoSize = true;
-            this.lbNascPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNascPac.Location = new System.Drawing.Point(291, 116);
-            this.lbNascPac.Name = "lbNascPac";
-            this.lbNascPac.Size = new System.Drawing.Size(117, 29);
-            this.lbNascPac.TabIndex = 3;
-            this.lbNascPac.Text = "00000000";
-            // 
             // lbNomeDent
             // 
             this.lbNomeDent.AutoSize = true;
@@ -297,15 +282,15 @@
             this.lbNomeDent.TabIndex = 4;
             this.lbNomeDent.Text = "00000000";
             // 
-            // lbEspDent
+            // label9
             // 
-            this.lbEspDent.AutoSize = true;
-            this.lbEspDent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEspDent.Location = new System.Drawing.Point(288, 74);
-            this.lbEspDent.Name = "lbEspDent";
-            this.lbEspDent.Size = new System.Drawing.Size(117, 29);
-            this.lbEspDent.TabIndex = 5;
-            this.lbEspDent.Text = "00000000";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(25, 29);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(212, 29);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Nome do Dentista:";
             // 
             // groupBox2
             // 
@@ -321,77 +306,124 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
-            // groupBox3
+            // lbNascPac
             // 
-            this.groupBox3.Controls.Add(this.lbEspDent);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.lbNomeDent);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(39, 224);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(446, 119);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
+            this.lbNascPac.AutoSize = true;
+            this.lbNascPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNascPac.Location = new System.Drawing.Point(291, 116);
+            this.lbNascPac.Name = "lbNascPac";
+            this.lbNascPac.Size = new System.Drawing.Size(117, 29);
+            this.lbNascPac.TabIndex = 3;
+            this.lbNascPac.Text = "00000000";
             // 
-            // label11
+            // label8
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(24, 29);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(196, 29);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Data da consulta:";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(28, 116);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(236, 29);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Data de Nascimento:";
             // 
-            // lbDataAg
+            // lbCpfPac
             // 
-            this.lbDataAg.AutoSize = true;
-            this.lbDataAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDataAg.Location = new System.Drawing.Point(287, 29);
-            this.lbDataAg.Name = "lbDataAg";
-            this.lbDataAg.Size = new System.Drawing.Size(117, 29);
-            this.lbDataAg.TabIndex = 5;
-            this.lbDataAg.Text = "00000000";
+            this.lbCpfPac.AutoSize = true;
+            this.lbCpfPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCpfPac.Location = new System.Drawing.Point(291, 72);
+            this.lbCpfPac.Name = "lbCpfPac";
+            this.lbCpfPac.Size = new System.Drawing.Size(117, 29);
+            this.lbCpfPac.TabIndex = 2;
+            this.lbCpfPac.Text = "00000000";
             // 
-            // label12
+            // label7
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(24, 74);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(232, 29);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Horário da Consulta:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(28, 72);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 29);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "CPF:";
             // 
-            // lbHora
+            // lbNomePac
             // 
-            this.lbHora.AutoSize = true;
-            this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHora.Location = new System.Drawing.Point(287, 74);
-            this.lbHora.Name = "lbHora";
-            this.lbHora.Size = new System.Drawing.Size(117, 29);
-            this.lbHora.TabIndex = 5;
-            this.lbHora.Text = "00000000";
+            this.lbNomePac.AutoSize = true;
+            this.lbNomePac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNomePac.Location = new System.Drawing.Point(291, 27);
+            this.lbNomePac.Name = "lbNomePac";
+            this.lbNomePac.Size = new System.Drawing.Size(117, 29);
+            this.lbNomePac.TabIndex = 1;
+            this.lbNomePac.Text = "00000000";
             // 
-            // groupBox4
+            // label6
             // 
-            this.groupBox4.Controls.Add(this.lbHora);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.lbDataAg);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Location = new System.Drawing.Point(39, 349);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(446, 127);
-            this.groupBox4.TabIndex = 8;
-            this.groupBox4.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(28, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(219, 29);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Nome do Paciente:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(129, 511);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(264, 44);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Confirmar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // cbHora
+            // 
+            this.cbHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHora.FormattingEnabled = true;
+            this.cbHora.Items.AddRange(new object[] {
+            "07:00",
+            "07:30",
+            "08:00",
+            "08:30",
+            "09:00",
+            "09:30",
+            "10:00",
+            "10:30",
+            "11:00",
+            "11:30",
+            "12:00",
+            "12:30",
+            "13:00",
+            "13:30",
+            "14:00",
+            "14:30",
+            "15:00",
+            "15:30",
+            "16:00",
+            "16:30",
+            "17:00",
+            "18:00",
+            "18:30",
+            "19:00",
+            "19:30",
+            "20:00",
+            "20:30",
+            "21:00",
+            "21:30",
+            "22:00",
+            "22:30"});
+            this.cbHora.Location = new System.Drawing.Point(918, 703);
+            this.cbHora.Name = "cbHora";
+            this.cbHora.Size = new System.Drawing.Size(121, 28);
+            this.cbHora.TabIndex = 7;
+            this.cbHora.SelectedValueChanged += new System.EventHandler(this.cbHora_SelectedValueChanged);
             // 
             // frmAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1780, 976);
+            this.Controls.Add(this.cbHora);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtHora);
             this.Controls.Add(this.dgAgendamentos);
             this.Controls.Add(this.dgDentista);
             this.Controls.Add(this.Calendar);
@@ -410,12 +442,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgDentista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgAgendamentos)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,7 +463,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDentista;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox txtHora;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgAgendamentos;
@@ -454,5 +485,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox cbHora;
     }
 }

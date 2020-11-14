@@ -38,7 +38,7 @@ namespace ProjetoSISO
             dados.NomeDentista = txtNome.Text;
             bool condition = radioButton1.Checked;
             dados.SexoDentista = condition ? "F" : "M";
-            dados.DataNascimentoDentista = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+            dados.DataNascimentoDentista = dateTimePicker1.Value;
             dados.CpfDentista = txtCPF.Text;
             dados.EnderecoDentista = txtEndereco.Text;
             dados.CidadeDentista = txtCidade.Text;

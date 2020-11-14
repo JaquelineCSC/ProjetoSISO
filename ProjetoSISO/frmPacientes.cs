@@ -44,7 +44,7 @@ namespace ProjetoSISO {
             dp.CepPacientes = txtCep.Text;
             dp.TelefonePacientes = txtCelular.Text;
             dp.CelularPacientes = txtCelular.Text;
-            dp.DataNascimentoPacientes = dateTimePicker1.Value.ToString("dd/MM/yy");
+            dp.DataNascimentoPacientes = dateTimePicker1.Value;
             dp.EstadoPacientes = cboEstado.SelectedItem.ToString();
             dp.CidadePacientes = txtCidade.Text;
             bool condition = radioButtonFem.Checked;
