@@ -59,6 +59,12 @@ namespace ProjetoSISO
             string sql = "select p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where d.idDentista = " + dentista.IdDentista + " and a.dataAgendamento = '" + DataAgendamento + "'";
             return c.Listar(sql);
         }
+
+        public void InserirAgendamento()
+        {
+            string sql = "insert into Agendamento (dataAgendamento, horaAgendamento, idPaciente, idDentista) values ('" + DataAgendamento.ToString("d") + "', '" + HoraAgendamento + "', " + dentista.IdDentista + ", " + paciente.IdPacientes + ")";
+            c.Executar(sql);
+        }
     }
 
 

@@ -30,9 +30,6 @@ namespace ProjetoSISO {
             cn.Close();
         }
 
-       
-
-
         public void ConsultarPacientes(string sql) {
             Conectar();
             cd.Connection = cn;

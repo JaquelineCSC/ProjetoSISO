@@ -88,6 +88,12 @@ namespace ProjetoSISO {
         private void cbHora_SelectedValueChanged(object sender, EventArgs e)
         {
             lbHora.Text = cbHora.SelectedItem.ToString();
+            agendamento.HoraAgendamento = cbHora.SelectedItem.ToString();
+        }
+
+        private void cmdConfirmar_Click(object sender, EventArgs e)
+        {
+            agendamento.InserirAgendamento();
         }
     }
 }

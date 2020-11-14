@@ -52,7 +52,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbNomePac = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmdConfirmar = new System.Windows.Forms.Button();
             this.cbHora = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgDentista)).BeginInit();
@@ -180,7 +180,7 @@
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.cmdConfirmar);
             this.groupBox1.Location = new System.Drawing.Point(1156, 48);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(560, 866);
@@ -366,14 +366,15 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Nome do Paciente:";
             // 
-            // button1
+            // cmdConfirmar
             // 
-            this.button1.Location = new System.Drawing.Point(129, 511);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(264, 44);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Confirmar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cmdConfirmar.Location = new System.Drawing.Point(129, 511);
+            this.cmdConfirmar.Name = "cmdConfirmar";
+            this.cmdConfirmar.Size = new System.Drawing.Size(264, 44);
+            this.cmdConfirmar.TabIndex = 0;
+            this.cmdConfirmar.Text = "Confirmar";
+            this.cmdConfirmar.UseVisualStyleBackColor = true;
+            this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
             // 
             // cbHora
             // 
@@ -467,7 +468,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgAgendamentos;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cmdConfirmar;
         private System.Windows.Forms.Label lbEspDent;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbNomeDent;
