@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Drawing;
 
 namespace ProjetoSISO
 {
@@ -23,11 +25,17 @@ namespace ProjetoSISO
         public void ConsultarDadosAgendamento()
         {
             string sql = "";
-            sql += "select p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente";
+            sql += "select p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where d.idDentista = " + dentista.IdDentista + " and a.dataAgendamento = " + DataAgendamento;
             c.ConsultarAgendamentos(sql);
             string[] auxiliar = c.Campos.Split(';');
             DataAgendamento = auxiliar[0];
             HoraAgendamento = auxiliar[1];
+        }
+
+        public DataSet ListarDadosAgendamentos()
+        {
+            string sql = "select p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where d.idDentista = " + dentista.IdDentista + " and a.dataAgendamento = " + DataAgendamento;
+            return c.Listar(sql);
         }
     }
 

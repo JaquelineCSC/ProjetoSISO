@@ -12,8 +12,11 @@ namespace ProjetoSISO {
     public partial class frmAgendamento : Form {
         dadosDentista dentista = new dadosDentista();
         dadosPacientes paciente = new dadosPacientes();
+        dadosAgendamento agendamento = new dadosAgendamento();
         
         DateTime hoje = DateTime.Now.Date;
+
+
 
         public frmAgendamento() {
             InitializeComponent();
@@ -52,7 +55,15 @@ namespace ProjetoSISO {
 
         private void Calendar_DateChanged(object sender, DateRangeEventArgs e)
         {
+            agendamento.DataAgendamento = Calendar.SelectionRange.Start.ToString();
+            agendamento.ConsultarDadosAgendamento();
+            dgAgendamentos.DataSource = agendamento.ListarDadosAgendamentos().Tables[0];
+        }
 
+        private void dgDentista_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            dentista.IdDentista = Convert.ToInt32(dgDentista.Rows[e.RowIndex].Cells[0].Value.ToString());
+            dentista.ConsultarDadosDentista();
         }
     }
 }
