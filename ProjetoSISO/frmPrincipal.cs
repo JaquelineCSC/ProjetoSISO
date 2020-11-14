@@ -65,5 +65,11 @@ namespace ProjetoSISO
             frmAgendamento frm = new frmAgendamento();
             frm.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmRelatório relatório = new FrmRelatório();
+            relatório.Show();
+        }
     }
 }
