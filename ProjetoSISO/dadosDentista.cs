@@ -19,7 +19,7 @@ namespace ProjetoSISO
         private string estadoDentista;
         private string cepDentista;
         private string cidadeDentista;
-        private string dataNascimentoDentista;
+        private DateTime dataNascimentoDentista;
         private string sexoDentista;
         private string telefoneDentista;
         private string celularDentista;
@@ -33,7 +33,7 @@ namespace ProjetoSISO
         public string EstadoDentista { get => estadoDentista; set => estadoDentista = value; }
         public string CepDentista { get => cepDentista; set => cepDentista = value; }
         public string CidadeDentista { get => cidadeDentista; set => cidadeDentista = value; }
-        public string DataNascimentoDentista { get => dataNascimentoDentista; set => dataNascimentoDentista = value; }
+        public DateTime DataNascimentoDentista { get => dataNascimentoDentista; set => dataNascimentoDentista = value; }
         public string SexoDentista { get => sexoDentista; set => sexoDentista = value; }
         public string TelefoneDentista { get => telefoneDentista; set => telefoneDentista = value; }
         public string CelularDentista { get => celularDentista; set => celularDentista = value; }
@@ -76,7 +76,7 @@ namespace ProjetoSISO
             EstadoDentista = auxiliar[4];
             cepDentista = auxiliar[5];
             cidadeDentista = auxiliar[6];
-            dataNascimentoDentista = auxiliar[7];
+            dataNascimentoDentista = DateTime.Parse(auxiliar[7]);
             sexoDentista = auxiliar[8];
             telefoneDentista = auxiliar[9];
             celularDentista = auxiliar[10];

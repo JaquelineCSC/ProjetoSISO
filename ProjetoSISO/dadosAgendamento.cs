@@ -14,7 +14,7 @@ namespace ProjetoSISO
         dadosPacientes paciente;
         conexao c = new conexao();
         int idAgendamento;
-        string dataAgendamento;
+        DateTime dataAgendamento;
         string horaAgendamento;
 
         public dadosAgendamento(dadosDentista d, dadosPacientes p)
@@ -23,7 +23,7 @@ namespace ProjetoSISO
             paciente = p;
         }
         public int IdAgendamento { get => idAgendamento; set => idAgendamento = value; }
-        public string DataAgendamento { get => dataAgendamento; set => dataAgendamento = value; }
+        public DateTime DataAgendamento { get => dataAgendamento; set => dataAgendamento = value; }
         public string HoraAgendamento { get => horaAgendamento; set => horaAgendamento = value; }
 
 
@@ -48,7 +48,7 @@ namespace ProjetoSISO
             if(auxiliar[0]!="")
             {
                 IdAgendamento = int.Parse(auxiliar[0]);
-                DataAgendamento = auxiliar[1];
+                DataAgendamento = DateTime.Parse(auxiliar[1]);
                 HoraAgendamento = auxiliar[2];
 
             }
