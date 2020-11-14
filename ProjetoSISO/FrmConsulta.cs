@@ -53,16 +53,7 @@ namespace ProjetoSISO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(tipo==0)
-            {
-                dentista.NomeDentista = txtxNome.Text;
-                dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
-            }
-            else
-            {
-                paciente.NomePacientes = txtxNome.Text;
-                dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
-            }
+
         }
 
         private void cmdExcluir_Click(object sender, EventArgs e)
@@ -217,6 +208,20 @@ namespace ProjetoSISO
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtxNome_TextChanged(object sender, EventArgs e)
+        {
+            if (tipo == 0)
+            {
+                dentista.NomeDentista = txtxNome.Text;
+                dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
+            }
+            else
+            {
+                paciente.NomePacientes = txtxNome.Text;
+                dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
+            }
         }
     }
 }

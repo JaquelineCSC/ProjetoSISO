@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conexao.cs" />
+    <Compile Include="dadosAgendamento.cs" />
     <Compile Include="dadosPacientes.cs" />
     <Compile Include="dadosDentista.cs" />
     <Compile Include="frmAgendamento.cs">

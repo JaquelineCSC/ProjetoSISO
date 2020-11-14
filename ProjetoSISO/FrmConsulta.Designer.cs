@@ -34,7 +34,6 @@
             this.cmdExcluir = new System.Windows.Forms.Button();
             this.cmdAlterar = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEspecializacao = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -84,16 +83,17 @@
             // txtxNome
             // 
             this.txtxNome.Font = new System.Drawing.Font("Lucida Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtxNome.Location = new System.Drawing.Point(34, 53);
+            this.txtxNome.Location = new System.Drawing.Point(34, 72);
             this.txtxNome.Name = "txtxNome";
-            this.txtxNome.Size = new System.Drawing.Size(345, 23);
+            this.txtxNome.Size = new System.Drawing.Size(611, 23);
             this.txtxNome.TabIndex = 1;
+            this.txtxNome.TextChanged += new System.EventHandler(this.txtxNome_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 33);
+            this.label1.Location = new System.Drawing.Point(31, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 18);
@@ -108,7 +108,7 @@
             this.cmdExcluir.Image = global::ProjetoSISO.Properties.Resources.trash_52px;
             this.cmdExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdExcluir.Location = new System.Drawing.Point(191, 528);
-            this.cmdExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.cmdExcluir.Name = "cmdExcluir";
             this.cmdExcluir.Size = new System.Drawing.Size(99, 44);
             this.cmdExcluir.TabIndex = 13;
@@ -125,7 +125,7 @@
             this.cmdAlterar.Image = global::ProjetoSISO.Properties.Resources.edit_52px;
             this.cmdAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdAlterar.Location = new System.Drawing.Point(454, 528);
-            this.cmdAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdAlterar.Name = "cmdAlterar";
             this.cmdAlterar.Size = new System.Drawing.Size(97, 44);
             this.cmdAlterar.TabIndex = 14;
@@ -142,26 +142,12 @@
             this.cmdClose.FlatAppearance.BorderSize = 0;
             this.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdClose.Location = new System.Drawing.Point(1216, 6);
-            this.cmdClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdClose.Margin = new System.Windows.Forms.Padding(2);
             this.cmdClose.Name = "cmdClose";
             this.cmdClose.Size = new System.Drawing.Size(49, 41);
             this.cmdClose.TabIndex = 4;
             this.cmdClose.UseVisualStyleBackColor = true;
             this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::ProjetoSISO.Properties.Resources.search;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(391, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 37);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -204,7 +190,7 @@
             // 
             this.txtEspecializacao.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEspecializacao.Location = new System.Drawing.Point(191, 471);
-            this.txtEspecializacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEspecializacao.Margin = new System.Windows.Forms.Padding(4);
             this.txtEspecializacao.Name = "txtEspecializacao";
             this.txtEspecializacao.Size = new System.Drawing.Size(362, 27);
             this.txtEspecializacao.TabIndex = 12;
@@ -235,7 +221,7 @@
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone.Location = new System.Drawing.Point(191, 383);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(362, 27);
             this.txtTelefone.TabIndex = 10;
@@ -262,7 +248,7 @@
             // 
             this.txtNome.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(191, 19);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(362, 27);
             this.txtNome.TabIndex = 1;
@@ -375,7 +361,7 @@
             // 
             this.txtCep.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCep.Location = new System.Drawing.Point(191, 252);
-            this.txtCep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCep.Margin = new System.Windows.Forms.Padding(4);
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(362, 27);
             this.txtCep.TabIndex = 7;
@@ -384,7 +370,7 @@
             // 
             this.txtCidade.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(191, 209);
-            this.txtCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(4);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(362, 27);
             this.txtCidade.TabIndex = 6;
@@ -437,7 +423,7 @@
             // 
             this.txtEndereco.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(191, 168);
-            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(362, 27);
             this.txtEndereco.TabIndex = 5;
@@ -446,7 +432,7 @@
             // 
             this.txtCelular.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelular.Location = new System.Drawing.Point(191, 341);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(4);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(362, 27);
             this.txtCelular.TabIndex = 9;
@@ -455,7 +441,7 @@
             // 
             this.txtCPF.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPF.Location = new System.Drawing.Point(191, 129);
-            this.txtCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(4);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(362, 27);
             this.txtCPF.TabIndex = 4;
@@ -475,7 +461,7 @@
             // 
             this.txtCRO.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCRO.Location = new System.Drawing.Point(191, 428);
-            this.txtCRO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCRO.Margin = new System.Windows.Forms.Padding(4);
             this.txtCRO.Name = "txtCRO";
             this.txtCRO.Size = new System.Drawing.Size(362, 27);
             this.txtCRO.TabIndex = 11;
@@ -501,7 +487,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtxNome);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -524,7 +509,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtxNome;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cmdClose;
         private System.Windows.Forms.Button cmdAlterar;

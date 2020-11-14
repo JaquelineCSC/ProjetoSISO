@@ -24,120 +24,123 @@
         /// </summary>
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.txtPaciente = new System.Windows.Forms.TextBox();
+            this.dgPaciente = new System.Windows.Forms.DataGridView();
+            this.Calendar = new System.Windows.Forms.MonthCalendar();
+            this.dgDentista = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDentista = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtHora = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgAgendamentos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPaciente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDentista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgAgendamentos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 47);
+            this.label1.Location = new System.Drawing.Point(35, 442);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nome";
+            this.label1.Text = "Paciente";
             // 
-            // textBox1
+            // txtPaciente
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 62);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtPaciente.Location = new System.Drawing.Point(38, 457);
+            this.txtPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaciente.Name = "txtPaciente";
+            this.txtPaciente.Size = new System.Drawing.Size(203, 20);
+            this.txtPaciente.TabIndex = 1;
+            this.txtPaciente.TextChanged += new System.EventHandler(this.txtPaciente_TextChanged);
             // 
-            // dataGridView1
+            // dgPaciente
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(76, 93);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(431, 106);
-            this.dataGridView1.TabIndex = 2;
+            this.dgPaciente.AllowUserToAddRows = false;
+            this.dgPaciente.AllowUserToDeleteRows = false;
+            this.dgPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPaciente.Location = new System.Drawing.Point(38, 488);
+            this.dgPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgPaciente.Name = "dgPaciente";
+            this.dgPaciente.ReadOnly = true;
+            this.dgPaciente.RowHeadersWidth = 62;
+            this.dgPaciente.RowTemplate.Height = 28;
+            this.dgPaciente.Size = new System.Drawing.Size(651, 106);
+            this.dgPaciente.TabIndex = 2;
             // 
-            // monthCalendar1
+            // Calendar
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(76, 247);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 3;
+            this.Calendar.Location = new System.Drawing.Point(477, 100);
+            this.Calendar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Calendar.Name = "Calendar";
+            this.Calendar.TabIndex = 3;
+            this.Calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendar_DateChanged);
             // 
-            // dataGridView2
+            // dgDentista
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(76, 493);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(431, 114);
-            this.dataGridView2.TabIndex = 4;
+            this.dgDentista.AllowUserToAddRows = false;
+            this.dgDentista.AllowUserToDeleteRows = false;
+            this.dgDentista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDentista.Location = new System.Drawing.Point(38, 100);
+            this.dgDentista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgDentista.Name = "dgDentista";
+            this.dgDentista.ReadOnly = true;
+            this.dgDentista.RowHeadersWidth = 62;
+            this.dgDentista.RowTemplate.Height = 28;
+            this.dgDentista.Size = new System.Drawing.Size(431, 164);
+            this.dgDentista.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 450);
+            this.label2.Location = new System.Drawing.Point(35, 57);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dentista";
             // 
-            // textBox2
+            // txtDentista
             // 
-            this.textBox2.Location = new System.Drawing.Point(76, 465);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtDentista.Location = new System.Drawing.Point(38, 72);
+            this.txtDentista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDentista.Name = "txtDentista";
+            this.txtDentista.Size = new System.Drawing.Size(203, 20);
+            this.txtDentista.TabIndex = 1;
+            this.txtDentista.TextChanged += new System.EventHandler(this.txtDentista_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(73, 228);
+            this.label3.Location = new System.Drawing.Point(474, 81);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Data de agendamento";
             // 
-            // maskedTextBox1
+            // txtHora
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(76, 640);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox1.Mask = "00:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(68, 20);
-            this.maskedTextBox1.TabIndex = 5;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.txtHora.Location = new System.Drawing.Point(612, 457);
+            this.txtHora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHora.Mask = "00:00";
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(79, 20);
+            this.txtHora.TabIndex = 5;
+            this.txtHora.ValidatingType = typeof(System.DateTime);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 624);
+            this.label4.Location = new System.Drawing.Point(609, 441);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
@@ -147,35 +150,35 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(328, 231);
+            this.label5.Location = new System.Drawing.Point(35, 284);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(189, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Consultas do dentista no dia informado";
             // 
-            // dataGridView3
+            // dgAgendamentos
             // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(331, 247);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersWidth = 62;
-            this.dataGridView3.RowTemplate.Height = 28;
-            this.dataGridView3.Size = new System.Drawing.Size(431, 114);
-            this.dataGridView3.TabIndex = 4;
+            this.dgAgendamentos.AllowUserToAddRows = false;
+            this.dgAgendamentos.AllowUserToDeleteRows = false;
+            this.dgAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgAgendamentos.Location = new System.Drawing.Point(38, 300);
+            this.dgAgendamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgAgendamentos.Name = "dgAgendamentos";
+            this.dgAgendamentos.ReadOnly = true;
+            this.dgAgendamentos.RowHeadersWidth = 62;
+            this.dgAgendamentos.RowTemplate.Height = 28;
+            this.dgAgendamentos.Size = new System.Drawing.Size(651, 114);
+            this.dgAgendamentos.TabIndex = 4;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(795, 47);
+            this.groupBox1.Location = new System.Drawing.Point(771, 31);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(480, 712);
+            this.groupBox1.Size = new System.Drawing.Size(633, 712);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -194,26 +197,27 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 749);
+            this.ClientSize = new System.Drawing.Size(1283, 690);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtHora);
+            this.Controls.Add(this.dgAgendamentos);
+            this.Controls.Add(this.dgDentista);
+            this.Controls.Add(this.Calendar);
+            this.Controls.Add(this.dgPaciente);
+            this.Controls.Add(this.txtDentista);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPaciente);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAgendamento";
             this.Text = "frmAgendamento";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.Load += new System.EventHandler(this.frmAgendamento_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgPaciente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDentista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgAgendamentos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -223,17 +227,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox txtPaciente;
+        private System.Windows.Forms.DataGridView dgPaciente;
+        private System.Windows.Forms.MonthCalendar Calendar;
+        private System.Windows.Forms.DataGridView dgDentista;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDentista;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtHora;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgAgendamentos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
     }

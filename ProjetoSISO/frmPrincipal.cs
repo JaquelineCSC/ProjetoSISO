@@ -59,5 +59,11 @@ namespace ProjetoSISO
         {
             panelMenuEsquerda.Enabled = true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmAgendamento frm = new frmAgendamento();
+            frm.Show();
+        }
     }
 }
