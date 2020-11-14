@@ -39,6 +39,8 @@ namespace ProjetoSISO
                 label11.Visible = false;
                 txtCRO.Visible = false;
                 txtEspecializacao.Visible = false;
+                txtCRO.Text = ".";
+                txtEspecializacao.Text = ".";
                 paciente.NomePacientes = "";
                 dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
                 dataGridView1.Columns[0].Visible = false;
@@ -93,7 +95,7 @@ namespace ProjetoSISO
                 dentista.CpfDentista = txtCPF.Text;
                 dentista.EnderecoDentista = txtEndereco.Text;
                 dentista.CidadeDentista = txtCidade.Text;
-                dentista.EstadoDentista = cbEstado.SelectedIndex.ToString();
+                dentista.EstadoDentista = cbEstado.SelectedItem.ToString();
                 dentista.CepDentista = txtCep.Text;
                 dentista.CelularDentista = txtCelular.Text;
                 dentista.TelefoneDentista = txtTelefone.Text;
@@ -104,8 +106,8 @@ namespace ProjetoSISO
                 {
                     dentista.AlterarDadosDentista();
                     MessageBox.Show("Alteração efetuada com sucesso!");
+                    dentista.NomeDentista = "";
                     dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
-                    groupBox1.Enabled = false;
                 }
                 else
                     MessageBox.Show("Preencha todas informações!");
@@ -119,7 +121,7 @@ namespace ProjetoSISO
                 paciente.CpfPacientes = txtCPF.Text;
                 paciente.EnderecoPacientes = txtEndereco.Text;
                 paciente.CidadePacientes = txtCidade.Text;
-                paciente.EstadoPacientes = cbEstado.SelectedIndex.ToString();
+                paciente.EstadoPacientes = cbEstado.SelectedItem.ToString();
                 paciente.CepPacientes = txtCep.Text;
                 paciente.CelularPacientes = txtCelular.Text;
                 paciente.TelefonePacientes = txtTelefone.Text;
@@ -128,8 +130,8 @@ namespace ProjetoSISO
                 {
                     paciente.AlterarDadosPacientes();
                     MessageBox.Show("Alteração efetuada com sucesso!");
+                    paciente.NomePacientes = "";
                     dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
-                    groupBox1.Enabled = false;
                 }
                 else
                     MessageBox.Show("Preencha todas informações!");
