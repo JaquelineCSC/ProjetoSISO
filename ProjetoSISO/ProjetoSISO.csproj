@@ -139,6 +139,7 @@
     <EmbeddedResource Include="FrmRelatório.resx">
       <DependentUpon>FrmRelatório.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pacientes.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -149,7 +150,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="packages.config" />
     <None Include="ProjetoSISODataSet.xsc">
       <DependentUpon>ProjetoSISODataSet.xsd</DependentUpon>

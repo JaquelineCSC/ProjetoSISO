@@ -17,18 +17,23 @@ namespace ProjetoSISO
             InitializeComponent();
         }
 
-        private void FrmRelatório_Load(object sender, EventArgs e)
+        private void reportViewer1_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'ProjetoSISODataSet.Agendamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.AgendamentoTableAdapter.Fill(this.ProjetoSISODataSet.Agendamento);
 
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
         }
 
-        private void cmdGerarRelatorio_Click(object sender, EventArgs e)
+        private void FrmRelatório_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmdPacientes_Click(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'ProjetoSISODataSet.Pacientes'. Você pode movê-la ou removê-la conforme necessário.
+            this.PacientesTableAdapter.Fill(this.ProjetoSISODataSet.Pacientes);
+
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
     }
 }
