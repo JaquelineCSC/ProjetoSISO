@@ -6,22 +6,65 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.06104cm</Width>
+              <Width>6.91854cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.32563cm</Width>
+              <Width>3.66417cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.53729cm</Width>
+              <Width>6.41583cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.29375cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.26729cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
               <Height>0.6cm</Height>
               <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Nome</Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#666666</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox3">
@@ -31,7 +74,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nome</Value>
+                              <Value>CPF</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -222,6 +265,39 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="CPFPaciente">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!CPFPaciente.Value</Value>
+                              <Style>
+                                <FontWeight>Normal</FontWeight>
+                                <Color>#333333</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>CPFPaciente</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="cidadePaciente">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -329,6 +405,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -343,7 +420,7 @@
         </TablixRowHierarchy>
         <DataSetName>Pacientes</DataSetName>
         <Height>1.2cm</Height>
-        <Width>15.42396cm</Width>
+        <Width>23.55958cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -354,7 +431,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>9.48376in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -367,18 +444,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ProjetoSISODataSet">
+    <DataSource Name="ProjetoSISO2DataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>759802e9-1343-45d2-ab56-c1990a10529b</rd:DataSourceID>
+      <rd:DataSourceID>bdb1eff1-bb93-4d04-a54c-032b4d4ed4f6</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="Pacientes">
       <Query>
-        <DataSourceName>ProjetoSISODataSet</DataSourceName>
+        <DataSourceName>ProjetoSISO2DataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -428,8 +505,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ProjetoSISODataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\cruzi\Documents\GitHub\ProjetoSISO\ProjetoSISO\ProjetoSISODataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>ProjetoSISO2DataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\cruzi\Documents\GitHub\ProjetoSISO\ProjetoSISO\ProjetoSISO2DataSet.xsd</rd:SchemaPath>
         <rd:TableName>Pacientes</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -438,5 +515,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>e33efa09-0ba7-4df7-bc1e-429a1546ec58</rd:ReportID>
+  <rd:ReportID>903b2483-5db2-42c9-aa75-267445cc88c0</rd:ReportID>
 </Report>
