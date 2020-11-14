@@ -28,16 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ProjetoSISODataSet = new ProjetoSISO.ProjetoSISODataSet();
             this.cmdAgenda = new System.Windows.Forms.Button();
             this.cmdPacientes = new System.Windows.Forms.Button();
-            this.PacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.PacientesTableAdapter = new ProjetoSISO.ProjetoSISODataSetTableAdapters.PacientesTableAdapter();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.cmdDentista = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISODataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PacientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ProjetoSISODataSet
@@ -47,58 +43,55 @@
             // 
             // cmdAgenda
             // 
-            this.cmdAgenda.Location = new System.Drawing.Point(700, 370);
+            this.cmdAgenda.Location = new System.Drawing.Point(305, 133);
             this.cmdAgenda.Name = "cmdAgenda";
-            this.cmdAgenda.Size = new System.Drawing.Size(88, 28);
+            this.cmdAgenda.Size = new System.Drawing.Size(185, 65);
             this.cmdAgenda.TabIndex = 1;
             this.cmdAgenda.Text = "&Agendamentos";
             this.cmdAgenda.UseVisualStyleBackColor = true;
             // 
             // cmdPacientes
             // 
-            this.cmdPacientes.Location = new System.Drawing.Point(594, 370);
+            this.cmdPacientes.Location = new System.Drawing.Point(305, 216);
             this.cmdPacientes.Name = "cmdPacientes";
-            this.cmdPacientes.Size = new System.Drawing.Size(88, 28);
+            this.cmdPacientes.Size = new System.Drawing.Size(185, 56);
             this.cmdPacientes.TabIndex = 3;
             this.cmdPacientes.Text = "&Pacientes";
-            this.cmdPacientes.UseVisualStyleBackColor = true;
             this.cmdPacientes.Click += new System.EventHandler(this.cmdPacientes_Click);
             // 
-            // PacientesBindingSource
+            // cmdDentista
             // 
-            this.PacientesBindingSource.DataMember = "Pacientes";
-            this.PacientesBindingSource.DataSource = this.ProjetoSISODataSet;
+            this.cmdDentista.Location = new System.Drawing.Point(305, 290);
+            this.cmdDentista.Name = "cmdDentista";
+            this.cmdDentista.Size = new System.Drawing.Size(185, 64);
+            this.cmdDentista.TabIndex = 5;
+            this.cmdDentista.Text = "&Dentistas";
+            this.cmdDentista.UseVisualStyleBackColor = true;
+            this.cmdDentista.Click += new System.EventHandler(this.cmdDentista_Click);
             // 
-            // PacientesTableAdapter
+            // label1
             // 
-            this.PacientesTableAdapter.ClearBeforeFill = true;
-            // 
-            // reportViewer1
-            // 
-            reportDataSource2.Name = "Pacientes";
-            reportDataSource2.Value = this.PacientesBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoSISO.Pacientes.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 75);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(776, 246);
-            this.reportViewer1.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(369, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Relatórios";
             // 
             // FrmRelatório
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.ClientSize = new System.Drawing.Size(800, 420);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmdDentista);
             this.Controls.Add(this.cmdPacientes);
             this.Controls.Add(this.cmdAgenda);
             this.Name = "FrmRelatório";
             this.Text = "FrmRelatório";
-            this.Load += new System.EventHandler(this.FrmRelatório_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISODataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PacientesBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -106,8 +99,7 @@
         private System.Windows.Forms.Button cmdAgenda;
         private ProjetoSISODataSet ProjetoSISODataSet;
         private System.Windows.Forms.Button cmdPacientes;
-        private System.Windows.Forms.BindingSource PacientesBindingSource;
-        private ProjetoSISODataSetTableAdapters.PacientesTableAdapter PacientesTableAdapter;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Button cmdDentista;
+        private System.Windows.Forms.Label label1;
     }
 }

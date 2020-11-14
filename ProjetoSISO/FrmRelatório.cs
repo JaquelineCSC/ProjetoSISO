@@ -17,23 +17,16 @@ namespace ProjetoSISO
             InitializeComponent();
         }
 
-        private void reportViewer1_Load(object sender, EventArgs e)
+        private void cmdDentista_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void FrmRelatório_Load(object sender, EventArgs e)
-        {
-
+            FrmRelatorioDentistas relatorioDentistas = new FrmRelatorioDentistas();
+            relatorioDentistas.Show();
         }
 
         private void cmdPacientes_Click(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'ProjetoSISODataSet.Pacientes'. Você pode movê-la ou removê-la conforme necessário.
-            this.PacientesTableAdapter.Fill(this.ProjetoSISODataSet.Pacientes);
-
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
+            FrmRelatorioPaciente relatorioPaciente = new FrmRelatorioPaciente();
+            relatorioPaciente.Show();
         }
     }
 }

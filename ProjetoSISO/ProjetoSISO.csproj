@@ -107,6 +107,18 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRelatorioDentistas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioDentistas.Designer.cs">
+      <DependentUpon>FrmRelatorioDentistas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorioPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioPaciente.Designer.cs">
+      <DependentUpon>FrmRelatorioPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRelatório.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +133,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Dentistas.rdlc" />
     <EmbeddedResource Include="frmAgendamento.resx">
       <DependentUpon>frmAgendamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +148,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioDentistas.resx">
+      <DependentUpon>FrmRelatorioDentistas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioPaciente.resx">
+      <DependentUpon>FrmRelatorioPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRelatório.resx">
       <DependentUpon>FrmRelatório.cs</DependentUpon>
