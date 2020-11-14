@@ -51,7 +51,7 @@ namespace ProjetoSISO
         public void AlterarDadosDentista()
         {
             string sql = "";
-            sql += "Update Dentistas set CPFDentista = '" + CpfDentista + "', CROdentista = '" + CroDentista + "', nomeDentista = '" + NomeDentista + "', enderecoDentista = '" + EnderecoDentista + "', esatadoDentista = '" + EstadoDentista + "', CEPDentista = '" + CepDentista + "', cidadeDentista = '" + CidadeDentista + "',dataNascDentista = '" + dataNascimentoDentista + "', sexoDentista = '" + SexoDentista + "', telefoneDentista = '" + TelefoneDentista + "', celularDentista = '" + CelularDentista + "', especializacaoDentista = '" +EspecializacaoDentista + "'  where idDentista = " + IdDentista.ToString();
+            sql += "Update Dentistas set CPFDentista = '" + CpfDentista + "', CROdentista = '" + CroDentista + "', nomeDentista = '" + NomeDentista + "', enderecoDentista = '" + EnderecoDentista + "', estadoDentista = '" + EstadoDentista + "', CEPDentista = '" + CepDentista + "', cidadeDentista = '" + CidadeDentista + "',dataNascDentista = '" + dataNascimentoDentista + "', sexoDentista = '" + SexoDentista + "', telefoneDentista = '" + TelefoneDentista + "', celularDentista = '" + CelularDentista + "', especializacaoDentista = '" +EspecializacaoDentista + "'  where idDentista = " + IdDentista.ToString();
             c.Executar(sql);
         }
 
