@@ -12,7 +12,7 @@ namespace ProjetoSISO {
     public partial class frmAgendamento : Form {
         dadosDentista dentista = new dadosDentista();
         dadosPacientes paciente = new dadosPacientes();
-        dadosAgendamento agendamento = new dadosAgendamento();
+        dadosAgendamento agendamento;
         
         DateTime hoje = DateTime.Now.Date;
 
@@ -24,13 +24,18 @@ namespace ProjetoSISO {
 
         private void frmAgendamento_Load(object sender, EventArgs e)
         {
+            
+            dgAgendamentos.ReadOnly = true;
+            dgAgendamentos.MultiSelect = false;
+            dgAgendamentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            agendamento = new dadosAgendamento(dentista, paciente);
             dentista.NomeDentista = "";
             dgDentista.DataSource = dentista.ListarDadosDentista().Tables[0];
             dgDentista.Columns[0].Visible = false;
             dgDentista.ReadOnly = true;
             dgDentista.MultiSelect = false;
             dgDentista.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgDentista.Rows[0].Selected = true;
 
             paciente.NomePacientes = "";
             dgPaciente.DataSource = paciente.ListarDadosPacientes().Tables[0];
@@ -38,7 +43,7 @@ namespace ProjetoSISO {
             dgPaciente.ReadOnly = true;
             dgPaciente.MultiSelect = false;
             dgPaciente.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgPaciente.Rows[0].Selected = true;
+
         }
 
         private void txtDentista_TextChanged(object sender, EventArgs e)
@@ -55,15 +60,34 @@ namespace ProjetoSISO {
 
         private void Calendar_DateChanged(object sender, DateRangeEventArgs e)
         {
-            agendamento.DataAgendamento = Calendar.SelectionRange.Start.ToString();
+            agendamento.DataAgendamento = Calendar.SelectionRange.Start.Date.ToString("dd/MM/yy");
             agendamento.ConsultarDadosAgendamento();
             dgAgendamentos.DataSource = agendamento.ListarDadosAgendamentos().Tables[0];
+            lbDataAg.Text = Calendar.SelectionRange.Start.ToString();
         }
 
         private void dgDentista_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             dentista.IdDentista = Convert.ToInt32(dgDentista.Rows[e.RowIndex].Cells[0].Value.ToString());
             dentista.ConsultarDadosDentista();
+            agendamento.ConsultarDadosAgendamento();
+            dgAgendamentos.DataSource = agendamento.ListarDadosAgendamentos().Tables[0];
+            lbNomeDent.Text = dentista.NomeDentista;
+            lbEspDent.Text = dentista.EspecializacaoDentista;
+        }
+
+        private void dgPaciente_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            paciente.IdPacientes = Convert.ToInt32(dgPaciente.Rows[e.RowIndex].Cells[0].Value.ToString());
+            paciente.ConsultarDadosPacientes();
+            lbNomePac.Text = paciente.NomePacientes;
+            lbCpfPac.Text = paciente.CpfPacientes;
+            lbNascPac.Text = paciente.DataNascimentoPacientes;
+        }
+
+        private void txtHora_TextChanged(object sender, EventArgs e)
+        {
+            lbHora.Text = txtHora.Text;
         }
     }
 }

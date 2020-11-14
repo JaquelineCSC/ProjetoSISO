@@ -89,6 +89,24 @@ namespace ProjetoSISO {
             return ds;
         }
 
+        //public void ConsultarAgendamentos(string sql)
+        //{
+        //    Conectar();
+        //    cd.Connection = cn;
+        //    cd.CommandText = sql;
+        //    SqlDataReader dr = cd.ExecuteReader();
+
+        //    Campos = "";
+        //    if (dr.Read())
+        //    {
+        //        Campos += dr["nomePaciente"].ToString() + ";";
+        //        Campos += dr["nomeDentista"].ToString() + ";";
+        //        Campos += dr["dataAgendamento"].ToString() + ";";
+        //        Campos += dr["horaAgendamento"].ToString() + ";";
+        //        cn.Close();
+        //    }
+        //}
+
         public void ConsultarAgendamentos(string sql)
         {
             Conectar();
@@ -106,6 +124,7 @@ namespace ProjetoSISO {
                 Campos += dr["idDentista"].ToString() + ";";
                 cn.Close();
             }
+            cn.Close();
         }
     }
 }
