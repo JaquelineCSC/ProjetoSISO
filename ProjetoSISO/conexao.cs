@@ -88,5 +88,24 @@ namespace ProjetoSISO {
             cn.Close();
             return ds;
         }
+
+        public void ConsultarAgendamentos(string sql)
+        {
+            Conectar();
+            cd.Connection = cn;
+            cd.CommandText = sql;
+            SqlDataReader dr = cd.ExecuteReader();
+
+            Campos = "";
+            if (dr.Read())
+            {
+                Campos += dr["idAgendamento"].ToString() + ";";
+                Campos += dr["dataAgendamento"].ToString() + ";";
+                Campos += dr["horaAgendamento"].ToString() + ";";
+                Campos += dr["idPaciente"].ToString() + ";";
+                Campos += dr["idDentista"].ToString() + ";";
+                cn.Close();
+            }
+        }
     }
 }
