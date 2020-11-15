@@ -129,5 +129,10 @@ namespace ProjetoSISO {
             this.Close();
             p.Enabled = true;
         }
+
+        private void cmdLimpar_Click(object sender, EventArgs e)
+        {
+            Limpar();
+        }
     }
 }

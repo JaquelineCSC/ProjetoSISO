@@ -52,9 +52,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbNomePac = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmdConfirmar = new System.Windows.Forms.Button();
             this.cbHora = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cmdLimpar = new System.Windows.Forms.Button();
+            this.cmdConfirmar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgDentista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgAgendamentos)).BeginInit();
@@ -67,19 +69,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 850);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(71, 806);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 25);
+            this.label1.Size = new System.Drawing.Size(107, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Paciente";
             // 
             // txtPaciente
             // 
-            this.txtPaciente.Location = new System.Drawing.Point(76, 879);
-            this.txtPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPaciente.Location = new System.Drawing.Point(76, 839);
+            this.txtPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.Size = new System.Drawing.Size(401, 30);
+            this.txtPaciente.Size = new System.Drawing.Size(424, 30);
             this.txtPaciente.TabIndex = 1;
             this.txtPaciente.TextChanged += new System.EventHandler(this.txtPaciente_TextChanged);
             // 
@@ -87,20 +90,22 @@
             // 
             this.dgPaciente.AllowUserToAddRows = false;
             this.dgPaciente.AllowUserToDeleteRows = false;
+            this.dgPaciente.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPaciente.Location = new System.Drawing.Point(76, 939);
-            this.dgPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgPaciente.Location = new System.Drawing.Point(76, 877);
+            this.dgPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.dgPaciente.Name = "dgPaciente";
             this.dgPaciente.ReadOnly = true;
             this.dgPaciente.RowHeadersWidth = 62;
             this.dgPaciente.RowTemplate.Height = 28;
-            this.dgPaciente.Size = new System.Drawing.Size(1301, 204);
+            this.dgPaciente.Size = new System.Drawing.Size(1218, 204);
             this.dgPaciente.TabIndex = 2;
             this.dgPaciente.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPaciente_CellEnter);
             // 
             // Calendar
             // 
-            this.Calendar.Location = new System.Drawing.Point(955, 192);
+            this.Calendar.BackColor = System.Drawing.SystemColors.Menu;
+            this.Calendar.Location = new System.Drawing.Point(975, 192);
             this.Calendar.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.Calendar.MaxDate = new System.DateTime(2500, 2, 2, 0, 0, 0, 0);
             this.Calendar.MaxSelectionCount = 1;
@@ -113,9 +118,10 @@
             // 
             this.dgDentista.AllowUserToAddRows = false;
             this.dgDentista.AllowUserToDeleteRows = false;
+            this.dgDentista.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgDentista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDentista.Location = new System.Drawing.Point(76, 192);
-            this.dgDentista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgDentista.Margin = new System.Windows.Forms.Padding(4);
             this.dgDentista.Name = "dgDentista";
             this.dgDentista.ReadOnly = true;
             this.dgDentista.RowHeadersWidth = 62;
@@ -127,49 +133,53 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 110);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(71, 121);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 25);
+            this.label2.Size = new System.Drawing.Size(100, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dentista";
             // 
             // txtDentista
             // 
-            this.txtDentista.Location = new System.Drawing.Point(76, 139);
-            this.txtDentista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDentista.Location = new System.Drawing.Point(76, 154);
+            this.txtDentista.Margin = new System.Windows.Forms.Padding(4);
             this.txtDentista.Name = "txtDentista";
-            this.txtDentista.Size = new System.Drawing.Size(401, 30);
+            this.txtDentista.Size = new System.Drawing.Size(424, 30);
             this.txtDentista.TabIndex = 1;
             this.txtDentista.TextChanged += new System.EventHandler(this.txtDentista_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(948, 156);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(968, 156);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 25);
+            this.label3.Size = new System.Drawing.Size(250, 29);
             this.label3.TabIndex = 0;
             this.label3.Text = "Data de agendamento";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1219, 848);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1128, 795);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 25);
+            this.label4.Size = new System.Drawing.Size(93, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "Horário";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(69, 546);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(71, 528);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(349, 25);
+            this.label5.Size = new System.Drawing.Size(429, 29);
             this.label5.TabIndex = 0;
             this.label5.Text = "Consultas do dentista no dia informado";
             // 
@@ -177,30 +187,32 @@
             // 
             this.dgAgendamentos.AllowUserToAddRows = false;
             this.dgAgendamentos.AllowUserToDeleteRows = false;
+            this.dgAgendamentos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgAgendamentos.Location = new System.Drawing.Point(76, 578);
-            this.dgAgendamentos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgAgendamentos.Location = new System.Drawing.Point(76, 562);
+            this.dgAgendamentos.Margin = new System.Windows.Forms.Padding(4);
             this.dgAgendamentos.Name = "dgAgendamentos";
             this.dgAgendamentos.ReadOnly = true;
             this.dgAgendamentos.RowHeadersWidth = 62;
             this.dgAgendamentos.RowTemplate.Height = 28;
-            this.dgAgendamentos.Size = new System.Drawing.Size(1301, 219);
+            this.dgAgendamentos.Size = new System.Drawing.Size(1218, 219);
             this.dgAgendamentos.TabIndex = 4;
             // 
             // gbDados
             // 
+            this.gbDados.Controls.Add(this.cmdLimpar);
             this.gbDados.Controls.Add(this.groupBox4);
             this.gbDados.Controls.Add(this.groupBox3);
             this.gbDados.Controls.Add(this.groupBox2);
             this.gbDados.Controls.Add(this.cmdConfirmar);
-            this.gbDados.Location = new System.Drawing.Point(1541, 60);
-            this.gbDados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gbDados.Location = new System.Drawing.Point(1327, 139);
+            this.gbDados.Margin = new System.Windows.Forms.Padding(4);
             this.gbDados.Name = "gbDados";
-            this.gbDados.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbDados.Size = new System.Drawing.Size(747, 1082);
+            this.gbDados.Padding = new System.Windows.Forms.Padding(4);
+            this.gbDados.Size = new System.Drawing.Size(643, 742);
             this.gbDados.TabIndex = 6;
             this.gbDados.TabStop = false;
-            this.gbDados.Text = "Confirmação de dados";
             // 
             // groupBox4
             // 
@@ -208,11 +220,12 @@
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.lbDataAg);
             this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Location = new System.Drawing.Point(52, 436);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox4.Location = new System.Drawing.Point(52, 429);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Size = new System.Drawing.Size(595, 159);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(546, 159);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             // 
@@ -266,11 +279,12 @@
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.lbNomeDent);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(52, 280);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Location = new System.Drawing.Point(52, 273);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(595, 149);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(546, 149);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
@@ -326,11 +340,12 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.lbNomePac);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(52, 66);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Location = new System.Drawing.Point(52, 59);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(595, 206);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(546, 206);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
@@ -400,20 +415,11 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Nome do Paciente:";
             // 
-            // cmdConfirmar
-            // 
-            this.cmdConfirmar.Location = new System.Drawing.Point(172, 639);
-            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmdConfirmar.Name = "cmdConfirmar";
-            this.cmdConfirmar.Size = new System.Drawing.Size(352, 55);
-            this.cmdConfirmar.TabIndex = 0;
-            this.cmdConfirmar.Text = "Confirmar";
-            this.cmdConfirmar.UseVisualStyleBackColor = true;
-            this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
-            // 
             // cbHora
             // 
+            this.cbHora.BackColor = System.Drawing.SystemColors.Control;
             this.cbHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHora.FormattingEnabled = true;
             this.cbHora.Items.AddRange(new object[] {
             "07:00",
@@ -447,28 +453,71 @@
             "21:30",
             "22:00",
             "22:30"});
-            this.cbHora.Location = new System.Drawing.Point(1224, 879);
-            this.cbHora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbHora.Location = new System.Drawing.Point(1133, 829);
+            this.cbHora.Margin = new System.Windows.Forms.Padding(4);
             this.cbHora.Name = "cbHora";
-            this.cbHora.Size = new System.Drawing.Size(160, 33);
+            this.cbHora.Size = new System.Drawing.Size(160, 37);
             this.cbHora.TabIndex = 7;
             this.cbHora.SelectedValueChanged += new System.EventHandler(this.cbHora_SelectedValueChanged);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(1521, 106);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(256, 29);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Confirmação de dados";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(76, 33);
+            this.button1.BackgroundImage = global::ProjetoSISO.Properties.Resources.back;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(74, 25);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 63);
             this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cmdLimpar
+            // 
+            this.cmdLimpar.BackgroundImage = global::ProjetoSISO.Properties.Resources.erase;
+            this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdLimpar.FlatAppearance.BorderSize = 0;
+            this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLimpar.Location = new System.Drawing.Point(363, 623);
+            this.cmdLimpar.Name = "cmdLimpar";
+            this.cmdLimpar.Size = new System.Drawing.Size(76, 69);
+            this.cmdLimpar.TabIndex = 9;
+            this.cmdLimpar.UseVisualStyleBackColor = true;
+            this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
+            // 
+            // cmdConfirmar
+            // 
+            this.cmdConfirmar.BackgroundImage = global::ProjetoSISO.Properties.Resources.save;
+            this.cmdConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdConfirmar.FlatAppearance.BorderSize = 0;
+            this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdConfirmar.Location = new System.Drawing.Point(211, 623);
+            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdConfirmar.Name = "cmdConfirmar";
+            this.cmdConfirmar.Size = new System.Drawing.Size(86, 69);
+            this.cmdConfirmar.TabIndex = 0;
+            this.cmdConfirmar.UseVisualStyleBackColor = true;
+            this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
             // 
             // frmAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2373, 1220);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(2054, 1136);
+            this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbHora);
             this.Controls.Add(this.gbDados);
@@ -477,6 +526,7 @@
             this.Controls.Add(this.Calendar);
             this.Controls.Add(this.dgPaciente);
             this.Controls.Add(this.txtDentista);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -484,7 +534,8 @@
             this.Controls.Add(this.txtPaciente);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAgendamento";
             this.Text = "frmAgendamento";
             this.Load += new System.EventHandler(this.frmAgendamento_Load);
@@ -537,5 +588,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cbHora;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cmdLimpar;
+        private System.Windows.Forms.Label label13;
     }
 }
