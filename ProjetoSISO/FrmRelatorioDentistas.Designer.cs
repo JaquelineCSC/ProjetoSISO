@@ -30,15 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.DentistasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ProjetoSISO2DataSet = new ProjetoSISO.ProjetoSISO2DataSet();
             this.ProjetoSISODataSet = new ProjetoSISO.ProjetoSISODataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DentistasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DentistasTableAdapter = new ProjetoSISO.ProjetoSISO2DataSetTableAdapters.DentistasTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.DentistasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISO2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISODataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DentistasBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DentistasBindingSource
+            // 
+            this.DentistasBindingSource.DataMember = "Dentistas";
+            this.DentistasBindingSource.DataSource = this.ProjetoSISO2DataSet;
             // 
             // ProjetoSISO2DataSet
             // 
@@ -58,15 +63,12 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoSISO.Dentistas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1043, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(1564, 692);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // DentistasBindingSource
-            // 
-            this.DentistasBindingSource.DataMember = "Dentistas";
-            this.DentistasBindingSource.DataSource = this.ProjetoSISO2DataSet;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // DentistasTableAdapter
             // 
@@ -74,16 +76,17 @@
             // 
             // FrmRelatorioDentistas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 450);
+            this.ClientSize = new System.Drawing.Size(1564, 692);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmRelatorioDentistas";
             this.Text = "Relatório Dentistas";
             this.Load += new System.EventHandler(this.FrmRelatorioDentistas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DentistasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISO2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjetoSISODataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DentistasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

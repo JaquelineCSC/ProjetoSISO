@@ -16,10 +16,12 @@ namespace ProjetoSISO {
         
         DateTime hoje = DateTime.Now.Date;
 
+        Panel p;
 
 
-        public frmAgendamento() {
+        public frmAgendamento(Panel p) {
             InitializeComponent();
+            this.p = p;
         }
 
         private void frmAgendamento_Load(object sender, EventArgs e)
@@ -93,7 +95,39 @@ namespace ProjetoSISO {
 
         private void cmdConfirmar_Click(object sender, EventArgs e)
         {
-            agendamento.InserirAgendamento();
+            if (Conferir())
+            {
+                agendamento.InserirAgendamento();
+                MessageBox.Show("Agendamento efetuado com sucesso");
+                Limpar();
+            }
+            else
+                MessageBox.Show("Preencha todas as informações");
+        }
+
+        public bool Conferir()
+        {
+            if ((lbNomeDent.Text == "") || (lbNomePac.Text == "") || (lbCpfPac.Text == "") || (lbDataAg.Text == "") || (lbEspDent.Text == "") || (lbHora.Text == "") || (lbNascPac.Text == ""))
+                return false;
+            else 
+                return true;
+        }
+
+        public void Limpar()
+        {
+            lbNomeDent.Text = "";
+            lbNomePac.Text = "";
+            lbCpfPac.Text = "";
+            lbDataAg.Text = "";
+            lbEspDent.Text = "";
+            lbHora.Text = "";
+            lbNascPac.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            p.Enabled = true;
         }
     }
 }

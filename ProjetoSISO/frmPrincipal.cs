@@ -62,8 +62,11 @@ namespace ProjetoSISO
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmAgendamento frm = new frmAgendamento();
-            frm.Show();
+            frmAgendamento janela = new frmAgendamento(panelMenuEsquerda);
+            janela.TopLevel = false;
+            janela.Visible = true;
+            panelForm.Controls.Add(janela);
+            panelMenuEsquerda.Enabled = false;
         }
 
         private void button3_Click(object sender, EventArgs e)

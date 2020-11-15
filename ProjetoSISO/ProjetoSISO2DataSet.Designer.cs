@@ -2739,7 +2739,7 @@ SELECT idAgendamento, dataAgendamento, horaAgendamento, idPaciente, idDentista F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString;
+            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3081,7 +3081,7 @@ SELECT idConsulta, descricaoProcedimentoConsulta, valorConsulta, idAgendamento F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString;
+            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3463,7 +3463,7 @@ SELECT idDentista, CPFDentista, CRODentista, nomeDentista, enderecoDentista, est
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString;
+            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4127,7 +4127,7 @@ SELECT idPaciente, nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString;
+            this._connection.ConnectionString = global::ProjetoSISO.Properties.Settings.Default.ProjetoSISO2ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
