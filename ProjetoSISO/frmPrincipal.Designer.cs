@@ -51,7 +51,7 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(924, 59);
             this.panel1.TabIndex = 0;
@@ -82,7 +82,7 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::ProjetoSISO.Properties.Resources.close;
             this.button4.Location = new System.Drawing.Point(866, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(58, 59);
             this.button4.TabIndex = 0;
@@ -103,7 +103,7 @@
             this.panelMenuEsquerda.Controls.Add(this.cmdDentista);
             this.panelMenuEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuEsquerda.Location = new System.Drawing.Point(0, 59);
-            this.panelMenuEsquerda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenuEsquerda.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenuEsquerda.Name = "panelMenuEsquerda";
             this.panelMenuEsquerda.Size = new System.Drawing.Size(223, 453);
             this.panelMenuEsquerda.TabIndex = 1;
@@ -113,7 +113,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 411);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(223, 6);
             this.panel3.TabIndex = 3;
@@ -177,7 +177,7 @@
             this.button2.Image = global::ProjetoSISO.Properties.Resources.calendar_60px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(15, 209);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(207, 62);
             this.button2.TabIndex = 0;
@@ -219,7 +219,7 @@
             this.cmdDentista.Image = global::ProjetoSISO.Properties.Resources.tooth_64px;
             this.cmdDentista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdDentista.Location = new System.Drawing.Point(16, 45);
-            this.cmdDentista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdDentista.Margin = new System.Windows.Forms.Padding(2);
             this.cmdDentista.Name = "cmdDentista";
             this.cmdDentista.Size = new System.Drawing.Size(206, 53);
             this.cmdDentista.TabIndex = 0;
@@ -231,7 +231,7 @@
             // panelForm
             // 
             this.panelForm.Location = new System.Drawing.Point(225, 63);
-            this.panelForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelForm.Margin = new System.Windows.Forms.Padding(2);
             this.panelForm.Name = "panelForm";
             this.panelForm.Size = new System.Drawing.Size(951, 869);
             this.panelForm.TabIndex = 2;
@@ -247,7 +247,7 @@
             this.Controls.Add(this.panelMenuEsquerda);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPrincipal";
             this.Text = "Projeto SISO";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

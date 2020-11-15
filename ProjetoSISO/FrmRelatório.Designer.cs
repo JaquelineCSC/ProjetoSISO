@@ -42,6 +42,7 @@
             this.cmdAgenda.TabIndex = 1;
             this.cmdAgenda.Text = "&Agendamentos";
             this.cmdAgenda.UseVisualStyleBackColor = true;
+            this.cmdAgenda.Click += new System.EventHandler(this.cmdAgenda_Click);
             // 
             // cmdPacientes
             // 

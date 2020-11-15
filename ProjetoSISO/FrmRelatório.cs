@@ -28,5 +28,11 @@ namespace ProjetoSISO
             FrmRelatorioPaciente relatorioPaciente = new FrmRelatorioPaciente();
             relatorioPaciente.Show();
         }
+
+        private void cmdAgenda_Click(object sender, EventArgs e)
+        {
+            FrmRelatorioAgendamentos agendamentos = new FrmRelatorioAgendamentos();
+            agendamentos.Show();
+        }
     }
 }
