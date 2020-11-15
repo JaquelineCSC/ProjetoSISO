@@ -16,13 +16,5 @@ namespace ProjetoSISO
         {
             InitializeComponent();
         }
-
-        private void FrmRelatorioPaciente_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'ProjetoSISO2DataSet.Pacientes'. Você pode movê-la ou removê-la conforme necessário.
-            this.PacientesTableAdapter.Fill(this.ProjetoSISO2DataSet.Pacientes);
-
-            this.reportViewer1.RefreshReport();
-        }
     }
 }
