@@ -74,5 +74,14 @@ namespace ProjetoSISO
             FrmRelatório relatório = new FrmRelatório();
             relatório.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmConsultaDia janela = new frmConsultaDia(panelMenuEsquerda);
+            janela.TopLevel = false;
+            janela.Visible = true;
+            panelForm.Controls.Add(janela);
+            panelMenuEsquerda.Enabled = false;
+        }
     }
 }

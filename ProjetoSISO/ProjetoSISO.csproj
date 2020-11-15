@@ -89,6 +89,12 @@
     <Compile Include="FrmConsulta.Designer.cs">
       <DependentUpon>FrmConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaDia.Designer.cs">
+      <DependentUpon>frmConsultaDia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDentista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConsulta.resx">
       <DependentUpon>FrmConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaDia.resx">
+      <DependentUpon>frmConsultaDia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDentista.resx">
       <DependentUpon>frmDentista.cs</DependentUpon>
@@ -218,6 +227,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="imgs\logo2j.png" />
+    <None Include="imgs\logo.jpg" />
+    <None Include="imgs\cons.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

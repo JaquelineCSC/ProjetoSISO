@@ -38,6 +38,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cmdDentista = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelMenuEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,6 +70,7 @@
             // panelMenuEsquerda
             // 
             this.panelMenuEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(49)))), ((int)(((byte)(74)))));
+            this.panelMenuEsquerda.Controls.Add(this.button5);
             this.panelMenuEsquerda.Controls.Add(this.pictureBox1);
             this.panelMenuEsquerda.Controls.Add(this.button3);
             this.panelMenuEsquerda.Controls.Add(this.button2);
@@ -77,7 +79,7 @@
             this.panelMenuEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuEsquerda.Location = new System.Drawing.Point(0, 91);
             this.panelMenuEsquerda.Name = "panelMenuEsquerda";
-            this.panelMenuEsquerda.Size = new System.Drawing.Size(334, 1345);
+            this.panelMenuEsquerda.Size = new System.Drawing.Size(349, 1345);
             this.panelMenuEsquerda.TabIndex = 1;
             // 
             // panelForm
@@ -85,9 +87,11 @@
             this.panelForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelForm.Location = new System.Drawing.Point(338, 97);
+            this.panelForm.BackColor = System.Drawing.Color.Transparent;
+            this.panelForm.BackgroundImage = global::ProjetoSISO.Properties.Resources.logo;
+            this.panelForm.Location = new System.Drawing.Point(355, 97);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(1975, 1337);
+            this.panelForm.Size = new System.Drawing.Size(1958, 1337);
             this.panelForm.TabIndex = 2;
             this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
             // 
@@ -97,7 +101,7 @@
             this.pictureBox1.Image = global::ProjetoSISO.Properties.Resources.logo2j;
             this.pictureBox1.Location = new System.Drawing.Point(0, 1239);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(334, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(349, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -113,7 +117,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::ProjetoSISO.Properties.Resources.print_60px;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(24, 460);
+            this.button3.Location = new System.Drawing.Point(24, 617);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(306, 85);
@@ -207,6 +211,16 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(37, 505);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(274, 84);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -241,6 +255,7 @@
         private System.Windows.Forms.Panel panelForm;
         public System.Windows.Forms.Panel panelMenuEsquerda;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button5;
     }
 }
 
