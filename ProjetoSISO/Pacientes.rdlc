@@ -513,6 +513,42 @@
         <rd:TableAdapterName>PacientesTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
+    <DataSet Name="ProjetoSISO2">
+      <Query>
+        <DataSourceName>ProjetoSISO2DataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="idAgendamento">
+          <DataField>idAgendamento</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="dataAgendamento">
+          <DataField>dataAgendamento</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="horaAgendamento">
+          <DataField>horaAgendamento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="idPaciente">
+          <DataField>idPaciente</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="idDentista">
+          <DataField>idDentista</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>ProjetoSISO2DataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Rodrigo\Desktop\Aulas\ProjetoSISO\ProjetoSISO\ProjetoSISO2DataSet.xsd</rd:SchemaPath>
+        <rd:TableName>Agendamento</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>AgendamentoTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>42b52917-e365-4dca-8662-da7df25f13ec</rd:ReportID>
