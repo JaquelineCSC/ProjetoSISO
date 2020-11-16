@@ -16,6 +16,8 @@ namespace ProjetoSISO
         dadosDentista dentista = new dadosDentista();
         dadosPacientes pacientes = new dadosPacientes();
         dadosAgendamento agenda = new dadosAgendamento();
+        Font fonte = new Font(FontFamily.GenericMonospace, 14);
+        Font titulo = new Font(FontFamily.GenericMonospace, 20, FontStyle.Bold);
         private int i;
         public FrmRelatório()
         {
@@ -74,29 +76,28 @@ namespace ProjetoSISO
             float alturaFonte = 0;
             string linha = "";
 
-            Font fonte = new Font("Calibri", 14);
             alturaFonte = fonte.GetHeight(e.Graphics);
             linhaPorPagina = Convert.ToInt32(e.MarginBounds.Height / alturaFonte);
 
             //Título
             linha = "Lista de Dentistas";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
+            e.Graphics.DrawString(linha, titulo, Brushes.Black, margemEsquerda, posicaoVertical);
 
             contador += 4;
 
             //SubTítulo
             linha = "CRO";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda, posicaoVertical);
 
             linha = "Dentista";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 150, posicaoVertical);
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda + 150, posicaoVertical);
 
             linha = "Especialização";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 400, posicaoVertical);
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda + 450, posicaoVertical);
 
             contador += 1;
 
@@ -124,7 +125,7 @@ namespace ProjetoSISO
 
                     linha = item["especializacaoDentista"].ToString();
                     posicaoVertical = margemSuperior + contador * alturaFonte;
-                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 400, posicaoVertical);
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 450, posicaoVertical);
 
                     contador += 2;
                     i++;
@@ -160,33 +161,32 @@ namespace ProjetoSISO
             float alturaFonte = 0;
             string linha = "";
 
-            Font fonte = new Font("Calibri", 14);
             alturaFonte = fonte.GetHeight(e.Graphics);
             linhaPorPagina = Convert.ToInt32(e.MarginBounds.Height / alturaFonte);
 
             //Título
             linha = "Lista de Pacientes";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
+            e.Graphics.DrawString(linha, titulo, Brushes.Black, margemEsquerda, posicaoVertical);
 
             contador += 4;
 
             //SubTítulo
             linha = "CPF";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda, posicaoVertical);
 
             linha = "Nome";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 150, posicaoVertical);
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda + 160, posicaoVertical);
 
             linha = "Cidade";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 400, posicaoVertical);
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda + 450, posicaoVertical);
 
             linha = "Celular";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 550, posicaoVertical);
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda + 620, posicaoVertical);
 
             contador += 1;
 
@@ -210,15 +210,15 @@ namespace ProjetoSISO
 
                     linha = item["nomePaciente"].ToString();
                     posicaoVertical = margemSuperior + contador * alturaFonte;
-                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 150, posicaoVertical);
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 160, posicaoVertical);
 
                     linha = item["cidadePaciente"].ToString();
                     posicaoVertical = margemSuperior + contador * alturaFonte;
-                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 400, posicaoVertical);
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 450, posicaoVertical);
 
                     linha = item["celularPaciente"].ToString();
                     posicaoVertical = margemSuperior + contador * alturaFonte;
-                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 550, posicaoVertical);
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 620, posicaoVertical);
 
                     contador += 2;
                     i++;
@@ -254,33 +254,32 @@ namespace ProjetoSISO
             float alturaFonte = 0;
             string linha = "";
 
-            Font fonte = new Font("Calibri", 14);
             alturaFonte = fonte.GetHeight(e.Graphics);
             linhaPorPagina = Convert.ToInt32(e.MarginBounds.Height / alturaFonte);
 
             //Título
             linha = "Agendamentos";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
+            e.Graphics.DrawString(linha, titulo, Brushes.Black, margemEsquerda, posicaoVertical);
 
             contador += 4;
 
             //SubTítulo
             linha = "Paciente";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda, posicaoVertical);
 
             linha = "Dentista";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 150, posicaoVertical);
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda + 300, posicaoVertical);
 
             linha = "Data";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 400, posicaoVertical);
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda + 550, posicaoVertical);
 
             linha = "Horário";
             posicaoVertical = margemSuperior + contador * alturaFonte;
-            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 550, posicaoVertical);
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda + 700, posicaoVertical);
 
             contador += 1;
 
@@ -304,15 +303,15 @@ namespace ProjetoSISO
 
                     linha = item["nomeDentista"].ToString();
                     posicaoVertical = margemSuperior + contador * alturaFonte;
-                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 150, posicaoVertical);
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 300, posicaoVertical);
 
                     linha = Convert.ToDateTime(item["dataAgendamento"]).ToString("d");
                     posicaoVertical = margemSuperior + contador * alturaFonte;
-                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 400, posicaoVertical);
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 550, posicaoVertical);
 
                     linha = item["horaAgendamento"].ToString();
                     posicaoVertical = margemSuperior + contador * alturaFonte;
-                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 550, posicaoVertical);
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 700, posicaoVertical);
 
                     contador += 2;
                     i++;
