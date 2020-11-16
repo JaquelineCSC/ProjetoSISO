@@ -210,7 +210,7 @@
             this.gbDados.Margin = new System.Windows.Forms.Padding(4);
             this.gbDados.Name = "gbDados";
             this.gbDados.Padding = new System.Windows.Forms.Padding(4);
-            this.gbDados.Size = new System.Drawing.Size(551, 742);
+            this.gbDados.Size = new System.Drawing.Size(614, 742);
             this.gbDados.TabIndex = 6;
             this.gbDados.TabStop = false;
             // 
@@ -220,7 +220,7 @@
             this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cmdLimpar.FlatAppearance.BorderSize = 0;
             this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLimpar.Location = new System.Drawing.Point(306, 592);
+            this.cmdLimpar.Location = new System.Drawing.Point(326, 592);
             this.cmdLimpar.Name = "cmdLimpar";
             this.cmdLimpar.Size = new System.Drawing.Size(76, 69);
             this.cmdLimpar.TabIndex = 9;
@@ -238,7 +238,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(505, 159);
+            this.groupBox4.Size = new System.Drawing.Size(573, 159);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             // 
@@ -297,7 +297,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(505, 149);
+            this.groupBox3.Size = new System.Drawing.Size(573, 149);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
@@ -358,7 +358,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(505, 206);
+            this.groupBox2.Size = new System.Drawing.Size(573, 206);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
@@ -434,7 +434,7 @@
             this.cmdConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cmdConfirmar.FlatAppearance.BorderSize = 0;
             this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdConfirmar.Location = new System.Drawing.Point(154, 592);
+            this.cmdConfirmar.Location = new System.Drawing.Point(174, 592);
             this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdConfirmar.Name = "cmdConfirmar";
             this.cmdConfirmar.Size = new System.Drawing.Size(86, 69);
