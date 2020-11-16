@@ -71,7 +71,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(51, 166);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(916, 416);
@@ -85,7 +85,7 @@
             // 
             this.txtxNome.Font = new System.Drawing.Font("Lucida Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtxNome.Location = new System.Drawing.Point(51, 108);
-            this.txtxNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtxNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtxNome.Name = "txtxNome";
             this.txtxNome.Size = new System.Drawing.Size(914, 31);
             this.txtxNome.TabIndex = 1;
@@ -103,7 +103,6 @@
             // 
             // cmdExcluir
             // 
-            this.cmdExcluir.AutoEllipsis = true;
             this.cmdExcluir.AutoSize = true;
             this.cmdExcluir.BackgroundImage = global::ProjetoSISO.Properties.Resources.trash_52px;
             this.cmdExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -121,7 +120,6 @@
             // 
             // cmdAlterar
             // 
-            this.cmdAlterar.AutoEllipsis = true;
             this.cmdAlterar.AutoSize = true;
             this.cmdAlterar.BackgroundImage = global::ProjetoSISO.Properties.Resources.edit_52px;
             this.cmdAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -182,7 +180,7 @@
             this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(1060, 80);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 3, 4, 4);
             this.groupBox1.Size = new System.Drawing.Size(850, 900);
@@ -193,7 +191,7 @@
             // 
             this.txtEspecializacao.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEspecializacao.Location = new System.Drawing.Point(286, 706);
-            this.txtEspecializacao.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEspecializacao.Margin = new System.Windows.Forms.Padding(6);
             this.txtEspecializacao.Name = "txtEspecializacao";
             this.txtEspecializacao.Size = new System.Drawing.Size(541, 37);
             this.txtEspecializacao.TabIndex = 12;
@@ -224,7 +222,7 @@
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone.Location = new System.Drawing.Point(286, 574);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(6);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(541, 37);
             this.txtTelefone.TabIndex = 10;
@@ -232,7 +230,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(286, 134);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(541, 44);
             this.dateTimePicker1.TabIndex = 3;
@@ -252,7 +250,7 @@
             // 
             this.txtNome.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(286, 28);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(6);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(541, 37);
             this.txtNome.TabIndex = 1;
@@ -264,9 +262,9 @@
             this.gbSexo.Controls.Add(this.radioButton1);
             this.gbSexo.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbSexo.Location = new System.Drawing.Point(286, 64);
-            this.gbSexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbSexo.Margin = new System.Windows.Forms.Padding(4);
             this.gbSexo.Name = "gbSexo";
-            this.gbSexo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbSexo.Padding = new System.Windows.Forms.Padding(4);
             this.gbSexo.Size = new System.Drawing.Size(350, 56);
             this.gbSexo.TabIndex = 2;
             this.gbSexo.TabStop = false;
@@ -275,7 +273,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(170, 26);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(131, 27);
             this.radioButton2.TabIndex = 1;
@@ -287,7 +285,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(9, 26);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(124, 27);
             this.radioButton1.TabIndex = 0;
@@ -339,7 +337,7 @@
             "SE",
             "TO"});
             this.cbEstado.Location = new System.Drawing.Point(286, 446);
-            this.cbEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(97, 36);
             this.cbEstado.TabIndex = 8;
@@ -370,7 +368,7 @@
             // 
             this.txtCep.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCep.Location = new System.Drawing.Point(286, 378);
-            this.txtCep.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCep.Margin = new System.Windows.Forms.Padding(6);
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(541, 37);
             this.txtCep.TabIndex = 7;
@@ -379,7 +377,7 @@
             // 
             this.txtCidade.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(286, 314);
-            this.txtCidade.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(6);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(541, 37);
             this.txtCidade.TabIndex = 6;
@@ -432,7 +430,7 @@
             // 
             this.txtEndereco.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(286, 252);
-            this.txtEndereco.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEndereco.Margin = new System.Windows.Forms.Padding(6);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(541, 37);
             this.txtEndereco.TabIndex = 5;
@@ -441,7 +439,7 @@
             // 
             this.txtCelular.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelular.Location = new System.Drawing.Point(286, 512);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(6);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(541, 37);
             this.txtCelular.TabIndex = 9;
@@ -450,7 +448,7 @@
             // 
             this.txtCPF.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPF.Location = new System.Drawing.Point(286, 194);
-            this.txtCPF.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(6);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(541, 37);
             this.txtCPF.TabIndex = 4;
@@ -470,7 +468,7 @@
             // 
             this.txtCRO.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCRO.Location = new System.Drawing.Point(286, 642);
-            this.txtCRO.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCRO.Margin = new System.Windows.Forms.Padding(6);
             this.txtCRO.Name = "txtCRO";
             this.txtCRO.Size = new System.Drawing.Size(541, 37);
             this.txtCRO.TabIndex = 11;
@@ -492,14 +490,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(183)))), ((int)(((byte)(234)))));
-            this.ClientSize = new System.Drawing.Size(1953, 1028);
+            this.ClientSize = new System.Drawing.Size(1953, 1119);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtxNome);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmConsulta";

@@ -46,6 +46,8 @@ namespace ProjetoSISO {
             dgPaciente.MultiSelect = false;
             dgPaciente.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
+            Limpar();
+
         }
 
         private void txtDentista_TextChanged(object sender, EventArgs e)
