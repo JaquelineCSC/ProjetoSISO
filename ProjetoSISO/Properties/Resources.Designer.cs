@@ -123,6 +123,26 @@ namespace ProjetoSISO.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dentist {
+            get {
+                object obj = ResourceManager.GetObject("dentist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dentist_appointment {
+            get {
+                object obj = ResourceManager.GetObject("dentist_appointment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_52px {
             get {
                 object obj = ResourceManager.GetObject("edit_52px", resourceCulture);
@@ -156,6 +176,16 @@ namespace ProjetoSISO.Properties {
         internal static System.Drawing.Bitmap logo2j {
             get {
                 object obj = ResourceManager.GetObject("logo2j", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paciente {
+            get {
+                object obj = ResourceManager.GetObject("paciente", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
