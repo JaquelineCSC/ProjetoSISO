@@ -31,7 +31,6 @@
             this.Calendar = new System.Windows.Forms.MonthCalendar();
             this.dgAgenda = new System.Windows.Forms.DataGridView();
             this.gbDados = new System.Windows.Forms.GroupBox();
-            this.cmdLimpar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblValor = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbNomePac = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmdConfirmar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.txtProcedimento = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,6 +58,10 @@
             this.txtValor = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmdBack = new System.Windows.Forms.Button();
+            this.cmdLimpar = new System.Windows.Forms.Button();
+            this.cmdConfirmar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgAgenda)).BeginInit();
             this.gbDados.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -84,13 +86,13 @@
             this.dgAgenda.AllowUserToAddRows = false;
             this.dgAgenda.AllowUserToDeleteRows = false;
             this.dgAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgAgenda.Location = new System.Drawing.Point(264, 100);
+            this.dgAgenda.Location = new System.Drawing.Point(264, 129);
             this.dgAgenda.Margin = new System.Windows.Forms.Padding(4);
             this.dgAgenda.Name = "dgAgenda";
             this.dgAgenda.ReadOnly = true;
             this.dgAgenda.RowHeadersWidth = 62;
             this.dgAgenda.RowTemplate.Height = 28;
-            this.dgAgenda.Size = new System.Drawing.Size(440, 162);
+            this.dgAgenda.Size = new System.Drawing.Size(440, 133);
             this.dgAgenda.TabIndex = 1;
             this.dgAgenda.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAgenda_CellEnter);
             // 
@@ -111,19 +113,6 @@
             this.gbDados.TabIndex = 8;
             this.gbDados.TabStop = false;
             // 
-            // cmdLimpar
-            // 
-            this.cmdLimpar.BackgroundImage = global::ProjetoSISO.Properties.Resources.erase;
-            this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdLimpar.FlatAppearance.BorderSize = 0;
-            this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLimpar.Location = new System.Drawing.Point(277, 502);
-            this.cmdLimpar.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdLimpar.Name = "cmdLimpar";
-            this.cmdLimpar.Size = new System.Drawing.Size(54, 57);
-            this.cmdLimpar.TabIndex = 9;
-            this.cmdLimpar.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblValor);
@@ -141,7 +130,7 @@
             // 
             this.lblValor.AutoSize = true;
             this.lblValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValor.Location = new System.Drawing.Point(206, 25);
+            this.lblValor.Location = new System.Drawing.Point(195, 25);
             this.lblValor.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(81, 20);
@@ -178,7 +167,7 @@
             // 
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(206, 62);
+            this.lblHora.Location = new System.Drawing.Point(195, 62);
             this.lblHora.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(81, 20);
@@ -200,7 +189,7 @@
             // 
             this.lbDataAg.AutoSize = true;
             this.lbDataAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDataAg.Location = new System.Drawing.Point(206, 28);
+            this.lbDataAg.Location = new System.Drawing.Point(195, 28);
             this.lbDataAg.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbDataAg.Name = "lbDataAg";
             this.lbDataAg.Size = new System.Drawing.Size(81, 20);
@@ -237,7 +226,7 @@
             // 
             this.lbEspDent.AutoSize = true;
             this.lbEspDent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEspDent.Location = new System.Drawing.Point(206, 63);
+            this.lbEspDent.Location = new System.Drawing.Point(195, 63);
             this.lbEspDent.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbEspDent.Name = "lbEspDent";
             this.lbEspDent.Size = new System.Drawing.Size(81, 20);
@@ -259,7 +248,7 @@
             // 
             this.lbNomeDent.AutoSize = true;
             this.lbNomeDent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomeDent.Location = new System.Drawing.Point(206, 28);
+            this.lbNomeDent.Location = new System.Drawing.Point(195, 28);
             this.lbNomeDent.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbNomeDent.Name = "lbNomeDent";
             this.lbNomeDent.Size = new System.Drawing.Size(81, 20);
@@ -298,7 +287,7 @@
             // 
             this.lbNascPac.AutoSize = true;
             this.lbNascPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNascPac.Location = new System.Drawing.Point(206, 98);
+            this.lbNascPac.Location = new System.Drawing.Point(195, 98);
             this.lbNascPac.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbNascPac.Name = "lbNascPac";
             this.lbNascPac.Size = new System.Drawing.Size(81, 20);
@@ -320,7 +309,7 @@
             // 
             this.lbCpfPac.AutoSize = true;
             this.lbCpfPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCpfPac.Location = new System.Drawing.Point(206, 63);
+            this.lbCpfPac.Location = new System.Drawing.Point(195, 63);
             this.lbCpfPac.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbCpfPac.Name = "lbCpfPac";
             this.lbCpfPac.Size = new System.Drawing.Size(81, 20);
@@ -342,7 +331,7 @@
             // 
             this.lbNomePac.AutoSize = true;
             this.lbNomePac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomePac.Location = new System.Drawing.Point(206, 28);
+            this.lbNomePac.Location = new System.Drawing.Point(195, 28);
             this.lbNomePac.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbNomePac.Name = "lbNomePac";
             this.lbNomePac.Size = new System.Drawing.Size(81, 20);
@@ -359,20 +348,6 @@
             this.label6.Size = new System.Drawing.Size(143, 20);
             this.label6.TabIndex = 1;
             this.label6.Text = "Nome do Paciente:";
-            // 
-            // cmdConfirmar
-            // 
-            this.cmdConfirmar.BackgroundImage = global::ProjetoSISO.Properties.Resources.save;
-            this.cmdConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdConfirmar.FlatAppearance.BorderSize = 0;
-            this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdConfirmar.Location = new System.Drawing.Point(190, 502);
-            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(5);
-            this.cmdConfirmar.Name = "cmdConfirmar";
-            this.cmdConfirmar.Size = new System.Drawing.Size(58, 57);
-            this.cmdConfirmar.TabIndex = 0;
-            this.cmdConfirmar.UseVisualStyleBackColor = true;
-            this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
             // 
             // label13
             // 
@@ -429,7 +404,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 72);
+            this.label3.Location = new System.Drawing.Point(20, 78);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 17);
@@ -449,6 +424,52 @@
             this.cmdBack.UseVisualStyleBackColor = true;
             this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
+            // cmdLimpar
+            // 
+            this.cmdLimpar.BackgroundImage = global::ProjetoSISO.Properties.Resources.erase;
+            this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdLimpar.FlatAppearance.BorderSize = 0;
+            this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLimpar.Location = new System.Drawing.Point(277, 502);
+            this.cmdLimpar.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdLimpar.Name = "cmdLimpar";
+            this.cmdLimpar.Size = new System.Drawing.Size(54, 57);
+            this.cmdLimpar.TabIndex = 9;
+            this.cmdLimpar.UseVisualStyleBackColor = true;
+            this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
+            // 
+            // cmdConfirmar
+            // 
+            this.cmdConfirmar.BackgroundImage = global::ProjetoSISO.Properties.Resources.save;
+            this.cmdConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdConfirmar.FlatAppearance.BorderSize = 0;
+            this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdConfirmar.Location = new System.Drawing.Point(190, 502);
+            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(5);
+            this.cmdConfirmar.Name = "cmdConfirmar";
+            this.cmdConfirmar.Size = new System.Drawing.Size(58, 57);
+            this.cmdConfirmar.TabIndex = 0;
+            this.cmdConfirmar.UseVisualStyleBackColor = true;
+            this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(264, 100);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(244, 23);
+            this.textBox1.TabIndex = 13;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(261, 80);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Pesquisar por nome";
+            // 
             // frmConsultaDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -457,9 +478,11 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1266, 649);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.cmdBack);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtProcedimento);
@@ -522,5 +545,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button cmdBack;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
     }
 }

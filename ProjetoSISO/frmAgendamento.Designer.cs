@@ -204,7 +204,7 @@
             this.gbDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbDados.Location = new System.Drawing.Point(623, 104);
             this.gbDados.Name = "gbDados";
-            this.gbDados.Size = new System.Drawing.Size(475, 495);
+            this.gbDados.Size = new System.Drawing.Size(475, 425);
             this.gbDados.TabIndex = 6;
             this.gbDados.TabStop = false;
             // 
@@ -214,7 +214,7 @@
             this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cmdLimpar.FlatAppearance.BorderSize = 0;
             this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLimpar.Location = new System.Drawing.Point(217, 395);
+            this.cmdLimpar.Location = new System.Drawing.Point(270, 351);
             this.cmdLimpar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdLimpar.Name = "cmdLimpar";
             this.cmdLimpar.Size = new System.Drawing.Size(51, 46);
@@ -229,9 +229,9 @@
             this.groupBox4.Controls.Add(this.lbDataAg);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox4.Location = new System.Drawing.Point(13, 267);
+            this.groupBox4.Location = new System.Drawing.Point(13, 250);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(446, 106);
+            this.groupBox4.Size = new System.Drawing.Size(446, 95);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             // 
@@ -239,7 +239,7 @@
             // 
             this.lbHora.AutoSize = true;
             this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHora.Location = new System.Drawing.Point(240, 55);
+            this.lbHora.Location = new System.Drawing.Point(200, 55);
             this.lbHora.Name = "lbHora";
             this.lbHora.Size = new System.Drawing.Size(81, 20);
             this.lbHora.TabIndex = 5;
@@ -259,7 +259,7 @@
             // 
             this.lbDataAg.AutoSize = true;
             this.lbDataAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDataAg.Location = new System.Drawing.Point(240, 18);
+            this.lbDataAg.Location = new System.Drawing.Point(200, 18);
             this.lbDataAg.Name = "lbDataAg";
             this.lbDataAg.Size = new System.Drawing.Size(81, 20);
             this.lbDataAg.TabIndex = 5;
@@ -282,9 +282,9 @@
             this.groupBox3.Controls.Add(this.lbNomeDent);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.Location = new System.Drawing.Point(13, 163);
+            this.groupBox3.Location = new System.Drawing.Point(13, 159);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(446, 99);
+            this.groupBox3.Size = new System.Drawing.Size(446, 90);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
@@ -292,7 +292,7 @@
             // 
             this.lbEspDent.AutoSize = true;
             this.lbEspDent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEspDent.Location = new System.Drawing.Point(240, 55);
+            this.lbEspDent.Location = new System.Drawing.Point(200, 55);
             this.lbEspDent.Name = "lbEspDent";
             this.lbEspDent.Size = new System.Drawing.Size(81, 20);
             this.lbEspDent.TabIndex = 5;
@@ -312,7 +312,7 @@
             // 
             this.lbNomeDent.AutoSize = true;
             this.lbNomeDent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomeDent.Location = new System.Drawing.Point(240, 18);
+            this.lbNomeDent.Location = new System.Drawing.Point(200, 18);
             this.lbNomeDent.Name = "lbNomeDent";
             this.lbNomeDent.Size = new System.Drawing.Size(81, 20);
             this.lbNomeDent.TabIndex = 4;
@@ -339,7 +339,7 @@
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Location = new System.Drawing.Point(13, 21);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(446, 137);
+            this.groupBox2.Size = new System.Drawing.Size(446, 136);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
@@ -347,7 +347,7 @@
             // 
             this.lbNascPac.AutoSize = true;
             this.lbNascPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNascPac.Location = new System.Drawing.Point(240, 92);
+            this.lbNascPac.Location = new System.Drawing.Point(200, 92);
             this.lbNascPac.Name = "lbNascPac";
             this.lbNascPac.Size = new System.Drawing.Size(81, 20);
             this.lbNascPac.TabIndex = 3;
@@ -367,7 +367,7 @@
             // 
             this.lbCpfPac.AutoSize = true;
             this.lbCpfPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCpfPac.Location = new System.Drawing.Point(240, 55);
+            this.lbCpfPac.Location = new System.Drawing.Point(200, 55);
             this.lbCpfPac.Name = "lbCpfPac";
             this.lbCpfPac.Size = new System.Drawing.Size(81, 20);
             this.lbCpfPac.TabIndex = 2;
@@ -387,7 +387,7 @@
             // 
             this.lbNomePac.AutoSize = true;
             this.lbNomePac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomePac.Location = new System.Drawing.Point(240, 18);
+            this.lbNomePac.Location = new System.Drawing.Point(200, 18);
             this.lbNomePac.Name = "lbNomePac";
             this.lbNomePac.Size = new System.Drawing.Size(81, 20);
             this.lbNomePac.TabIndex = 1;
@@ -409,7 +409,7 @@
             this.cmdConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cmdConfirmar.FlatAppearance.BorderSize = 0;
             this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdConfirmar.Location = new System.Drawing.Point(116, 395);
+            this.cmdConfirmar.Location = new System.Drawing.Point(169, 351);
             this.cmdConfirmar.Name = "cmdConfirmar";
             this.cmdConfirmar.Size = new System.Drawing.Size(57, 46);
             this.cmdConfirmar.TabIndex = 0;

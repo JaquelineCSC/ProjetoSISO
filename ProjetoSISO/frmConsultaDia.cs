@@ -26,6 +26,7 @@ namespace ProjetoSISO
 
         private void frmConsultaDia_Load(object sender, EventArgs e)
         {
+            Limpar();
             agendamento = new dadosAgendamento(dentista, paciente);
             dgAgenda.ReadOnly = true;
             dgAgenda.MultiSelect = false;
@@ -62,8 +63,16 @@ namespace ProjetoSISO
 
         private void cmdConfirmar_Click(object sender, EventArgs e)
         {
-
-            consulta = new dadosConsulta();
+            if (Conferir())
+            {
+                consulta = new dadosConsulta(agendamento, dentista, paciente);
+                consulta.InserirConsulta();
+                MessageBox.Show("Agendamento efetuado com sucesso");
+                Limpar();
+            }
+            else
+                MessageBox.Show("Preencha todas as informações");
+            
 
         }
 
@@ -71,6 +80,37 @@ namespace ProjetoSISO
         {
             this.Close();
             p.Enabled = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            paciente.NomePacientes = textBox1.Text;
+            dgAgenda.DataSource = paciente.ListarDadosPacientes().Tables[0];
+        }
+
+        private void cmdLimpar_Click(object sender, EventArgs e)
+        {
+            Limpar();
+        }
+
+        public bool Conferir()
+        {
+            if ((lbNomeDent.Text == "") || (lbNomePac.Text == "") || (lbCpfPac.Text == "") || (lbDataAg.Text == "") || (lbEspDent.Text == "") || (lbHora.Text == "") || (lbNascPac.Text == ""))
+                return false;
+            else
+                return true;
+        }
+
+        public void Limpar()
+        {
+            lbNomeDent.Text = "";
+            lbNomePac.Text = "";
+            lbCpfPac.Text = "";
+            lbDataAg.Text = "";
+            lbEspDent.Text = "";
+            lblHora.Text = "";
+            lbNascPac.Text = "";
+            lblValor.Text = "";
         }
     }
 }

@@ -51,7 +51,7 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1293, 59);
             this.panel1.TabIndex = 0;
@@ -84,7 +84,7 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::ProjetoSISO.Properties.Resources.close;
             this.button4.Location = new System.Drawing.Point(1235, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(58, 59);
             this.button4.TabIndex = 0;
@@ -106,20 +106,26 @@
             this.panelMenuEsquerda.Controls.Add(this.cmdDentista);
             this.panelMenuEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuEsquerda.Location = new System.Drawing.Point(0, 59);
-            this.panelMenuEsquerda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenuEsquerda.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenuEsquerda.Name = "panelMenuEsquerda";
-            this.panelMenuEsquerda.Size = new System.Drawing.Size(224, 656);
+            this.panelMenuEsquerda.Size = new System.Drawing.Size(226, 656);
             this.panelMenuEsquerda.TabIndex = 1;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(25, 328);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(25, 306);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(183, 55);
             this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Text = "Consulta";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox1
@@ -127,9 +133,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox1.Image = global::ProjetoSISO.Properties.Resources.logo2j;
             this.pictureBox1.Location = new System.Drawing.Point(0, 587);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(224, 69);
+            this.pictureBox1.Size = new System.Drawing.Size(226, 69);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -148,10 +154,10 @@
             this.button3.Location = new System.Drawing.Point(16, 401);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(204, 55);
+            this.button3.Size = new System.Drawing.Size(199, 55);
             this.button3.TabIndex = 0;
             this.button3.Text = "     Relatório";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -167,9 +173,9 @@
             this.button2.Image = global::ProjetoSISO.Properties.Resources.calendar_60px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(15, 209);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(207, 62);
+            this.button2.Size = new System.Drawing.Size(209, 62);
             this.button2.TabIndex = 0;
             this.button2.Text = "     Agendamento";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -193,7 +199,7 @@
             this.button1.Size = new System.Drawing.Size(199, 62);
             this.button1.TabIndex = 0;
             this.button1.Text = "     Pacientes";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -209,12 +215,12 @@
             this.cmdDentista.Image = global::ProjetoSISO.Properties.Resources.tooth_64px;
             this.cmdDentista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdDentista.Location = new System.Drawing.Point(16, 45);
-            this.cmdDentista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdDentista.Margin = new System.Windows.Forms.Padding(2);
             this.cmdDentista.Name = "cmdDentista";
-            this.cmdDentista.Size = new System.Drawing.Size(206, 53);
+            this.cmdDentista.Size = new System.Drawing.Size(199, 53);
             this.cmdDentista.TabIndex = 0;
             this.cmdDentista.Text = "     Dentistas";
-            this.cmdDentista.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.cmdDentista.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdDentista.UseVisualStyleBackColor = false;
             this.cmdDentista.Click += new System.EventHandler(this.cmdDentista_Click);
             // 
@@ -227,9 +233,9 @@
             this.panelForm.BackgroundImage = global::ProjetoSISO.Properties.Resources.logo;
             this.panelForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelForm.Location = new System.Drawing.Point(228, 63);
-            this.panelForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelForm.Margin = new System.Windows.Forms.Padding(2);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(1065, 641);
+            this.panelForm.Size = new System.Drawing.Size(1065, 652);
             this.panelForm.TabIndex = 2;
             this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
             // 
@@ -243,7 +249,7 @@
             this.Controls.Add(this.panelMenuEsquerda);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPrincipal";
             this.Text = "Projeto SISO";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

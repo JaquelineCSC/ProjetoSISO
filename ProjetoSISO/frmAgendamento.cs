@@ -13,8 +13,6 @@ namespace ProjetoSISO {
         dadosDentista dentista = new dadosDentista();
         dadosPacientes paciente = new dadosPacientes();
         dadosAgendamento agendamento;
-        
-        DateTime hoje = DateTime.Now.Date;
 
         Panel p;
 
