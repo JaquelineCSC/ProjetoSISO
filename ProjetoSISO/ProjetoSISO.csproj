@@ -181,6 +181,9 @@
     <None Include="imgs\logo2j.png" />
     <None Include="imgs\logo.jpg" />
     <None Include="imgs\cons.png" />
+    <None Include="imgs\dentist.png" />
+    <None Include="imgs\paciente.png" />
+    <None Include="imgs\dentist_appointment.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

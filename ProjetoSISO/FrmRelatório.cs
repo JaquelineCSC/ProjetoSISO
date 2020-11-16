@@ -18,9 +18,11 @@ namespace ProjetoSISO
         dadosAgendamento agenda = new dadosAgendamento();
         Font fonte = new Font(FontFamily.GenericMonospace, 14);
         Font titulo = new Font(FontFamily.GenericMonospace, 20, FontStyle.Bold);
+        Panel p;
         private int i;
-        public FrmRelatório()
+        public FrmRelatório(Panel p)
         {
+            this.p = p;
             InitializeComponent();
         }
 
@@ -334,6 +336,16 @@ namespace ProjetoSISO
             {
                 e.HasMorePages = false;
             }
+        }
+
+        private void FrmRelatório_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

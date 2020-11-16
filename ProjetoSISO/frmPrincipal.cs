@@ -56,8 +56,11 @@ namespace ProjetoSISO
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmRelatório relatório = new FrmRelatório();
-            relatório.Show();
+            FrmRelatório janela = new FrmRelatório(panelMenuEsquerda);
+            janela.TopLevel = false;
+            janela.Visible = true;
+            panelForm.Controls.Add(janela);
+            panelMenuEsquerda.Enabled = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
