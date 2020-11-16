@@ -33,7 +33,7 @@ namespace ProjetoSISO {
 
         private void frmPacientes_Load(object sender, EventArgs e)
         {
-
+            cboEstado.SelectedIndex = 12;
         }
 
         private void cmdSalvar_Click(object sender, EventArgs e) 
@@ -71,7 +71,7 @@ namespace ProjetoSISO {
             int i = 0;
             foreach (Control item in this.groupBox1.Controls)
             {
-                if ((item is TextBox) && (item.Text == ""))
+                if ((item is TextBox) && (item.Text == "") && (item != txtTelefone))
                     i++;
             }
             if ((radioButtonFem.Checked == false) && (radioButtonMasc.Checked == false))
@@ -88,7 +88,7 @@ namespace ProjetoSISO {
             {
                 if (item is TextBox)
                     item.Text = "";
-               cboEstado.SelectedIndex = 0;
+                cboEstado.SelectedIndex = 12;
                 radioButtonMasc.Checked = false;
                 radioButtonFem.Checked = false;
             }
