@@ -30,15 +30,15 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.panelMenuEsquerda = new System.Windows.Forms.Panel();
-            this.panelForm = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.cmdDentista = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.panelForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelMenuEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,8 +67,33 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Projeto SISO";
             // 
+            // button4
+            // 
+            this.button4.AutoSize = true;
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(80)))), ((int)(((byte)(151)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(102)))), ((int)(((byte)(193)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::ProjetoSISO.Properties.Resources.close;
+            this.button4.Location = new System.Drawing.Point(2226, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(87, 91);
+            this.button4.TabIndex = 0;
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // panelMenuEsquerda
             // 
+            this.panelMenuEsquerda.AutoSize = true;
+            this.panelMenuEsquerda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelMenuEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(49)))), ((int)(((byte)(74)))));
             this.panelMenuEsquerda.Controls.Add(this.button5);
             this.panelMenuEsquerda.Controls.Add(this.pictureBox1);
@@ -79,21 +104,18 @@
             this.panelMenuEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuEsquerda.Location = new System.Drawing.Point(0, 91);
             this.panelMenuEsquerda.Name = "panelMenuEsquerda";
-            this.panelMenuEsquerda.Size = new System.Drawing.Size(349, 1345);
+            this.panelMenuEsquerda.Size = new System.Drawing.Size(336, 1345);
             this.panelMenuEsquerda.TabIndex = 1;
             // 
-            // panelForm
+            // button5
             // 
-            this.panelForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelForm.BackColor = System.Drawing.Color.Transparent;
-            this.panelForm.BackgroundImage = global::ProjetoSISO.Properties.Resources.logo;
-            this.panelForm.Location = new System.Drawing.Point(355, 97);
-            this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(1958, 1337);
-            this.panelForm.TabIndex = 2;
-            this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
+            this.button5.Location = new System.Drawing.Point(37, 505);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(274, 84);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox1
             // 
@@ -101,7 +123,7 @@
             this.pictureBox1.Image = global::ProjetoSISO.Properties.Resources.logo2j;
             this.pictureBox1.Location = new System.Drawing.Point(0, 1239);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(349, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(336, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -188,38 +210,18 @@
             this.cmdDentista.UseVisualStyleBackColor = false;
             this.cmdDentista.Click += new System.EventHandler(this.cmdDentista_Click);
             // 
-            // button4
+            // panelForm
             // 
-            this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(80)))), ((int)(((byte)(151)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(102)))), ((int)(((byte)(193)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::ProjetoSISO.Properties.Resources.close;
-            this.button4.Location = new System.Drawing.Point(2226, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 91);
-            this.button4.TabIndex = 0;
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(37, 505);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(274, 84);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.panelForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelForm.BackColor = System.Drawing.Color.Transparent;
+            this.panelForm.BackgroundImage = global::ProjetoSISO.Properties.Resources.logo;
+            this.panelForm.Location = new System.Drawing.Point(355, 97);
+            this.panelForm.Name = "panelForm";
+            this.panelForm.Size = new System.Drawing.Size(1958, 1337);
+            this.panelForm.TabIndex = 2;
+            this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
             // 
             // frmPrincipal
             // 
@@ -240,6 +242,7 @@
             this.panelMenuEsquerda.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
