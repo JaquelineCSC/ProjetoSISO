@@ -57,6 +57,25 @@ namespace ProjetoSISO
             }
         }
 
+        public void ConsultarDadosAgendamentoPorIdPessoa()
+        {
+            string sql = "";
+            sql += "select p.nomePaciente, p.CPFPaciente, p.dataNascPaciente, d.nomeDentista, d.especializacaoDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where idAgendamento = " + IdAgendamento;
+            c.ConsultarAgendamentosIDPessoa(sql);
+            string[] auxiliar = c.Campos.Split(';');
+            if (auxiliar[0] != "")
+            {
+                paciente.NomePacientes = auxiliar[0];
+                paciente.CpfPacientes = auxiliar[1];
+                paciente.DataNascimentoPacientes  = Convert.ToDateTime(auxiliar[2]);
+                dentista.NomeDentista = auxiliar[3];
+                dentista.EspecializacaoDentista = auxiliar[4];
+                DataAgendamento = Convert.ToDateTime(auxiliar[5]);
+                HoraAgendamento = auxiliar[6];
+
+            }
+        }
+
         public void ConsultarDadosAgendamentoPorId()
         {
             string sql = "";
@@ -74,7 +93,7 @@ namespace ProjetoSISO
 
         public DataSet ListarDadosAgendamentosPorData()
         {
-            string sql = "select p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where a.dataAgendamento = '" + DataAgendamento.ToString() + "'";
+            string sql = "select a.idAgendamento, p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where a.dataAgendamento = '" + DataAgendamento.ToString() + "'";
             return c.Listar(sql);
         }
 
@@ -86,7 +105,7 @@ namespace ProjetoSISO
 
         public DataSet ListarDadosPorNome()
         {
-            string sql = "select p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where p.nomePaciente  like '%" + paciente.NomePacientes+"%'";
+            string sql = "select a.idAgendamento, p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where p.nomePaciente  like '%" + paciente.NomePacientes+"%'";
             return c.Listar(sql);
         }
 

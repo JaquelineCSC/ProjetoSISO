@@ -45,14 +45,17 @@ namespace ProjetoSISO
 
         private void dgAgenda_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            agendamento.IdAgendamento = Convert.ToInt32(dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString());
-            agendamento.ConsultarDadosAgendamentoPorId();
-            lbNomeDent.Text = dentista.NomeDentista;
-            lbEspDent.Text = dentista.EspecializacaoDentista;
-            lbCpfPac.Text = paciente.CpfPacientes;
-            lbNascPac.Text = paciente.DataNascimentoPacientes.ToString("d");
-            lblHora.Text = agendamento.HoraAgendamento;
-            lbDataAg.Text = agendamento.DataAgendamento.ToString("d");
+            if (dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
+            {
+                agendamento.IdAgendamento = Convert.ToInt32(dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString());
+                agendamento.ConsultarDadosAgendamentoPorIdPessoa();
+                lbNomeDent.Text = dentista.NomeDentista;
+                lbEspDent.Text = dentista.EspecializacaoDentista;
+                lbCpfPac.Text = paciente.CpfPacientes;
+                lbNascPac.Text = paciente.DataNascimentoPacientes.ToString("d");
+                lblHora.Text = agendamento.HoraAgendamento;
+                lbDataAg.Text = agendamento.DataAgendamento.ToString("d");
+            }
         }
 
         private void txtValor_TextChanged(object sender, EventArgs e)
@@ -85,7 +88,7 @@ namespace ProjetoSISO
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             paciente.NomePacientes = textBox1.Text;
-            dgAgenda.DataSource = paciente.ListarDadosPacientes().Tables[0];
+            dgAgenda.DataSource = agendamento.ListarDadosPorNome().Tables[0];
         }
 
         private void cmdLimpar_Click(object sender, EventArgs e)

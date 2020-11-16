@@ -123,5 +123,27 @@ namespace ProjetoSISO {
             }
             cn.Close();
         }
+
+        public void ConsultarAgendamentosIDPessoa(string sql)
+        {
+            Conectar();
+            cd.Connection = cn;
+            cd.CommandText = sql;
+            SqlDataReader dr = cd.ExecuteReader();
+
+            Campos = "";
+            if (dr.Read())
+            {
+                Campos += dr["nomePaciente"].ToString() + ";";
+                Campos += dr["CPFPaciente"].ToString() + ";";
+                Campos += dr["dataNascPaciente"].ToString() + ";";
+                Campos += dr["nomeDentista"].ToString() + ";";
+                Campos += dr["especializacaoDentista"].ToString() + ";";
+                Campos += dr["dataAgendamento"].ToString() + ";";
+                Campos += dr["horaAgendamento"].ToString() + ";";
+                cn.Close();
+            }
+            cn.Close();
+        }
     }
 }
