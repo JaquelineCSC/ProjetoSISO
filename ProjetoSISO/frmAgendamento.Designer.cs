@@ -35,6 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dgAgendamentos = new System.Windows.Forms.DataGridView();
             this.gbDados = new System.Windows.Forms.GroupBox();
+            this.cmdLimpar = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lbHora = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -52,11 +53,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbNomePac = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.cmdConfirmar = new System.Windows.Forms.Button();
             this.cbHora = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.cmdLimpar = new System.Windows.Forms.Button();
-            this.cmdConfirmar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgDentista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgAgendamentos)).BeginInit();
@@ -213,6 +213,19 @@
             this.gbDados.Size = new System.Drawing.Size(643, 742);
             this.gbDados.TabIndex = 6;
             this.gbDados.TabStop = false;
+            // 
+            // cmdLimpar
+            // 
+            this.cmdLimpar.BackgroundImage = global::ProjetoSISO.Properties.Resources.erase;
+            this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdLimpar.FlatAppearance.BorderSize = 0;
+            this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLimpar.Location = new System.Drawing.Point(363, 623);
+            this.cmdLimpar.Name = "cmdLimpar";
+            this.cmdLimpar.Size = new System.Drawing.Size(76, 69);
+            this.cmdLimpar.TabIndex = 9;
+            this.cmdLimpar.UseVisualStyleBackColor = true;
+            this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
             // 
             // groupBox4
             // 
@@ -415,6 +428,20 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Nome do Paciente:";
             // 
+            // cmdConfirmar
+            // 
+            this.cmdConfirmar.BackgroundImage = global::ProjetoSISO.Properties.Resources.save;
+            this.cmdConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdConfirmar.FlatAppearance.BorderSize = 0;
+            this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdConfirmar.Location = new System.Drawing.Point(211, 623);
+            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdConfirmar.Name = "cmdConfirmar";
+            this.cmdConfirmar.Size = new System.Drawing.Size(86, 69);
+            this.cmdConfirmar.TabIndex = 0;
+            this.cmdConfirmar.UseVisualStyleBackColor = true;
+            this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
+            // 
             // cbHora
             // 
             this.cbHora.BackColor = System.Drawing.SystemColors.Control;
@@ -484,37 +511,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cmdLimpar
-            // 
-            this.cmdLimpar.BackgroundImage = global::ProjetoSISO.Properties.Resources.erase;
-            this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdLimpar.FlatAppearance.BorderSize = 0;
-            this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLimpar.Location = new System.Drawing.Point(363, 623);
-            this.cmdLimpar.Name = "cmdLimpar";
-            this.cmdLimpar.Size = new System.Drawing.Size(76, 69);
-            this.cmdLimpar.TabIndex = 9;
-            this.cmdLimpar.UseVisualStyleBackColor = true;
-            this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
-            // 
-            // cmdConfirmar
-            // 
-            this.cmdConfirmar.BackgroundImage = global::ProjetoSISO.Properties.Resources.save;
-            this.cmdConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdConfirmar.FlatAppearance.BorderSize = 0;
-            this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdConfirmar.Location = new System.Drawing.Point(211, 623);
-            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdConfirmar.Name = "cmdConfirmar";
-            this.cmdConfirmar.Size = new System.Drawing.Size(86, 69);
-            this.cmdConfirmar.TabIndex = 0;
-            this.cmdConfirmar.UseVisualStyleBackColor = true;
-            this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
-            // 
             // frmAgendamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2054, 1136);
             this.ControlBox = false;
