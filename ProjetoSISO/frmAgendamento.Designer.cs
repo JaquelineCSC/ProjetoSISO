@@ -204,7 +204,7 @@
             this.gbDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbDados.Location = new System.Drawing.Point(623, 104);
             this.gbDados.Name = "gbDados";
-            this.gbDados.Size = new System.Drawing.Size(409, 495);
+            this.gbDados.Size = new System.Drawing.Size(475, 495);
             this.gbDados.TabIndex = 6;
             this.gbDados.TabStop = false;
             // 
@@ -215,7 +215,7 @@
             this.cmdLimpar.FlatAppearance.BorderSize = 0;
             this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdLimpar.Location = new System.Drawing.Point(217, 395);
-            this.cmdLimpar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdLimpar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdLimpar.Name = "cmdLimpar";
             this.cmdLimpar.Size = new System.Drawing.Size(51, 46);
             this.cmdLimpar.TabIndex = 9;
@@ -231,7 +231,7 @@
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox4.Location = new System.Drawing.Point(13, 267);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(382, 106);
+            this.groupBox4.Size = new System.Drawing.Size(446, 106);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             // 
@@ -284,7 +284,7 @@
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(13, 163);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(382, 99);
+            this.groupBox3.Size = new System.Drawing.Size(446, 99);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
@@ -339,7 +339,7 @@
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Location = new System.Drawing.Point(13, 21);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(382, 137);
+            this.groupBox2.Size = new System.Drawing.Size(446, 137);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
@@ -477,7 +477,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(49, 17);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 42);
             this.button1.TabIndex = 8;
@@ -491,7 +491,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(913, 515);
+            this.ClientSize = new System.Drawing.Size(1173, 732);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbHora);

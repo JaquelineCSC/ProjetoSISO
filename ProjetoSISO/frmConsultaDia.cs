@@ -66,5 +66,11 @@ namespace ProjetoSISO
             consulta = new dadosConsulta();
 
         }
+
+        private void cmdBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            p.Enabled = true;
+        }
     }
 }
