@@ -26,11 +26,10 @@ namespace ProjetoSISO
         public int IdConsulta { get; set; }
         public string DescricaoProcedimentoConsulta { get; set; }
         public double ValorConsulta { get; set; }
-        public int IdAgendamento { get; set; }
 
         public void InserirConsulta()
         {
-            string sql = "insert into Consulta (descricaoProcedimentoConsulta, valorConsulta, idAgendamento) values ('" + DescricaoProcedimentoConsulta + "', " + ValorConsulta + ", " + agendamento.IdAgendamento;
+            string sql = "insert into Consulta (descricaoProcedimentoConsulta, valorConsulta, idAgendamento) values ('" + DescricaoProcedimentoConsulta + "', " + ValorConsulta + ", " + agendamento.IdAgendamento+")";
             c.Executar(sql);
         }
     }

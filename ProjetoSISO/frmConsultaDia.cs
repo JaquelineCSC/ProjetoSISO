@@ -66,6 +66,8 @@ namespace ProjetoSISO
             if (Conferir())
             {
                 consulta = new dadosConsulta(agendamento, dentista, paciente);
+                consulta.ValorConsulta = Convert.ToDouble(lblValor.Text.ToString());
+                consulta.DescricaoProcedimentoConsulta = txtProcedimento.Text;
                 consulta.InserirConsulta();
                 MessageBox.Show("Agendamento efetuado com sucesso");
                 Limpar();
