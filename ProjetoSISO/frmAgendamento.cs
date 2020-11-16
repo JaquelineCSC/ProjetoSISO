@@ -8,23 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoSISO {
-    public partial class frmAgendamento : Form {
+namespace ProjetoSISO
+{
+    public partial class frmAgendamento : Form
+    {
         dadosDentista dentista = new dadosDentista();
         dadosPacientes paciente = new dadosPacientes();
         dadosAgendamento agendamento;
 
         Panel p;
 
-
-        public frmAgendamento(Panel p) {
+        public frmAgendamento(Panel p)
+        {
             InitializeComponent();
             this.p = p;
         }
 
         private void frmAgendamento_Load(object sender, EventArgs e)
         {
-            
             dgAgendamentos.ReadOnly = true;
             dgAgendamentos.MultiSelect = false;
             dgAgendamentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -45,7 +46,6 @@ namespace ProjetoSISO {
             dgPaciente.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             Limpar();
-
         }
 
         private void txtDentista_TextChanged(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace ProjetoSISO {
         {
             if ((lbNomeDent.Text == "") || (lbNomePac.Text == "") || (lbCpfPac.Text == "") || (lbDataAg.Text == "") || (lbEspDent.Text == "") || (lbHora.Text == "") || (lbNascPac.Text == ""))
                 return false;
-            else 
+            else
                 return true;
         }
 
@@ -139,16 +139,6 @@ namespace ProjetoSISO {
         private void cmdLimpar_Click(object sender, EventArgs e)
         {
             Limpar();
-        }
-
-        private void dgDentista_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgAgendamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

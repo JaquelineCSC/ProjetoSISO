@@ -17,11 +17,6 @@ namespace ProjetoSISO
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -34,16 +29,6 @@ namespace ProjetoSISO
             janela.TopLevel = false;
             janela.Visible = true;
             panelForm.Controls.Add(janela);
-        }
-
-        private void panelForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)

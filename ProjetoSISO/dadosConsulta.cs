@@ -14,10 +14,6 @@ namespace ProjetoSISO
         dadosPacientes paciente;
         dadosDentista dentista;
         conexao c = new conexao();
-        int idConsulta;
-        string descricaoProcedimentoConsulta;
-        double valorConsulta;
-        int idAgendamento;
 
         public dadosConsulta() { }
         public dadosConsulta(dadosAgendamento a, dadosDentista d, dadosPacientes p)
@@ -27,10 +23,10 @@ namespace ProjetoSISO
             paciente = p;
         }
 
-        public int IdConsulta { get => idConsulta; set => idConsulta = value; }
-        public string DescricaoProcedimentoConsulta { get => descricaoProcedimentoConsulta; set => descricaoProcedimentoConsulta = value; }
-        public double ValorConsulta { get => valorConsulta; set => valorConsulta = value; }
-        public int IdAgendamento { get => idAgendamento; set => idAgendamento = value; }
+        public int IdConsulta { get; set; }
+        public string DescricaoProcedimentoConsulta { get; set; }
+        public double ValorConsulta { get; set; }
+        public int IdAgendamento { get; set; }
 
         public void InserirConsulta()
         {

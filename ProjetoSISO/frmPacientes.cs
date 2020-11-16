@@ -26,11 +26,6 @@ namespace ProjetoSISO {
             p.Enabled = true;
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmPacientes_Load(object sender, EventArgs e)
         {
             cboEstado.SelectedIndex = 12;

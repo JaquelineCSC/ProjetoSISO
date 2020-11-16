@@ -11,33 +11,20 @@ namespace ProjetoSISO
     class dadosDentista
     {
         conexao c = new conexao();
-        private int idDentista;
-        private string cpfDentista;
-        private string croDentista;
-        private string nomeDentista;
-        private string enderecoDentista;
-        private string estadoDentista;
-        private string cepDentista;
-        private string cidadeDentista;
-        private DateTime dataNascimentoDentista;
-        private string sexoDentista;
-        private string telefoneDentista;
-        private string celularDentista;
-        private string especializacaoDentista;
 
-        public int IdDentista { get => idDentista; set => idDentista = value; }
-        public string CpfDentista { get => cpfDentista; set => cpfDentista = value; }
-        public string CroDentista { get => croDentista; set => croDentista = value; }
-        public string NomeDentista { get => nomeDentista; set => nomeDentista = value; }
-        public string EnderecoDentista { get => enderecoDentista; set => enderecoDentista = value; }
-        public string EstadoDentista { get => estadoDentista; set => estadoDentista = value; }
-        public string CepDentista { get => cepDentista; set => cepDentista = value; }
-        public string CidadeDentista { get => cidadeDentista; set => cidadeDentista = value; }
-        public DateTime DataNascimentoDentista { get => dataNascimentoDentista; set => dataNascimentoDentista = value; }
-        public string SexoDentista { get => sexoDentista; set => sexoDentista = value; }
-        public string TelefoneDentista { get => telefoneDentista; set => telefoneDentista = value; }
-        public string CelularDentista { get => celularDentista; set => celularDentista = value; }
-        public string EspecializacaoDentista { get => especializacaoDentista; set => especializacaoDentista = value; }
+        public int IdDentista { get; set; }
+        public string CpfDentista { get; set; }
+        public string CroDentista { get; set; }
+        public string NomeDentista { get; set; }
+        public string EnderecoDentista { get; set; }
+        public string EstadoDentista { get; set; }
+        public string CepDentista { get; set; }
+        public string CidadeDentista { get; set; }
+        public DateTime DataNascimentoDentista { get; set; }
+        public string SexoDentista { get; set; }
+        public string TelefoneDentista { get; set; }
+        public string CelularDentista { get; set; }
+        public string EspecializacaoDentista { get; set; }
 
         public void IncluirDadosDentista()
         {
@@ -46,12 +33,10 @@ namespace ProjetoSISO
                 "values ('" + CpfDentista + "','" + CroDentista.ToString() + "','" + NomeDentista + "','" + EnderecoDentista + "','" + EstadoDentista + "','" + CepDentista + "','" + CidadeDentista + "','" + DataNascimentoDentista + "','" + SexoDentista + "','" + TelefoneDentista + "','" + CelularDentista + "','" + EspecializacaoDentista + "')";
             c.Executar(sql);
         }
-
-
         public void AlterarDadosDentista()
         {
             string sql = "";
-            sql += "Update Dentistas set CPFDentista = '" + CpfDentista + "', CROdentista = '" + CroDentista + "', nomeDentista = '" + NomeDentista + "', enderecoDentista = '" + EnderecoDentista + "', estadoDentista = '" + EstadoDentista + "', CEPDentista = '" + CepDentista + "', cidadeDentista = '" + CidadeDentista + "',dataNascDentista = '" + dataNascimentoDentista + "', sexoDentista = '" + SexoDentista + "', telefoneDentista = '" + TelefoneDentista + "', celularDentista = '" + CelularDentista + "', especializacaoDentista = '" +EspecializacaoDentista + "'  where idDentista = " + IdDentista.ToString();
+            sql += "Update Dentistas set CPFDentista = '" + CpfDentista + "', CROdentista = '" + CroDentista + "', nomeDentista = '" + NomeDentista + "', enderecoDentista = '" + EnderecoDentista + "', estadoDentista = '" + EstadoDentista + "', CEPDentista = '" + CepDentista + "', cidadeDentista = '" + CidadeDentista + "',dataNascDentista = '" + DataNascimentoDentista + "', sexoDentista = '" + SexoDentista + "', telefoneDentista = '" + TelefoneDentista + "', celularDentista = '" + CelularDentista + "', especializacaoDentista = '" + EspecializacaoDentista + "'  where idDentista = " + IdDentista.ToString();
             c.Executar(sql);
         }
 
@@ -61,7 +46,6 @@ namespace ProjetoSISO
             sql += "Delete from Dentistas where idDentista = " + IdDentista.ToString();
             c.Executar(sql);
         }
-
 
         public void ConsultarDadosDentista()
         {
@@ -74,13 +58,13 @@ namespace ProjetoSISO
             NomeDentista = auxiliar[2];
             EnderecoDentista = auxiliar[3];
             EstadoDentista = auxiliar[4];
-            cepDentista = auxiliar[5];
-            cidadeDentista = auxiliar[6];
-            dataNascimentoDentista = DateTime.Parse(auxiliar[7]);
-            sexoDentista = auxiliar[8];
-            telefoneDentista = auxiliar[9];
-            celularDentista = auxiliar[10];
-            especializacaoDentista = auxiliar[11];
+            CepDentista = auxiliar[5];
+            CidadeDentista = auxiliar[6];
+            DataNascimentoDentista = DateTime.Parse(auxiliar[7]);
+            SexoDentista = auxiliar[8];
+            TelefoneDentista = auxiliar[9];
+            CelularDentista = auxiliar[10];
+            EspecializacaoDentista = auxiliar[11];
         }
 
         public DataSet ListarDadosDentista()
@@ -88,7 +72,6 @@ namespace ProjetoSISO
             string sql = "SELECT * FROM Dentistas where nomeDentista like '%" + NomeDentista + "%'";
             return c.Listar(sql);
         }
-
 
     }
 }

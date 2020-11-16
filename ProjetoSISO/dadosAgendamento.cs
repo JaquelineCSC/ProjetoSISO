@@ -13,9 +13,7 @@ namespace ProjetoSISO
         dadosDentista dentista;
         dadosPacientes paciente;
         conexao c = new conexao();
-        int idAgendamento;
         DateTime dataAgendamento;
-        string horaAgendamento;
 
         public dadosAgendamento(dadosDentista d, dadosPacientes p)
         {
@@ -25,9 +23,9 @@ namespace ProjetoSISO
 
         public dadosAgendamento() { }
 
-        public int IdAgendamento { get => idAgendamento; set => idAgendamento = value; }
+        public int IdAgendamento { get; set; }
         public DateTime DataAgendamento { get => dataAgendamento; set => dataAgendamento = value; }
-        public string HoraAgendamento { get => horaAgendamento; set => horaAgendamento = value; }
+        public string HoraAgendamento { get; set; }
 
 
         //public void ConsultarDadosAgendamento()
@@ -45,15 +43,14 @@ namespace ProjetoSISO
         public void ConsultarDadosAgendamento()
         {
             string sql = "";
-            sql += "select * from Agendamento where idDentista = " + dentista.IdDentista + " and dataAgendamento = '" + DataAgendamento+"'";
+            sql += "select * from Agendamento where idDentista = " + dentista.IdDentista + " and dataAgendamento = '" + DataAgendamento + "'";
             c.ConsultarAgendamentos(sql);
             string[] auxiliar = c.Campos.Split(';');
-            if(auxiliar[0]!="")
+            if (auxiliar[0] != "")
             {
                 IdAgendamento = int.Parse(auxiliar[0]);
                 DataAgendamento = DateTime.Parse(auxiliar[1]);
                 HoraAgendamento = auxiliar[2];
-
             }
         }
 
@@ -67,12 +64,11 @@ namespace ProjetoSISO
             {
                 paciente.NomePacientes = auxiliar[0];
                 paciente.CpfPacientes = auxiliar[1];
-                paciente.DataNascimentoPacientes  = Convert.ToDateTime(auxiliar[2]);
+                paciente.DataNascimentoPacientes = Convert.ToDateTime(auxiliar[2]);
                 dentista.NomeDentista = auxiliar[3];
                 dentista.EspecializacaoDentista = auxiliar[4];
                 DataAgendamento = Convert.ToDateTime(auxiliar[5]);
                 HoraAgendamento = auxiliar[6];
-
             }
         }
 
@@ -87,7 +83,6 @@ namespace ProjetoSISO
                 IdAgendamento = int.Parse(auxiliar[0]);
                 DataAgendamento = DateTime.Parse(auxiliar[1]);
                 HoraAgendamento = auxiliar[2];
-
             }
         }
 
@@ -105,18 +100,19 @@ namespace ProjetoSISO
 
         public DataSet ListarDadosPorNome()
         {
-            string sql = "select a.idAgendamento, p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where p.nomePaciente  like '%" + paciente.NomePacientes+"%'";
+            string sql = "select a.idAgendamento, p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where p.nomePaciente  like '%" + paciente.NomePacientes + "%'";
             return c.Listar(sql);
         }
 
-        public DataSet ListarDadosAgendamentosSemOID() {
+        public DataSet ListarDadosAgendamentosSemOID()
+        {
             string sql = "select p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente";
             return c.Listar(sql);
         }
 
         public void InserirAgendamento()
         {
-            string sql = "insert into Agendamento (dataAgendamento, horaAgendamento, idPaciente, idDentista) values ('" + dataAgendamento + "', '" + horaAgendamento + "', " + paciente.IdPacientes + "," +  dentista.IdDentista + ")";
+            string sql = "insert into Agendamento (dataAgendamento, horaAgendamento, idPaciente, idDentista) values ('" + dataAgendamento + "', '" + HoraAgendamento + "', " + paciente.IdPacientes + "," + dentista.IdDentista + ")";
             c.Executar(sql);
         }
     }
