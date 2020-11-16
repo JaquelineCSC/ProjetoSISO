@@ -16,6 +16,7 @@ namespace ProjetoSISO
         dadosDentista dentista = new dadosDentista();
         dadosPacientes paciente = new dadosPacientes();
         dadosAgendamento agendamento;
+        dadosConsulta consulta;
 
         public frmConsultaDia(Panel p)
         {
@@ -37,7 +38,32 @@ namespace ProjetoSISO
             agendamento.DataAgendamento = Calendar.SelectionRange.Start.Date;
             agendamento.ConsultarDadosAgendamento();
             dgAgenda.DataSource = agendamento.ListarDadosAgendamentos().Tables[0];
-            lbDataAg.Text = Calendar.SelectionRange.Start.Date.ToString("d");
+            
+
+        }
+
+        private void dgAgenda_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            agendamento.IdAgendamento = Convert.ToInt32(dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString());
+            lbNomeDent.Text = dentista.NomeDentista;
+            lbEspDent.Text = dentista.EspecializacaoDentista;
+            lbCpfPac.Text = paciente.CpfPacientes;
+            lbNascPac.Text = paciente.DataNascimentoPacientes.ToString("d");
+            lblHora.Text = agendamento.HoraAgendamento;
+            lbDataAg.Text = agendamento.DataAgendamento.ToString("d");
+        }
+
+        private void txtValor_TextChanged(object sender, EventArgs e)
+        {
+            lblValor.Text = txtValor.Text;
+
+        }
+
+        private void cmdConfirmar_Click(object sender, EventArgs e)
+        {
+
+            consulta = new dadosConsulta();
+
         }
     }
 }
