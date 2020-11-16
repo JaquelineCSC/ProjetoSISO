@@ -22,6 +22,9 @@ namespace ProjetoSISO
             dentista = d;
             paciente = p;
         }
+
+        public dadosAgendamento() { }
+
         public int IdAgendamento { get => idAgendamento; set => idAgendamento = value; }
         public DateTime DataAgendamento { get => dataAgendamento; set => dataAgendamento = value; }
         public string HoraAgendamento { get => horaAgendamento; set => horaAgendamento = value; }
