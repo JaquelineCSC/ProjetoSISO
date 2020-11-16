@@ -95,7 +95,7 @@ namespace ProjetoSISO
 
         public bool Conferir()
         {
-            if ((lbNomeDent.Text == "") || (lbNomePac.Text == "") || (lbCpfPac.Text == "") || (lbDataAg.Text == "") || (lbEspDent.Text == "") || (lbHora.Text == "") || (lbNascPac.Text == ""))
+            if ((lbNomeDent.Text == "") || (lbNomePac.Text == "") || (lbCpfPac.Text == "") || (lbDataAg.Text == "") || (lbEspDent.Text == "") || (lblHora.Text == "") || (lbNascPac.Text == ""))
                 return false;
             else
                 return true;
