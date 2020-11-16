@@ -72,21 +72,27 @@ namespace ProjetoSISO {
 
         private void dgDentista_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            dentista.IdDentista = Convert.ToInt32(dgDentista.Rows[e.RowIndex].Cells[0].Value.ToString());
-            dentista.ConsultarDadosDentista();
-            agendamento.ConsultarDadosAgendamento();
-            dgAgendamentos.DataSource = agendamento.ListarDadosAgendamentos().Tables[0];
-            lbNomeDent.Text = dentista.NomeDentista;
-            lbEspDent.Text = dentista.EspecializacaoDentista;
+            if (dgDentista.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
+            {
+                dentista.IdDentista = Convert.ToInt32(dgDentista.Rows[e.RowIndex].Cells[0].Value.ToString());
+                dentista.ConsultarDadosDentista();
+                agendamento.ConsultarDadosAgendamento();
+                dgAgendamentos.DataSource = agendamento.ListarDadosAgendamentos().Tables[0];
+                lbNomeDent.Text = dentista.NomeDentista;
+                lbEspDent.Text = dentista.EspecializacaoDentista;
+            }
         }
 
         private void dgPaciente_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            paciente.IdPacientes = Convert.ToInt32(dgPaciente.Rows[e.RowIndex].Cells[0].Value.ToString());
-            paciente.ConsultarDadosPacientes();
-            lbNomePac.Text = paciente.NomePacientes;
-            lbCpfPac.Text = paciente.CpfPacientes;
-            lbNascPac.Text = paciente.DataNascimentoPacientes.ToString("d");
+            if (dgPaciente.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
+            {
+                paciente.IdPacientes = Convert.ToInt32(dgPaciente.Rows[e.RowIndex].Cells[0].Value.ToString());
+                paciente.ConsultarDadosPacientes();
+                lbNomePac.Text = paciente.NomePacientes;
+                lbCpfPac.Text = paciente.CpfPacientes;
+                lbNascPac.Text = paciente.DataNascimentoPacientes.ToString("d");
+            }
         }
 
         private void cbHora_SelectedValueChanged(object sender, EventArgs e)
@@ -135,6 +141,16 @@ namespace ProjetoSISO {
         private void cmdLimpar_Click(object sender, EventArgs e)
         {
             Limpar();
+        }
+
+        private void dgDentista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgAgendamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
