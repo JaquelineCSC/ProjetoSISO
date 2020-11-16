@@ -31,6 +31,7 @@
             this.Calendar = new System.Windows.Forms.MonthCalendar();
             this.dgAgenda = new System.Windows.Forms.DataGridView();
             this.gbDados = new System.Windows.Forms.GroupBox();
+            this.cmdLimpar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblValor = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbNomePac = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.cmdConfirmar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.txtProcedimento = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,8 +60,6 @@
             this.txtValor = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmdBack = new System.Windows.Forms.Button();
-            this.cmdLimpar = new System.Windows.Forms.Button();
-            this.cmdConfirmar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgAgenda)).BeginInit();
@@ -105,13 +105,27 @@
             this.gbDados.Controls.Add(this.groupBox2);
             this.gbDados.Controls.Add(this.cmdConfirmar);
             this.gbDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbDados.Location = new System.Drawing.Point(733, 54);
+            this.gbDados.Location = new System.Drawing.Point(733, 100);
             this.gbDados.Margin = new System.Windows.Forms.Padding(5);
             this.gbDados.Name = "gbDados";
             this.gbDados.Padding = new System.Windows.Forms.Padding(5);
             this.gbDados.Size = new System.Drawing.Size(510, 581);
             this.gbDados.TabIndex = 8;
             this.gbDados.TabStop = false;
+            // 
+            // cmdLimpar
+            // 
+            this.cmdLimpar.BackgroundImage = global::ProjetoSISO.Properties.Resources.erase;
+            this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdLimpar.FlatAppearance.BorderSize = 0;
+            this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLimpar.Location = new System.Drawing.Point(277, 502);
+            this.cmdLimpar.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdLimpar.Name = "cmdLimpar";
+            this.cmdLimpar.Size = new System.Drawing.Size(54, 57);
+            this.cmdLimpar.TabIndex = 9;
+            this.cmdLimpar.UseVisualStyleBackColor = true;
+            this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
             // 
             // groupBox1
             // 
@@ -349,11 +363,25 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Nome do Paciente:";
             // 
+            // cmdConfirmar
+            // 
+            this.cmdConfirmar.BackgroundImage = global::ProjetoSISO.Properties.Resources.save;
+            this.cmdConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdConfirmar.FlatAppearance.BorderSize = 0;
+            this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdConfirmar.Location = new System.Drawing.Point(190, 502);
+            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(5);
+            this.cmdConfirmar.Name = "cmdConfirmar";
+            this.cmdConfirmar.Size = new System.Drawing.Size(58, 57);
+            this.cmdConfirmar.TabIndex = 0;
+            this.cmdConfirmar.UseVisualStyleBackColor = true;
+            this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(919, 29);
+            this.label13.Location = new System.Drawing.Point(919, 78);
             this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(169, 20);
@@ -374,40 +402,43 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 282);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(17, 279);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Procedimento";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.Location = new System.Drawing.Point(20, 526);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(46, 20);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Valor:";
+            this.label2.Text = "Valor";
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(113, 522);
+            this.txtValor.Location = new System.Drawing.Point(78, 523);
             this.txtValor.Margin = new System.Windows.Forms.Padding(4);
             this.txtValor.Mask = "000.00";
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(184, 23);
+            this.txtValor.Size = new System.Drawing.Size(81, 23);
             this.txtValor.TabIndex = 11;
             this.txtValor.TextChanged += new System.EventHandler(this.txtValor_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.Location = new System.Drawing.Point(20, 78);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 17);
+            this.label3.Size = new System.Drawing.Size(127, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Consultas no dia";
             // 
@@ -424,34 +455,6 @@
             this.cmdBack.UseVisualStyleBackColor = true;
             this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
-            // cmdLimpar
-            // 
-            this.cmdLimpar.BackgroundImage = global::ProjetoSISO.Properties.Resources.erase;
-            this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdLimpar.FlatAppearance.BorderSize = 0;
-            this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLimpar.Location = new System.Drawing.Point(277, 502);
-            this.cmdLimpar.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdLimpar.Name = "cmdLimpar";
-            this.cmdLimpar.Size = new System.Drawing.Size(54, 57);
-            this.cmdLimpar.TabIndex = 9;
-            this.cmdLimpar.UseVisualStyleBackColor = true;
-            this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
-            // 
-            // cmdConfirmar
-            // 
-            this.cmdConfirmar.BackgroundImage = global::ProjetoSISO.Properties.Resources.save;
-            this.cmdConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdConfirmar.FlatAppearance.BorderSize = 0;
-            this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdConfirmar.Location = new System.Drawing.Point(190, 502);
-            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(5);
-            this.cmdConfirmar.Name = "cmdConfirmar";
-            this.cmdConfirmar.Size = new System.Drawing.Size(58, 57);
-            this.cmdConfirmar.TabIndex = 0;
-            this.cmdConfirmar.UseVisualStyleBackColor = true;
-            this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(264, 100);
@@ -463,10 +466,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(261, 80);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(261, 78);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 17);
+            this.label4.Size = new System.Drawing.Size(150, 20);
             this.label4.TabIndex = 10;
             this.label4.Text = "Pesquisar por nome";
             // 
@@ -477,7 +481,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1266, 649);
+            this.ClientSize = new System.Drawing.Size(1173, 732);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.cmdBack);
             this.Controls.Add(this.txtValor);

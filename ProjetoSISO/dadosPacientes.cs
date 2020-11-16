@@ -6,73 +6,67 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoSISO {
-    class dadosPacientes {
+namespace ProjetoSISO
+{
+    class dadosPacientes
+    {
         conexao c = new conexao();
-        private int idPacientes;
-        private string cpfPacientes;
-        private string nomePacientes;
-        private string enderecoPacientes;
-        private string estadoPacientes;
-        private string cepPacientes;
-        private string cidadePacientes;
-        private DateTime dataNascimentoPacientes;
-        private string sexoPacientes;
-        private string telefonePacientes;
-        private string celularPacientes;
 
-        public int IdPacientes { get => idPacientes; set => idPacientes = value; }
-        public string CpfPacientes { get => cpfPacientes; set => cpfPacientes = value; }
-        public string NomePacientes { get => nomePacientes; set => nomePacientes = value; }
-        public string EnderecoPacientes { get => enderecoPacientes; set => enderecoPacientes = value; }
-        public string EstadoPacientes { get => estadoPacientes; set => estadoPacientes = value; }
-        public string CepPacientes { get => cepPacientes; set => cepPacientes = value; }
-        public string CidadePacientes { get => cidadePacientes; set => cidadePacientes = value; }
-        public DateTime DataNascimentoPacientes { get => dataNascimentoPacientes; set => dataNascimentoPacientes = value; }
-        public string SexoPacientes { get => sexoPacientes; set => sexoPacientes = value; }
-        public string TelefonePacientes { get => telefonePacientes; set => telefonePacientes = value; }
-        public string CelularPacientes { get => celularPacientes; set => celularPacientes = value; }
+        public int IdPacientes { get; set; }
+        public string CpfPacientes { get; set; }
+        public string NomePacientes { get; set; }
+        public string EnderecoPacientes { get; set; }
+        public string EstadoPacientes { get; set; }
+        public string CepPacientes { get; set; }
+        public string CidadePacientes { get; set; }
+        public DateTime DataNascimentoPacientes { get; set; }
+        public string SexoPacientes { get; set; }
+        public string TelefonePacientes { get; set; }
+        public string CelularPacientes { get; set; }
 
-        public void IncluirDadosPacientes() {
+        public void IncluirDadosPacientes()
+        {
             string sql = "";
             sql += "Insert into Pacientes (nomePaciente, CPFPaciente, enderecoPaciente, estadoPaciente, CEPPaciente, cidadePaciente, dataNascPaciente, sexoPaciente, telefonePaciente, celularPaciente) " +
-                "values ('" + nomePacientes+ "','" + cpfPacientes + "','" + enderecoPacientes + "','" + estadoPacientes + "','" + cepPacientes + "','" + cidadePacientes + "','" + dataNascimentoPacientes + "','" + sexoPacientes + "','" + telefonePacientes + "','" + celularPacientes + "')";
+                "values ('" + NomePacientes + "','" + CpfPacientes + "','" + EnderecoPacientes + "','" + EstadoPacientes + "','" + CepPacientes + "','" + CidadePacientes + "','" + DataNascimentoPacientes + "','" + SexoPacientes + "','" + TelefonePacientes + "','" + CelularPacientes + "')";
             c.Executar(sql);
         }
 
-
-        public void AlterarDadosPacientes() {
+        public void AlterarDadosPacientes()
+        {
             string sql = "";
-            sql += "Update Pacientes set nomePaciente = '" + nomePacientes + "', CPFPaciente = '" + CpfPacientes + "', enderecoPaciente = '" + enderecoPacientes + "', estadoPaciente = '" + estadoPacientes + "', CEPPaciente = '" + cepPacientes + "', cidadePaciente = '" + cidadePacientes + "', dataNascPaciente = '" + dataNascimentoPacientes + "', sexoPaciente = '" + sexoPacientes + "', telefonePaciente = '" + telefonePacientes + "', celularPaciente = '" + celularPacientes + "'" +
-                "  where idPaciente = " + idPacientes;
+            sql += "Update Pacientes set nomePaciente = '" + NomePacientes + "', CPFPaciente = '" + CpfPacientes + "', enderecoPaciente = '" + EnderecoPacientes + "', estadoPaciente = '" + EstadoPacientes + "', CEPPaciente = '" + CepPacientes + "', cidadePaciente = '" + CidadePacientes + "', dataNascPaciente = '" + DataNascimentoPacientes + "', sexoPaciente = '" + SexoPacientes + "', telefonePaciente = '" + TelefonePacientes + "', celularPaciente = '" + CelularPacientes + "'" +
+                "  where idPaciente = " + IdPacientes;
             c.Executar(sql);
         }
 
-        public void ExcluirDadosPacientes() {
+        public void ExcluirDadosPacientes()
+        {
             string sql = "";
-            sql += "Delete from Pacientes where idPaciente = " + idPacientes;
+            sql += "Delete from Pacientes where idPaciente = " + IdPacientes;
             c.Executar(sql);
         }
 
-
-        public void ConsultarDadosPacientes() {
+        public void ConsultarDadosPacientes()
+        {
             string sql = "";
             sql += "Select * from Pacientes where idPaciente = " + IdPacientes;
             c.ConsultarPacientes(sql);
             string[] auxiliar = c.Campos.Split(';');
-            nomePacientes = auxiliar[0];
+            NomePacientes = auxiliar[0];
             CpfPacientes = auxiliar[1];
-            enderecoPacientes = auxiliar[2];
-            estadoPacientes = auxiliar[3];
-            cepPacientes = auxiliar[4];
-            cidadePacientes = auxiliar[5];
-            dataNascimentoPacientes = DateTime.Parse(auxiliar[6]);
-            sexoPacientes = auxiliar[7];
-            telefonePacientes = auxiliar[8];
-            celularPacientes = auxiliar[9];
+            EnderecoPacientes = auxiliar[2];
+            EstadoPacientes = auxiliar[3];
+            CepPacientes = auxiliar[4];
+            CidadePacientes = auxiliar[5];
+            DataNascimentoPacientes = DateTime.Parse(auxiliar[6]);
+            SexoPacientes = auxiliar[7];
+            TelefonePacientes = auxiliar[8];
+            CelularPacientes = auxiliar[9];
         }
 
-        public DataSet ListarDadosPacientes() {
+        public DataSet ListarDadosPacientes()
+        {
             string sql = "SELECT * FROM Pacientes where nomePaciente like '%" + NomePacientes + "%'";
             return c.Listar(sql);
         }

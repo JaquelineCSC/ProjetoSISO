@@ -10,10 +10,7 @@ namespace ProjetoSISO {
     class conexao {
         private SqlConnection cn = new SqlConnection();
         private SqlCommand cd = new SqlCommand();
-
-        private string campos;
-
-        public string Campos { get => campos; set => campos = value; }
+        public string Campos { get; set; }
 
         private void Conectar() {
             string s = "";

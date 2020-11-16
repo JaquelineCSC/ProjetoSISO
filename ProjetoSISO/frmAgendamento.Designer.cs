@@ -70,7 +70,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 499);
+            this.label1.Location = new System.Drawing.Point(49, 497);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 0;
@@ -78,7 +78,7 @@
             // 
             // txtPaciente
             // 
-            this.txtPaciente.Location = new System.Drawing.Point(51, 521);
+            this.txtPaciente.Location = new System.Drawing.Point(48, 522);
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Size = new System.Drawing.Size(284, 23);
             this.txtPaciente.TabIndex = 1;
@@ -90,19 +90,19 @@
             this.dgPaciente.AllowUserToDeleteRows = false;
             this.dgPaciente.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPaciente.Location = new System.Drawing.Point(51, 546);
+            this.dgPaciente.Location = new System.Drawing.Point(48, 343);
             this.dgPaciente.Name = "dgPaciente";
             this.dgPaciente.ReadOnly = true;
             this.dgPaciente.RowHeadersWidth = 62;
             this.dgPaciente.RowTemplate.Height = 28;
-            this.dgPaciente.Size = new System.Drawing.Size(549, 136);
+            this.dgPaciente.Size = new System.Drawing.Size(563, 146);
             this.dgPaciente.TabIndex = 2;
             this.dgPaciente.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPaciente_CellEnter);
             // 
             // Calendar
             // 
             this.Calendar.BackColor = System.Drawing.SystemColors.Menu;
-            this.Calendar.Location = new System.Drawing.Point(387, 128);
+            this.Calendar.Location = new System.Drawing.Point(385, 142);
             this.Calendar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Calendar.MaxDate = new System.DateTime(2500, 2, 2, 0, 0, 0, 0);
             this.Calendar.MaxSelectionCount = 1;
@@ -117,21 +117,20 @@
             this.dgDentista.AllowUserToDeleteRows = false;
             this.dgDentista.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgDentista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDentista.Location = new System.Drawing.Point(51, 128);
+            this.dgDentista.Location = new System.Drawing.Point(49, 142);
             this.dgDentista.Name = "dgDentista";
             this.dgDentista.ReadOnly = true;
             this.dgDentista.RowHeadersWidth = 62;
             this.dgDentista.RowTemplate.Height = 28;
-            this.dgDentista.Size = new System.Drawing.Size(325, 169);
+            this.dgDentista.Size = new System.Drawing.Size(325, 162);
             this.dgDentista.TabIndex = 4;
-            this.dgDentista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDentista_CellContentClick);
             this.dgDentista.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDentista_CellEnter);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 81);
+            this.label2.Location = new System.Drawing.Point(49, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 0;
@@ -139,7 +138,7 @@
             // 
             // txtDentista
             // 
-            this.txtDentista.Location = new System.Drawing.Point(51, 103);
+            this.txtDentista.Location = new System.Drawing.Point(48, 112);
             this.txtDentista.Name = "txtDentista";
             this.txtDentista.Size = new System.Drawing.Size(284, 23);
             this.txtDentista.TabIndex = 1;
@@ -149,7 +148,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(382, 104);
+            this.label3.Location = new System.Drawing.Point(414, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(169, 20);
             this.label3.TabIndex = 0;
@@ -159,7 +158,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(489, 492);
+            this.label4.Location = new System.Drawing.Point(500, 497);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 20);
             this.label4.TabIndex = 0;
@@ -169,7 +168,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(47, 313);
+            this.label5.Location = new System.Drawing.Point(47, 316);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(285, 20);
             this.label5.TabIndex = 0;
@@ -183,16 +182,15 @@
             this.dgAgendamentos.AllowUserToResizeRows = false;
             this.dgAgendamentos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgAgendamentos.Location = new System.Drawing.Point(51, 336);
+            this.dgAgendamentos.Location = new System.Drawing.Point(48, 552);
             this.dgAgendamentos.MultiSelect = false;
             this.dgAgendamentos.Name = "dgAgendamentos";
             this.dgAgendamentos.RowHeadersWidth = 62;
             this.dgAgendamentos.RowTemplate.Height = 28;
             this.dgAgendamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgAgendamentos.ShowCellErrors = false;
-            this.dgAgendamentos.Size = new System.Drawing.Size(549, 146);
+            this.dgAgendamentos.Size = new System.Drawing.Size(563, 146);
             this.dgAgendamentos.TabIndex = 4;
-            this.dgAgendamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAgendamentos_CellContentClick);
             // 
             // gbDados
             // 
@@ -202,7 +200,7 @@
             this.gbDados.Controls.Add(this.groupBox2);
             this.gbDados.Controls.Add(this.cmdConfirmar);
             this.gbDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbDados.Location = new System.Drawing.Point(623, 104);
+            this.gbDados.Location = new System.Drawing.Point(625, 134);
             this.gbDados.Name = "gbDados";
             this.gbDados.Size = new System.Drawing.Size(475, 425);
             this.gbDados.TabIndex = 6;
@@ -420,7 +418,7 @@
             // 
             this.cbHora.BackColor = System.Drawing.SystemColors.Control;
             this.cbHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbHora.FormattingEnabled = true;
             this.cbHora.Items.AddRange(new object[] {
             "07:00",
@@ -454,9 +452,9 @@
             "21:30",
             "22:00",
             "22:30"});
-            this.cbHora.Location = new System.Drawing.Point(492, 515);
+            this.cbHora.Location = new System.Drawing.Point(503, 522);
             this.cbHora.Name = "cbHora";
-            this.cbHora.Size = new System.Drawing.Size(108, 28);
+            this.cbHora.Size = new System.Drawing.Size(108, 24);
             this.cbHora.TabIndex = 7;
             this.cbHora.SelectedValueChanged += new System.EventHandler(this.cbHora_SelectedValueChanged);
             // 
@@ -464,7 +462,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(723, 82);
+            this.label13.Location = new System.Drawing.Point(790, 115);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(169, 20);
             this.label13.TabIndex = 0;

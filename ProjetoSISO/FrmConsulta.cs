@@ -51,10 +51,6 @@ namespace ProjetoSISO
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void cmdExcluir_Click(object sender, EventArgs e)
         {
@@ -126,8 +122,7 @@ namespace ProjetoSISO
                 }
                 else
                     MessageBox.Show("Preencha todas informações!");
-            }
-            
+            }            
         }
 
         private void cmdClose_Click(object sender, EventArgs e)
@@ -149,11 +144,6 @@ namespace ProjetoSISO
                 return true;
             else
                 return false;
-        }
-
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -201,16 +191,6 @@ namespace ProjetoSISO
                     txtTelefone.Text = paciente.TelefonePacientes;
                 }
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_DoubleClick(object sender, EventArgs e)
-        {
-
         }
 
         private void txtxNome_TextChanged(object sender, EventArgs e)
