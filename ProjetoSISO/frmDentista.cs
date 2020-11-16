@@ -65,7 +65,7 @@ namespace ProjetoSISO
             int i = 0;
             foreach (Control item in this.groupBox1.Controls)
             {
-                if ((item is TextBox) && (item.Text == ""))
+                if ((item is TextBox) && (item.Text == "") && (item != txtTelefone))
                     i++;
             }
             if ((radioButton1.Checked == false) && (radioButton2.Checked == false))
@@ -82,7 +82,7 @@ namespace ProjetoSISO
             {
                 if (item is TextBox)
                     item.Text = "";
-                cbEstado.SelectedIndex = 0;
+                cbEstado.SelectedIndex = 12;
                 radioButton1.Checked = false;
                 radioButton2.Checked = false;
             }
@@ -101,7 +101,7 @@ namespace ProjetoSISO
 
         private void frmDentista_Load(object sender, EventArgs e)
         {
-
+            cbEstado.SelectedIndex = 12;
         }
     }
 }
