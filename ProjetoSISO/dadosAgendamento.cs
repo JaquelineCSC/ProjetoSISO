@@ -63,6 +63,11 @@ namespace ProjetoSISO
             return c.Listar(sql);
         }
 
+        public DataSet ListarDadosAgendamentosSemOID() {
+            string sql = "select p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente";
+            return c.Listar(sql);
+        }
+
         public void InserirAgendamento()
         {
             string sql = "insert into Agendamento (dataAgendamento, horaAgendamento, idPaciente, idDentista) values ('" + dataAgendamento + "', '" + horaAgendamento + "', " + paciente.IdPacientes + "," +  dentista.IdDentista + ")";

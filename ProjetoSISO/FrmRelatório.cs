@@ -290,7 +290,7 @@ namespace ProjetoSISO
 
             contador++;
 
-            DataSet ds = agenda.ListarDadosAgendamentos();
+            DataSet ds = agenda.ListarDadosAgendamentosSemOID();
 
             if (ds.Tables[0] != null)
             {
@@ -306,7 +306,7 @@ namespace ProjetoSISO
                     posicaoVertical = margemSuperior + contador * alturaFonte;
                     e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 150, posicaoVertical);
 
-                    linha = item["dataAgendamento"].ToString();
+                    linha = Convert.ToDateTime(item["dataAgendamento"]).ToString("d");
                     posicaoVertical = margemSuperior + contador * alturaFonte;
                     e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 400, posicaoVertical);
 
