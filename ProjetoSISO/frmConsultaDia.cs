@@ -36,8 +36,8 @@ namespace ProjetoSISO
         private void Calendar_DateChanged(object sender, DateRangeEventArgs e)
         {
             agendamento.DataAgendamento = Calendar.SelectionRange.Start.Date;
-            agendamento.ConsultarDadosAgendamento();
-            dgAgenda.DataSource = agendamento.ListarDadosAgendamentos().Tables[0];
+            
+            dgAgenda.DataSource = agendamento.ListarDadosAgendamentosPorData().Tables[0];
             
 
         }
@@ -45,6 +45,7 @@ namespace ProjetoSISO
         private void dgAgenda_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             agendamento.IdAgendamento = Convert.ToInt32(dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString());
+            agendamento.ConsultarDadosAgendamentoPorId();
             lbNomeDent.Text = dentista.NomeDentista;
             lbEspDent.Text = dentista.EspecializacaoDentista;
             lbCpfPac.Text = paciente.CpfPacientes;

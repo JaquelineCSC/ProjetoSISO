@@ -57,6 +57,27 @@ namespace ProjetoSISO
             }
         }
 
+        public void ConsultarDadosAgendamentoPorId()
+        {
+            string sql = "";
+            sql += "select * from Agendamento where idDentista = " + dentista.IdDentista;
+            c.ConsultarAgendamentos(sql);
+            string[] auxiliar = c.Campos.Split(';');
+            if (auxiliar[0] != "")
+            {
+                IdAgendamento = int.Parse(auxiliar[0]);
+                DataAgendamento = DateTime.Parse(auxiliar[1]);
+                HoraAgendamento = auxiliar[2];
+
+            }
+        }
+
+        public DataSet ListarDadosAgendamentosPorData()
+        {
+            string sql = "select p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where a.dataAgendamento = '" + DataAgendamento.ToString() + "'";
+            return c.Listar(sql);
+        }
+
         public DataSet ListarDadosAgendamentos()
         {
             string sql = "select p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where d.idDentista = " + dentista.IdDentista + " and a.dataAgendamento = '" + DataAgendamento + "'";
