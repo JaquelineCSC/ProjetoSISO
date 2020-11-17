@@ -51,9 +51,9 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1724, 73);
+            this.panel1.Size = new System.Drawing.Size(1293, 59);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -61,9 +61,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 14);
+            this.label1.Location = new System.Drawing.Point(19, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 45);
+            this.label1.Size = new System.Drawing.Size(188, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Projeto SISO";
             // 
@@ -81,10 +82,10 @@
             this.button4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::ProjetoSISO.Properties.Resources.close;
-            this.button4.Location = new System.Drawing.Point(1647, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(1235, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(77, 73);
+            this.button4.Size = new System.Drawing.Size(58, 59);
             this.button4.TabIndex = 0;
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -96,17 +97,17 @@
             this.panelMenuEsquerda.AutoSize = true;
             this.panelMenuEsquerda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelMenuEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(49)))), ((int)(((byte)(74)))));
+            this.panelMenuEsquerda.Controls.Add(this.cmdDentista);
+            this.panelMenuEsquerda.Controls.Add(this.button1);
+            this.panelMenuEsquerda.Controls.Add(this.button2);
+            this.panelMenuEsquerda.Controls.Add(this.button3);
             this.panelMenuEsquerda.Controls.Add(this.button5);
             this.panelMenuEsquerda.Controls.Add(this.pictureBox1);
-            this.panelMenuEsquerda.Controls.Add(this.button3);
-            this.panelMenuEsquerda.Controls.Add(this.button2);
-            this.panelMenuEsquerda.Controls.Add(this.button1);
-            this.panelMenuEsquerda.Controls.Add(this.cmdDentista);
             this.panelMenuEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenuEsquerda.Location = new System.Drawing.Point(0, 73);
-            this.panelMenuEsquerda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelMenuEsquerda.Location = new System.Drawing.Point(0, 59);
+            this.panelMenuEsquerda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenuEsquerda.Name = "panelMenuEsquerda";
-            this.panelMenuEsquerda.Size = new System.Drawing.Size(305, 807);
+            this.panelMenuEsquerda.Size = new System.Drawing.Size(244, 581);
             this.panelMenuEsquerda.TabIndex = 1;
             // 
             // button5
@@ -119,12 +120,12 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::ProjetoSISO.Properties.Resources.cons;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(20, 377);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(13, 109);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(282, 86);
+            this.button5.Size = new System.Drawing.Size(229, 70);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Consulta";
+            this.button5.Text = "Consultas";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -133,10 +134,10 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox1.Image = global::ProjetoSISO.Properties.Resources.logo2j;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 722);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 512);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(305, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(244, 69);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -152,12 +153,12 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::ProjetoSISO.Properties.Resources.print_60px;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(21, 478);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button3.Location = new System.Drawing.Point(11, 194);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(265, 84);
+            this.button3.Size = new System.Drawing.Size(229, 70);
             this.button3.TabIndex = 0;
-            this.button3.Text = "Relatório";
+            this.button3.Text = "Relatórios";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -173,12 +174,12 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::ProjetoSISO.Properties.Resources.calendar_60px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(20, 258);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(13, 35);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(279, 91);
+            this.button2.Size = new System.Drawing.Size(229, 70);
             this.button2.TabIndex = 0;
-            this.button2.Text = "Agendamento";
+            this.button2.Text = "Agendamentos";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -194,10 +195,10 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::ProjetoSISO.Properties.Resources.user_60px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(21, 148);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button1.Location = new System.Drawing.Point(11, 365);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(265, 93);
+            this.button1.Size = new System.Drawing.Size(229, 70);
             this.button1.TabIndex = 0;
             this.button1.Text = "Pacientes";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -215,10 +216,10 @@
             this.cmdDentista.ForeColor = System.Drawing.Color.White;
             this.cmdDentista.Image = global::ProjetoSISO.Properties.Resources.tooth_64px;
             this.cmdDentista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdDentista.Location = new System.Drawing.Point(21, 55);
-            this.cmdDentista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmdDentista.Location = new System.Drawing.Point(11, 282);
+            this.cmdDentista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdDentista.Name = "cmdDentista";
-            this.cmdDentista.Size = new System.Drawing.Size(265, 89);
+            this.cmdDentista.Size = new System.Drawing.Size(229, 70);
             this.cmdDentista.TabIndex = 0;
             this.cmdDentista.Text = "Dentistas";
             this.cmdDentista.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -227,29 +228,27 @@
             // 
             // panelForm
             // 
-            this.panelForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelForm.BackColor = System.Drawing.Color.Transparent;
             this.panelForm.BackgroundImage = global::ProjetoSISO.Properties.Resources.logo;
             this.panelForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelForm.Location = new System.Drawing.Point(304, 78);
-            this.panelForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelForm.Location = new System.Drawing.Point(244, 59);
+            this.panelForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(1420, 802);
+            this.panelForm.Size = new System.Drawing.Size(1049, 581);
             this.panelForm.TabIndex = 2;
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1724, 880);
+            this.ClientSize = new System.Drawing.Size(1293, 640);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.panelMenuEsquerda);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmPrincipal";
             this.Text = "Projeto SISO";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
