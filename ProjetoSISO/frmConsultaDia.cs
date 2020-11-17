@@ -31,6 +31,8 @@ namespace ProjetoSISO
             dgAgenda.ReadOnly = true;
             dgAgenda.MultiSelect = false;
             dgAgenda.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
+
         }
 
         private void Calendar_DateChanged(object sender, DateRangeEventArgs e)
@@ -42,6 +44,7 @@ namespace ProjetoSISO
 
         private void dgAgenda_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
+            //dgAgenda.Columns[0].Visible = false;
             if (dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
             {
                 agendamento.IdAgendamento = Convert.ToInt32(dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString());
@@ -53,6 +56,10 @@ namespace ProjetoSISO
                 lbNascPac.Text = paciente.DataNascimentoPacientes.ToString("d");
                 lblHora.Text = agendamento.HoraAgendamento;
                 lbDataAg.Text = agendamento.DataAgendamento.ToString("d");
+                dgAgenda.Columns[1].HeaderText = "Paciente";
+                dgAgenda.Columns[2].HeaderText = "Dentista";
+                dgAgenda.Columns[3].HeaderText = "Data";
+                dgAgenda.Columns[4].HeaderText = "Horário";
             }
         }
 

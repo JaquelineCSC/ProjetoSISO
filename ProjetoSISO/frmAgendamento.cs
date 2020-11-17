@@ -37,6 +37,13 @@ namespace ProjetoSISO
             dgDentista.ReadOnly = true;
             dgDentista.MultiSelect = false;
             dgDentista.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgDentista.Columns[0].Visible = false;
+            EsconderColunas(dgDentista);
+            dgDentista.Columns[3].Visible = true;
+            dgDentista.Columns[3].HeaderText = "Dentista";
+            dgDentista.Columns[12].Visible = true;
+            dgDentista.Columns[12].HeaderText = "Especialização";
+
 
             paciente.NomePacientes = "";
             dgPaciente.DataSource = paciente.ListarDadosPacientes().Tables[0];
@@ -44,6 +51,18 @@ namespace ProjetoSISO
             dgPaciente.ReadOnly = true;
             dgPaciente.MultiSelect = false;
             dgPaciente.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            EsconderColunas(dgPaciente); //015
+            dgPaciente.Columns[1].Visible = true;
+            dgPaciente.Columns[1].HeaderText = "Paciente";
+            dgPaciente.Columns[2].Visible = true;
+            dgPaciente.Columns[2].HeaderText = "CPF";
+            dgPaciente.Columns[6].Visible = true;
+            dgPaciente.Columns[6].HeaderText = "Cidade";
+
+            dgAgendamentos.Columns[0].HeaderText = "Paciente";
+            dgAgendamentos.Columns[1].HeaderText = "Dentista";
+            dgAgendamentos.Columns[2].HeaderText = "Data";
+            dgAgendamentos.Columns[3].HeaderText = "Hora";
 
             Limpar();
         }
@@ -139,6 +158,11 @@ namespace ProjetoSISO
         private void cmdLimpar_Click(object sender, EventArgs e)
         {
             Limpar();
+        }
+        public void EsconderColunas(DataGridView date)
+        {
+            for (int i = 0; i < date.Columns.Count; i++)
+                date.Columns[i].Visible = false;
         }
     }
 }
