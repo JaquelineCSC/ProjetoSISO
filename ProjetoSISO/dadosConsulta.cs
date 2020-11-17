@@ -32,5 +32,10 @@ namespace ProjetoSISO
             string sql = "insert into Consulta (descricaoProcedimentoConsulta, valorConsulta, idAgendamento) values ('" + DescricaoProcedimentoConsulta + "', " + ValorConsulta + ", " + agendamento.IdAgendamento+")";
             c.Executar(sql);
         }
+
+        public DataSet ListarDadosConsulta() {
+            string sql = "select p.nomePaciente, descricaoProcedimentoConsulta, a.dataAgendamento, valorConsulta FROM Consulta c INNER JOIN Agendamento a on c.idAgendamento = a.idAgendamento INNER JOIN Pacientes p ON a.idPaciente = p.idPaciente";
+            return c.Listar(sql);
+        }
     }
 }

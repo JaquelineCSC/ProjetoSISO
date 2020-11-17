@@ -16,6 +16,7 @@ namespace ProjetoSISO
         dadosDentista dentista = new dadosDentista();
         dadosPacientes pacientes = new dadosPacientes();
         dadosAgendamento agenda = new dadosAgendamento();
+        dadosConsulta consulta = new dadosConsulta();
         Font fonte = new Font(FontFamily.GenericMonospace, 14);
         Font titulo = new Font(FontFamily.GenericMonospace, 20, FontStyle.Bold);
         Panel p;
@@ -338,6 +339,94 @@ namespace ProjetoSISO
             }
         }
 
+        private void ImprimirConsultas(object sender, PrintPageEventArgs e) {
+            //configurações da página
+            float linhaPorPagina = 0;
+            float posicaoVertical = 0;
+            float contador = 0;
+            float margemEsquerda = 20;
+            float margemSuperior = 20;
+            float alturaFonte = 0;
+            string linha = "";
+
+            alturaFonte = fonte.GetHeight(e.Graphics);
+            linhaPorPagina = Convert.ToInt32(e.MarginBounds.Height / alturaFonte);
+
+            //Título
+            linha = "Consultas";
+            posicaoVertical = margemSuperior + contador * alturaFonte;
+            e.Graphics.DrawString(linha, titulo, Brushes.Black, margemEsquerda, posicaoVertical);
+
+            contador += 4;
+
+            //SubTítulo
+            linha = "Paciente";
+            posicaoVertical = margemSuperior + contador * alturaFonte;
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda, posicaoVertical);
+
+            linha = "Preço";
+            posicaoVertical = margemSuperior + contador * alturaFonte;
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda + 300, posicaoVertical);
+
+            linha = "Data";
+            posicaoVertical = margemSuperior + contador * alturaFonte;
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda + 400, posicaoVertical);
+
+            linha = "Procedimento";
+            posicaoVertical = margemSuperior + contador * alturaFonte;
+            e.Graphics.DrawString(linha, fonte, Brushes.DarkBlue, margemEsquerda + 550, posicaoVertical);
+
+            contador += 1;
+
+            linha = "____________________________________________________________________________________________________";
+            posicaoVertical = margemSuperior + contador * alturaFonte;
+            e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
+
+            contador++;
+
+            DataSet ds = consulta.ListarDadosConsulta();
+
+            if (ds.Tables[0] != null) {
+                while (i < ds.Tables[0].Rows.Count && contador < linhaPorPagina) {
+                    DataRow item = ds.Tables[0].Rows[i];
+
+                    linha = item["nomePaciente"].ToString();
+                    posicaoVertical = margemSuperior + contador * alturaFonte;
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda, posicaoVertical);
+
+                    linha = String.Format("{0:#.00}", Convert.ToDecimal(item["valorConsulta"]));
+                    posicaoVertical = margemSuperior + contador * alturaFonte;
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 300, posicaoVertical);
+
+                    linha = Convert.ToDateTime(item["dataAgendamento"]).ToString("d");
+                    posicaoVertical = margemSuperior + contador * alturaFonte;
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 400, posicaoVertical);
+
+                    linha = item["descricaoProcedimentoConsulta"].ToString();
+                    posicaoVertical = margemSuperior + contador * alturaFonte;
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 550, posicaoVertical);
+
+                    contador += 2;
+                    i++;
+                }
+
+                if (contador < linhaPorPagina) {
+                    linha = "Total de Consultas: " + i.ToString();
+                    posicaoVertical = margemSuperior + contador * alturaFonte;
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 100, posicaoVertical);
+                }
+            }
+            else MessageBox.Show("Tabela vazia");
+
+            if (contador > linhaPorPagina) {
+                e.HasMorePages = true;
+            }
+            else {
+                e.HasMorePages = false;
+            }
+        }
+
+
         private void FrmRelatório_Load(object sender, EventArgs e)
         {
 
@@ -346,6 +435,18 @@ namespace ProjetoSISO
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            p.Enabled = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+            PrintDocument pd = new PrintDocument();
+            pd.DocumentName = "Relatório de Consulta";
+            pd.BeginPrint += pd_beginPrint;
+            pd.PrintPage += ImprimirConsultas;
+
+            PrintPreviewDialog ppd = new PrintPreviewDialog();
+            ppd.Document = pd;
+            ppd.ShowDialog();
         }
     }
 }

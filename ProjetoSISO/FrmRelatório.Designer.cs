@@ -32,6 +32,7 @@
             this.cmdDentista = new System.Windows.Forms.Button();
             this.cmdPacientes = new System.Windows.Forms.Button();
             this.cmdAgenda = new System.Windows.Forms.Button();
+            this.cmdConsulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -40,9 +41,10 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(34, 26);
+            this.button1.Location = new System.Drawing.Point(30, 21);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 63);
+            this.button1.Size = new System.Drawing.Size(67, 50);
             this.button1.TabIndex = 9;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -55,10 +57,10 @@
             this.cmdDentista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdDentista.Image = global::ProjetoSISO.Properties.Resources.dentist;
             this.cmdDentista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdDentista.Location = new System.Drawing.Point(703, 122);
-            this.cmdDentista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdDentista.Location = new System.Drawing.Point(625, 98);
+            this.cmdDentista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdDentista.Name = "cmdDentista";
-            this.cmdDentista.Size = new System.Drawing.Size(392, 132);
+            this.cmdDentista.Size = new System.Drawing.Size(348, 106);
             this.cmdDentista.TabIndex = 5;
             this.cmdDentista.Text = "&Dentistas";
             this.cmdDentista.UseVisualStyleBackColor = true;
@@ -73,10 +75,10 @@
             this.cmdPacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdPacientes.Image = global::ProjetoSISO.Properties.Resources.paciente;
             this.cmdPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdPacientes.Location = new System.Drawing.Point(157, 112);
-            this.cmdPacientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdPacientes.Location = new System.Drawing.Point(140, 90);
+            this.cmdPacientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdPacientes.Name = "cmdPacientes";
-            this.cmdPacientes.Size = new System.Drawing.Size(416, 142);
+            this.cmdPacientes.Size = new System.Drawing.Size(370, 114);
             this.cmdPacientes.TabIndex = 3;
             this.cmdPacientes.Text = "&Pacientes";
             this.cmdPacientes.Click += new System.EventHandler(this.cmdPacientes_Click);
@@ -89,27 +91,45 @@
             this.cmdAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAgenda.Image = global::ProjetoSISO.Properties.Resources.dentist_appointment;
             this.cmdAgenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdAgenda.Location = new System.Drawing.Point(355, 348);
-            this.cmdAgenda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdAgenda.Location = new System.Drawing.Point(140, 248);
+            this.cmdAgenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdAgenda.Name = "cmdAgenda";
-            this.cmdAgenda.Size = new System.Drawing.Size(422, 123);
+            this.cmdAgenda.Size = new System.Drawing.Size(375, 98);
             this.cmdAgenda.TabIndex = 1;
             this.cmdAgenda.Text = "&Agendamentos";
             this.cmdAgenda.UseVisualStyleBackColor = true;
             this.cmdAgenda.Click += new System.EventHandler(this.cmdAgenda_Click);
             // 
+            // cmdConsulta
+            // 
+            this.cmdConsulta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdConsulta.FlatAppearance.BorderSize = 0;
+            this.cmdConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdConsulta.Image = global::ProjetoSISO.Properties.Resources.dentist_appointment;
+            this.cmdConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdConsulta.Location = new System.Drawing.Point(625, 248);
+            this.cmdConsulta.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdConsulta.Name = "cmdConsulta";
+            this.cmdConsulta.Size = new System.Drawing.Size(348, 98);
+            this.cmdConsulta.TabIndex = 10;
+            this.cmdConsulta.Text = "&Consultas";
+            this.cmdConsulta.UseVisualStyleBackColor = true;
+            this.cmdConsulta.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FrmRelatório
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1170, 646);
+            this.ClientSize = new System.Drawing.Size(1040, 517);
+            this.Controls.Add(this.cmdConsulta);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmdDentista);
             this.Controls.Add(this.cmdPacientes);
             this.Controls.Add(this.cmdAgenda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmRelatório";
             this.Text = "FrmRelatório";
             this.Load += new System.EventHandler(this.FrmRelatório_Load);
@@ -122,5 +142,6 @@
         private System.Windows.Forms.Button cmdPacientes;
         private System.Windows.Forms.Button cmdDentista;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cmdConsulta;
     }
 }
