@@ -20,5 +20,20 @@ namespace ProjetoSISO
         private void frmSobre_Load(object sender, EventArgs e) {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+        }
+
+        private void label9_DoubleClick(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
