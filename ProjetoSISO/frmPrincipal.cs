@@ -71,5 +71,10 @@ namespace ProjetoSISO
             panelForm.Controls.Add(janela);
             panelMenuEsquerda.Enabled = false;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e) {
+            frmSobre sobre = new frmSobre();
+            sobre.ShowDialog();
+        }
     }
 }

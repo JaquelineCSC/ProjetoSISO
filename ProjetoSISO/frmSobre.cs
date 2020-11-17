@@ -16,5 +16,9 @@ namespace ProjetoSISO
         {
             InitializeComponent();
         }
+
+        private void frmSobre_Load(object sender, EventArgs e) {
+
+        }
     }
 }
