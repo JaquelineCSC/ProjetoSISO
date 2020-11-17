@@ -24,6 +24,7 @@ namespace ProjetoSISO
         public string TelefonePacientes { get; set; }
         public string CelularPacientes { get; set; }
 
+        //inserção e Remoção
         public void IncluirDadosPacientes()
         {
             string sql = "";
@@ -47,6 +48,7 @@ namespace ProjetoSISO
             c.Executar(sql);
         }
 
+        //Consulta
         public void ConsultarDadosPacientes()
         {
             string sql = "";
@@ -65,6 +67,7 @@ namespace ProjetoSISO
             CelularPacientes = auxiliar[9];
         }
 
+        //Listagem
         public DataSet ListarDadosPacientes()
         {
             string sql = "SELECT * FROM Pacientes where nomePaciente like '%" + NomePacientes + "%'";

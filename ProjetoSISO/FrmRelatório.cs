@@ -63,6 +63,18 @@ namespace ProjetoSISO
             ppd.ShowDialog();
         }
 
+        private void cmdConsulta_Click(object sender, EventArgs e)
+        {
+            PrintDocument pd = new PrintDocument();
+            pd.DocumentName = "Relatório de Consulta";
+            pd.BeginPrint += pd_beginPrint;
+            pd.PrintPage += ImprimirConsultas;
+
+            PrintPreviewDialog ppd = new PrintPreviewDialog();
+            ppd.Document = pd;
+            ppd.ShowDialog();
+        }
+
         private void pd_beginPrint(object sender, PrintEventArgs e)
         {
             i = 0;
@@ -339,7 +351,8 @@ namespace ProjetoSISO
             }
         }
 
-        private void ImprimirConsultas(object sender, PrintPageEventArgs e) {
+        private void ImprimirConsultas(object sender, PrintPageEventArgs e)
+        {
             //configurações da página
             float linhaPorPagina = 0;
             float posicaoVertical = 0;
@@ -386,8 +399,10 @@ namespace ProjetoSISO
 
             DataSet ds = consulta.ListarDadosConsulta();
 
-            if (ds.Tables[0] != null) {
-                while (i < ds.Tables[0].Rows.Count && contador < linhaPorPagina) {
+            if (ds.Tables[0] != null)
+            {
+                while (i < ds.Tables[0].Rows.Count && contador < linhaPorPagina)
+                {
                     DataRow item = ds.Tables[0].Rows[i];
 
                     linha = item["nomePaciente"].ToString();
@@ -410,7 +425,8 @@ namespace ProjetoSISO
                     i++;
                 }
 
-                if (contador < linhaPorPagina) {
+                if (contador < linhaPorPagina)
+                {
                     linha = "Total de Consultas: " + i.ToString();
                     posicaoVertical = margemSuperior + contador * alturaFonte;
                     e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsquerda + 100, posicaoVertical);
@@ -418,18 +434,14 @@ namespace ProjetoSISO
             }
             else MessageBox.Show("Tabela vazia");
 
-            if (contador > linhaPorPagina) {
+            if (contador > linhaPorPagina)
+            {
                 e.HasMorePages = true;
             }
-            else {
+            else
+            {
                 e.HasMorePages = false;
             }
-        }
-
-
-        private void FrmRelatório_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -438,15 +450,6 @@ namespace ProjetoSISO
             p.Enabled = true;
         }
 
-        private void button2_Click(object sender, EventArgs e) {
-            PrintDocument pd = new PrintDocument();
-            pd.DocumentName = "Relatório de Consulta";
-            pd.BeginPrint += pd_beginPrint;
-            pd.PrintPage += ImprimirConsultas;
-
-            PrintPreviewDialog ppd = new PrintPreviewDialog();
-            ppd.Document = pd;
-            ppd.ShowDialog();
-        }
+        
     }
 }

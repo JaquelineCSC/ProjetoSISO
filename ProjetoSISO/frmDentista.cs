@@ -20,12 +20,18 @@ namespace ProjetoSISO
             p = pnDentista;
         }
 
+        private void frmDentista_Load(object sender, EventArgs e)
+        {
+            cbEstado.SelectedIndex = 12;
+        }
+
         private void cmdBack_Click(object sender, EventArgs e)
         {
             this.Close();
             p.Enabled = true;
         }
 
+        //Ñovo
         private void button1_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
@@ -33,6 +39,8 @@ namespace ProjetoSISO
             Limpar();
         }
 
+
+        //Salvar
         private void cmdSalvar_Click(object sender, EventArgs e)
         {
             dados.NomeDentista = txtNome.Text;
@@ -60,6 +68,22 @@ namespace ProjetoSISO
                 MessageBox.Show("Preencha todas informações!");
         }
 
+       
+        private void cmdLimpar_Click(object sender, EventArgs e)
+        {
+            Limpar();
+        }
+
+        //Consulta
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmConsulta frm = new FrmConsulta(0);
+            frm.Show();
+        }
+
+        
+
+        //Funções
         public bool Conferir()
         {
             int i = 0;
@@ -88,20 +112,5 @@ namespace ProjetoSISO
             }
         }
 
-        private void cmdLimpar_Click(object sender, EventArgs e)
-        {
-            Limpar();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FrmConsulta frm = new FrmConsulta(0);
-            frm.Show();
-        }
-
-        private void frmDentista_Load(object sender, EventArgs e)
-        {
-            cbEstado.SelectedIndex = 12;
-        }
     }
 }

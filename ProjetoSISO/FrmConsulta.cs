@@ -23,7 +23,7 @@ namespace ProjetoSISO
 
         private void FrmConsulta_Load(object sender, EventArgs e)
         {
-            if(tipo == 0)
+            if (tipo == 0)
             {
                 dentista.NomeDentista = "";
                 dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
@@ -73,7 +73,7 @@ namespace ProjetoSISO
             }
         }
 
-
+        //Botão excluir
         private void cmdExcluir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja excluir?", "Projeto SISO", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
@@ -93,9 +93,10 @@ namespace ProjetoSISO
             }
         }
 
+        //Botão Alterar
         private void cmdAlterar_Click(object sender, EventArgs e)
         {
-            if (tipo==0)
+            if (tipo == 0)
             {
                 dentista.NomeDentista = txtNome.Text;
                 bool condition = radioButton1.Checked;
@@ -144,7 +145,7 @@ namespace ProjetoSISO
                 }
                 else
                     MessageBox.Show("Preencha todas informações!");
-            }            
+            }
         }
 
         private void cmdClose_Click(object sender, EventArgs e)
@@ -152,22 +153,8 @@ namespace ProjetoSISO
             this.Close();
         }
 
-        public bool Conferir()
-        {
-            int i = 0;
-            foreach (Control item in this.groupBox1.Controls)
-            {
-                if ((item is TextBox) && (item.Text == ""))
-                    i++;
-            }
-            if ((radioButton1.Checked == false) && (radioButton2.Checked == false))
-                i++;
-            if (i == 0)
-                return true;
-            else
-                return false;
-        }
-
+      
+        //Gridview
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
@@ -215,6 +202,7 @@ namespace ProjetoSISO
             }
         }
 
+        //TextboxNome
         private void txtxNome_TextChanged(object sender, EventArgs e)
         {
             if (tipo == 0)
@@ -227,6 +215,23 @@ namespace ProjetoSISO
                 paciente.NomePacientes = txtxNome.Text;
                 dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
             }
+        }
+
+        //Função
+        public bool Conferir()
+        {
+            int i = 0;
+            foreach (Control item in this.groupBox1.Controls)
+            {
+                if ((item is TextBox) && (item.Text == ""))
+                    i++;
+            }
+            if ((radioButton1.Checked == false) && (radioButton2.Checked == false))
+                i++;
+            if (i == 0)
+                return true;
+            else
+                return false;
         }
     }
 }

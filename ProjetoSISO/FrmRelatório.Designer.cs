@@ -115,7 +115,7 @@
             this.cmdConsulta.TabIndex = 10;
             this.cmdConsulta.Text = "&Consultas";
             this.cmdConsulta.UseVisualStyleBackColor = true;
-            this.cmdConsulta.Click += new System.EventHandler(this.button2_Click);
+            this.cmdConsulta.Click += new System.EventHandler(this.cmdConsulta_Click);
             // 
             // FrmRelatório
             // 
@@ -132,7 +132,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmRelatório";
             this.Text = "FrmRelatório";
-            this.Load += new System.EventHandler(this.FrmRelatório_Load);
             this.ResumeLayout(false);
 
         }

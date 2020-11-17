@@ -26,6 +26,7 @@ namespace ProjetoSISO
         public string CelularDentista { get; set; }
         public string EspecializacaoDentista { get; set; }
 
+        //Inserção e Remoção
         public void IncluirDadosDentista()
         {
             string sql = "";
@@ -47,6 +48,8 @@ namespace ProjetoSISO
             c.Executar(sql);
         }
 
+
+        //Consulta
         public void ConsultarDadosDentista()
         {
             string sql = "";
@@ -67,6 +70,7 @@ namespace ProjetoSISO
             EspecializacaoDentista = auxiliar[11];
         }
 
+        //Listagem
         public DataSet ListarDadosDentista()
         {
             string sql = "SELECT * FROM Dentistas where nomeDentista like '%" + NomeDentista + "%'";

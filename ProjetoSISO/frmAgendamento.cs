@@ -66,7 +66,7 @@ namespace ProjetoSISO
 
             Limpar();
         }
-
+        //Textbox's
         private void txtDentista_TextChanged(object sender, EventArgs e)
         {
             dentista.NomeDentista = txtDentista.Text;
@@ -79,6 +79,7 @@ namespace ProjetoSISO
             dgPaciente.DataSource = paciente.ListarDadosPacientes().Tables[0];
         }
 
+        //Calendario
         private void Calendar_DateChanged(object sender, DateRangeEventArgs e)
         {
             agendamento.DataAgendamento = Calendar.SelectionRange.Start.Date;
@@ -87,6 +88,7 @@ namespace ProjetoSISO
             lbDataAg.Text = Calendar.SelectionRange.Start.Date.ToString("d");
         }
 
+        //Gridviews
         private void dgDentista_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (dgDentista.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
@@ -112,12 +114,14 @@ namespace ProjetoSISO
             }
         }
 
+        //Horario
         private void cbHora_SelectedValueChanged(object sender, EventArgs e)
         {
             lbHora.Text = cbHora.SelectedItem.ToString();
             agendamento.HoraAgendamento = cbHora.SelectedItem.ToString();
         }
 
+        //Botões
         private void cmdConfirmar_Click(object sender, EventArgs e)
         {
             if (Conferir())
@@ -130,6 +134,26 @@ namespace ProjetoSISO
                 MessageBox.Show("Preencha todas as informações");
         }
 
+       
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            p.Enabled = true;
+        }
+
+        private void cmdLimpar_Click(object sender, EventArgs e)
+        {
+            Limpar();
+        }
+
+        private void cmdExcluir_Click(object sender, EventArgs e)
+        {
+            frmExcluirAgendamento frm = new frmExcluirAgendamento();
+            frm.Show();
+        }
+
+        //Funções
         public bool Conferir()
         {
             if ((lbNomeDent.Text == "") || (lbNomePac.Text == "") || (lbCpfPac.Text == "") || (lbDataAg.Text == "") || (lbEspDent.Text == "") || (lbHora.Text == "") || (lbNascPac.Text == ""))
@@ -148,27 +172,12 @@ namespace ProjetoSISO
             lbHora.Text = "";
             lbNascPac.Text = "";
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            p.Enabled = true;
-        }
-
-        private void cmdLimpar_Click(object sender, EventArgs e)
-        {
-            Limpar();
-        }
         public void EsconderColunas(DataGridView date)
         {
             for (int i = 0; i < date.Columns.Count; i++)
                 date.Columns[i].Visible = false;
         }
 
-        private void cmdExcluir_Click(object sender, EventArgs e)
-        {
-            frmExcluirAgendamento frm = new frmExcluirAgendamento();
-            frm.Show();
-        }
+       
     }
 }
