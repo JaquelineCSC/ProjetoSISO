@@ -81,7 +81,7 @@
             // txtPaciente
             // 
             this.txtPaciente.Location = new System.Drawing.Point(886, 411);
-            this.txtPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Size = new System.Drawing.Size(354, 26);
             this.txtPaciente.TabIndex = 1;
@@ -94,7 +94,7 @@
             this.dgPaciente.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPaciente.Location = new System.Drawing.Point(886, 449);
-            this.dgPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.dgPaciente.Name = "dgPaciente";
             this.dgPaciente.ReadOnly = true;
             this.dgPaciente.RowHeadersWidth = 62;
@@ -122,7 +122,7 @@
             this.dgDentista.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgDentista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDentista.Location = new System.Drawing.Point(188, 449);
-            this.dgDentista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgDentista.Margin = new System.Windows.Forms.Padding(4);
             this.dgDentista.Name = "dgDentista";
             this.dgDentista.ReadOnly = true;
             this.dgDentista.RowHeadersWidth = 62;
@@ -145,7 +145,7 @@
             // txtDentista
             // 
             this.txtDentista.Location = new System.Drawing.Point(182, 402);
-            this.txtDentista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDentista.Margin = new System.Windows.Forms.Padding(4);
             this.txtDentista.Name = "txtDentista";
             this.txtDentista.Size = new System.Drawing.Size(354, 26);
             this.txtDentista.TabIndex = 1;
@@ -193,7 +193,7 @@
             this.dgAgendamentos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgAgendamentos.Location = new System.Drawing.Point(886, 172);
-            this.dgAgendamentos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgAgendamentos.Margin = new System.Windows.Forms.Padding(4);
             this.dgAgendamentos.MultiSelect = false;
             this.dgAgendamentos.Name = "dgAgendamentos";
             this.dgAgendamentos.RowHeadersWidth = 62;
@@ -214,9 +214,9 @@
             this.gbDados.Controls.Add(this.label13);
             this.gbDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbDados.Location = new System.Drawing.Point(39, 651);
-            this.gbDados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDados.Margin = new System.Windows.Forms.Padding(4);
             this.gbDados.Name = "gbDados";
-            this.gbDados.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDados.Padding = new System.Windows.Forms.Padding(4);
             this.gbDados.Size = new System.Drawing.Size(1414, 339);
             this.gbDados.TabIndex = 6;
             this.gbDados.TabStop = false;
@@ -228,7 +228,7 @@
             this.cmdAlterar.FlatAppearance.BorderSize = 0;
             this.cmdAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAlterar.Location = new System.Drawing.Point(727, 237);
-            this.cmdAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdAlterar.Name = "cmdAlterar";
             this.cmdAlterar.Size = new System.Drawing.Size(63, 58);
             this.cmdAlterar.TabIndex = 10;
@@ -257,9 +257,9 @@
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox4.Location = new System.Drawing.Point(1072, 44);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(334, 119);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
@@ -316,9 +316,9 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(16, 44);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(482, 112);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
@@ -377,9 +377,9 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Location = new System.Drawing.Point(526, 44);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(495, 170);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
@@ -457,7 +457,7 @@
             this.cmdConfirmar.FlatAppearance.BorderSize = 0;
             this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdConfirmar.Location = new System.Drawing.Point(519, 237);
-            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdConfirmar.Name = "cmdConfirmar";
             this.cmdConfirmar.Size = new System.Drawing.Size(71, 58);
             this.cmdConfirmar.TabIndex = 0;
@@ -478,6 +478,7 @@
             // cbHora
             // 
             this.cbHora.BackColor = System.Drawing.SystemColors.Control;
+            this.cbHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHora.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHora.FormattingEnabled = true;
@@ -514,7 +515,7 @@
             "22:00",
             "22:30"});
             this.cbHora.Location = new System.Drawing.Point(542, 198);
-            this.cbHora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbHora.Margin = new System.Windows.Forms.Padding(4);
             this.cbHora.Name = "cbHora";
             this.cbHora.Size = new System.Drawing.Size(146, 33);
             this.cbHora.TabIndex = 7;
@@ -559,7 +560,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAgendamento";
             this.Text = "frmAgendamento";
             this.Load += new System.EventHandler(this.frmAgendamento_Load);
