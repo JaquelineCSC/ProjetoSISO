@@ -26,6 +26,7 @@ namespace ProjetoSISO
             if(MessageBox.Show("Deseja excluir agendamento", "Projeto SISO", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 agendamento.ExcluirAgendamento();
+                dgAgenda.DataSource = agendamento.ListarDadosPorNome().Tables[0];
             }
         }
 
@@ -59,6 +60,11 @@ namespace ProjetoSISO
         private void frmExcluirAgendamento_Load(object sender, EventArgs e)
         {
             agendamento = new dadosAgendamento(dentista, paciente);
+        }
+
+        private void cmdClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
