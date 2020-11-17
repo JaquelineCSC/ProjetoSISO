@@ -102,6 +102,12 @@
     <Compile Include="frmDentista.Designer.cs">
       <DependentUpon>frmDentista.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmExcluirAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExcluirAgendamento.Designer.cs">
+      <DependentUpon>frmExcluirAgendamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDentista.resx">
       <DependentUpon>frmDentista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExcluirAgendamento.resx">
+      <DependentUpon>frmExcluirAgendamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPacientes.resx">
       <DependentUpon>frmPacientes.cs</DependentUpon>

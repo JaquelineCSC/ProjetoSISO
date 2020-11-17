@@ -165,9 +165,10 @@ namespace ProjetoSISO
                 date.Columns[i].Visible = false;
         }
 
-        private void cmdAlterar_Click(object sender, EventArgs e)
+        private void cmdExcluir_Click(object sender, EventArgs e)
         {
-           
+            frmExcluirAgendamento frm = new frmExcluirAgendamento();
+            frm.Show();
         }
     }
 }

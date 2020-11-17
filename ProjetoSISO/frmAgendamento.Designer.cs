@@ -35,7 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dgAgendamentos = new System.Windows.Forms.DataGridView();
             this.gbDados = new System.Windows.Forms.GroupBox();
-            this.cmdAlterar = new System.Windows.Forms.Button();
+            this.cmdExcluir = new System.Windows.Forms.Button();
             this.cmdLimpar = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lbHora = new System.Windows.Forms.Label();
@@ -195,7 +195,7 @@
             // 
             // gbDados
             // 
-            this.gbDados.Controls.Add(this.cmdAlterar);
+            this.gbDados.Controls.Add(this.cmdExcluir);
             this.gbDados.Controls.Add(this.cmdLimpar);
             this.gbDados.Controls.Add(this.groupBox4);
             this.gbDados.Controls.Add(this.groupBox3);
@@ -209,19 +209,19 @@
             this.gbDados.TabIndex = 6;
             this.gbDados.TabStop = false;
             // 
-            // cmdAlterar
+            // cmdExcluir
             // 
-            this.cmdAlterar.BackgroundImage = global::ProjetoSISO.Properties.Resources.trash_52px;
-            this.cmdAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdAlterar.FlatAppearance.BorderSize = 0;
-            this.cmdAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdAlterar.Location = new System.Drawing.Point(582, 190);
-            this.cmdAlterar.Margin = new System.Windows.Forms.Padding(2);
-            this.cmdAlterar.Name = "cmdAlterar";
-            this.cmdAlterar.Size = new System.Drawing.Size(50, 46);
-            this.cmdAlterar.TabIndex = 10;
-            this.cmdAlterar.UseVisualStyleBackColor = true;
-            this.cmdAlterar.Click += new System.EventHandler(this.cmdAlterar_Click);
+            this.cmdExcluir.BackgroundImage = global::ProjetoSISO.Properties.Resources.trash_52px;
+            this.cmdExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdExcluir.FlatAppearance.BorderSize = 0;
+            this.cmdExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdExcluir.Location = new System.Drawing.Point(582, 190);
+            this.cmdExcluir.Margin = new System.Windows.Forms.Padding(2);
+            this.cmdExcluir.Name = "cmdExcluir";
+            this.cmdExcluir.Size = new System.Drawing.Size(50, 46);
+            this.cmdExcluir.TabIndex = 10;
+            this.cmdExcluir.UseVisualStyleBackColor = true;
+            this.cmdExcluir.Click += new System.EventHandler(this.cmdExcluir_Click);
             // 
             // cmdLimpar
             // 
@@ -506,7 +506,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1246, 618);
+            this.ClientSize = new System.Drawing.Size(1246, 838);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbHora);
@@ -579,6 +579,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button cmdLimpar;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button cmdAlterar;
+        private System.Windows.Forms.Button cmdExcluir;
     }
 }

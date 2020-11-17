@@ -115,6 +115,12 @@ namespace ProjetoSISO
             string sql = "insert into Agendamento (dataAgendamento, horaAgendamento, idPaciente, idDentista) values ('" + dataAgendamento + "', '" + HoraAgendamento + "', " + paciente.IdPacientes + "," + dentista.IdDentista + ")";
             c.Executar(sql);
         }
+
+        public void ExcluirAgendamento()
+        {
+            string sql = "delete from Agendamento where idAgendamento = " + IdAgendamento;
+            c.Executar(sql);
+        }
     }
 
 

@@ -1,6 +1,6 @@
 ﻿namespace ProjetoSISO
 {
-    partial class frmConsultaDia
+    partial class frmExcluirAgendamento
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Calendar = new System.Windows.Forms.MonthCalendar();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.dgAgenda = new System.Windows.Forms.DataGridView();
+            this.cmdExcluir = new System.Windows.Forms.Button();
+            this.cmdClose = new System.Windows.Forms.Button();
             this.gbDados = new System.Windows.Forms.GroupBox();
-            this.cmdLimpar = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblValor = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblHora = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -52,116 +51,91 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbNomePac = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmdConfirmar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtProcedimento = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtValor = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmdBack = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgAgenda)).BeginInit();
             this.gbDados.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Calendar
+            // textBox1
             // 
-            this.Calendar.Location = new System.Drawing.Point(21, 100);
-            this.Calendar.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.Calendar.MaxDate = new System.DateTime(2500, 12, 31, 0, 0, 0, 0);
-            this.Calendar.MaxSelectionCount = 1;
-            this.Calendar.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.Calendar.Name = "Calendar";
-            this.Calendar.TabIndex = 0;
-            this.Calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendar_DateChanged);
+            this.textBox1.Location = new System.Drawing.Point(35, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(401, 20);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(159, 28);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 20);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Pesquisar por nome";
             // 
             // dgAgenda
             // 
             this.dgAgenda.AllowUserToAddRows = false;
             this.dgAgenda.AllowUserToDeleteRows = false;
             this.dgAgenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgAgenda.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgAgenda.Location = new System.Drawing.Point(264, 129);
+            this.dgAgenda.Location = new System.Drawing.Point(35, 80);
             this.dgAgenda.Margin = new System.Windows.Forms.Padding(4);
             this.dgAgenda.Name = "dgAgenda";
             this.dgAgenda.ReadOnly = true;
             this.dgAgenda.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgAgenda.RowTemplate.Height = 28;
             this.dgAgenda.Size = new System.Drawing.Size(401, 133);
-            this.dgAgenda.TabIndex = 1;
-            this.dgAgenda.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAgenda_CellEnter);
+            this.dgAgenda.TabIndex = 14;
+            this.dgAgenda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAgenda_CellContentClick);
+            // 
+            // cmdExcluir
+            // 
+            this.cmdExcluir.BackgroundImage = global::ProjetoSISO.Properties.Resources.trash_52px;
+            this.cmdExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdExcluir.FlatAppearance.BorderSize = 0;
+            this.cmdExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdExcluir.Location = new System.Drawing.Point(222, 404);
+            this.cmdExcluir.Name = "cmdExcluir";
+            this.cmdExcluir.Size = new System.Drawing.Size(45, 45);
+            this.cmdExcluir.TabIndex = 17;
+            this.cmdExcluir.UseVisualStyleBackColor = true;
+            this.cmdExcluir.Click += new System.EventHandler(this.cmdExcluir_Click);
+            // 
+            // cmdClose
+            // 
+            this.cmdClose.BackgroundImage = global::ProjetoSISO.Properties.Resources.close;
+            this.cmdClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdClose.FlatAppearance.BorderSize = 0;
+            this.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdClose.Location = new System.Drawing.Point(1008, 13);
+            this.cmdClose.Margin = new System.Windows.Forms.Padding(2);
+            this.cmdClose.Name = "cmdClose";
+            this.cmdClose.Size = new System.Drawing.Size(49, 41);
+            this.cmdClose.TabIndex = 18;
+            this.cmdClose.UseVisualStyleBackColor = true;
             // 
             // gbDados
             // 
-            this.gbDados.Controls.Add(this.cmdLimpar);
-            this.gbDados.Controls.Add(this.groupBox1);
             this.gbDados.Controls.Add(this.groupBox4);
             this.gbDados.Controls.Add(this.groupBox3);
             this.gbDados.Controls.Add(this.groupBox2);
-            this.gbDados.Controls.Add(this.cmdConfirmar);
+            this.gbDados.Controls.Add(this.cmdExcluir);
             this.gbDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbDados.Location = new System.Drawing.Point(675, 59);
+            this.gbDados.Location = new System.Drawing.Point(479, 44);
             this.gbDados.Margin = new System.Windows.Forms.Padding(5);
             this.gbDados.Name = "gbDados";
             this.gbDados.Padding = new System.Windows.Forms.Padding(5);
-            this.gbDados.Size = new System.Drawing.Size(493, 564);
-            this.gbDados.TabIndex = 8;
+            this.gbDados.Size = new System.Drawing.Size(493, 472);
+            this.gbDados.TabIndex = 20;
             this.gbDados.TabStop = false;
-            // 
-            // cmdLimpar
-            // 
-            this.cmdLimpar.BackgroundImage = global::ProjetoSISO.Properties.Resources.erase;
-            this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdLimpar.FlatAppearance.BorderSize = 0;
-            this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLimpar.Location = new System.Drawing.Point(251, 480);
-            this.cmdLimpar.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdLimpar.Name = "cmdLimpar";
-            this.cmdLimpar.Size = new System.Drawing.Size(54, 57);
-            this.cmdLimpar.TabIndex = 9;
-            this.cmdLimpar.UseVisualStyleBackColor = true;
-            this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblValor);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(11, 407);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(465, 63);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            // 
-            // lblValor
-            // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValor.Location = new System.Drawing.Point(195, 25);
-            this.lblValor.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(81, 20);
-            this.lblValor.TabIndex = 5;
-            this.lblValor.Text = "00000000";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 25);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Valor:";
             // 
             // groupBox4
             // 
@@ -364,147 +338,36 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Nome do Paciente:";
             // 
-            // cmdConfirmar
-            // 
-            this.cmdConfirmar.BackgroundImage = global::ProjetoSISO.Properties.Resources.save;
-            this.cmdConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdConfirmar.FlatAppearance.BorderSize = 0;
-            this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdConfirmar.Location = new System.Drawing.Point(164, 480);
-            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(5);
-            this.cmdConfirmar.Name = "cmdConfirmar";
-            this.cmdConfirmar.Size = new System.Drawing.Size(58, 57);
-            this.cmdConfirmar.TabIndex = 0;
-            this.cmdConfirmar.UseVisualStyleBackColor = true;
-            this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(860, 37);
+            this.label13.Location = new System.Drawing.Point(640, 28);
             this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(169, 20);
-            this.label13.TabIndex = 7;
+            this.label13.TabIndex = 19;
             this.label13.Text = "Confirmação de dados";
             // 
-            // txtProcedimento
+            // frmExcluirAgendamento
             // 
-            this.txtProcedimento.BackColor = System.Drawing.SystemColors.Window;
-            this.txtProcedimento.Location = new System.Drawing.Point(21, 303);
-            this.txtProcedimento.Margin = new System.Windows.Forms.Padding(4);
-            this.txtProcedimento.Name = "txtProcedimento";
-            this.txtProcedimento.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.txtProcedimento.Size = new System.Drawing.Size(644, 208);
-            this.txtProcedimento.TabIndex = 9;
-            this.txtProcedimento.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(17, 279);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Procedimento";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(20, 526);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Valor";
-            // 
-            // txtValor
-            // 
-            this.txtValor.Location = new System.Drawing.Point(78, 523);
-            this.txtValor.Margin = new System.Windows.Forms.Padding(4);
-            this.txtValor.Mask = "000.00";
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(81, 23);
-            this.txtValor.TabIndex = 11;
-            this.txtValor.TextChanged += new System.EventHandler(this.txtValor_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(20, 78);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Consultas no dia";
-            // 
-            // cmdBack
-            // 
-            this.cmdBack.BackgroundImage = global::ProjetoSISO.Properties.Resources.back;
-            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdBack.FlatAppearance.BorderSize = 0;
-            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBack.Location = new System.Drawing.Point(23, 12);
-            this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(50, 44);
-            this.cmdBack.TabIndex = 12;
-            this.cmdBack.UseVisualStyleBackColor = true;
-            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(264, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 23);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(261, 78);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Pesquisar por nome";
-            // 
-            // frmConsultaDia
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1263, 739);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.cmdBack);
-            this.Controls.Add(this.txtValor);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtProcedimento);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(183)))), ((int)(((byte)(234)))));
+            this.ClientSize = new System.Drawing.Size(1073, 536);
             this.Controls.Add(this.gbDados);
             this.Controls.Add(this.label13);
+            this.Controls.Add(this.cmdClose);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dgAgenda);
-            this.Controls.Add(this.Calendar);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmConsultaDia";
-            this.Text = "frmConsultaDia";
-            this.Load += new System.EventHandler(this.frmConsultaDia_Load);
+            this.Name = "frmExcluirAgendamento";
+            this.Text = "frmExcluirAgendamento";
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmExcluirAgendamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgAgenda)).EndInit();
             this.gbDados.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -518,10 +381,12 @@
 
         #endregion
 
-        private System.Windows.Forms.MonthCalendar Calendar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgAgenda;
+        private System.Windows.Forms.Button cmdExcluir;
+        private System.Windows.Forms.Button cmdClose;
         private System.Windows.Forms.GroupBox gbDados;
-        private System.Windows.Forms.Button cmdLimpar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label label12;
@@ -539,18 +404,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbNomePac;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button cmdConfirmar;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RichTextBox txtProcedimento;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox txtValor;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblValor;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button cmdBack;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
     }
 }
