@@ -31,7 +31,6 @@ namespace ProjetoSISO
             dgAgenda.ReadOnly = true;
             dgAgenda.MultiSelect = false;
             dgAgenda.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            
 
         }
 
@@ -40,11 +39,11 @@ namespace ProjetoSISO
             agendamento.DataAgendamento = Calendar.SelectionRange.Start.Date;
 
             dgAgenda.DataSource = agendamento.ListarDadosAgendamentosPorData().Tables[0];
+            dgAgenda.Columns[0].Visible = false;
         }
 
         private void dgAgenda_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            //dgAgenda.Columns[0].Visible = false;
             if (dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
             {
                 agendamento.IdAgendamento = Convert.ToInt32(dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString());

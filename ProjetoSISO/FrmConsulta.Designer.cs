@@ -68,6 +68,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(34, 111);
@@ -107,7 +108,7 @@
             this.cmdExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdExcluir.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.cmdExcluir.Location = new System.Drawing.Point(307, 507);
-            this.cmdExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.cmdExcluir.Name = "cmdExcluir";
             this.cmdExcluir.Size = new System.Drawing.Size(46, 37);
             this.cmdExcluir.TabIndex = 13;
@@ -125,7 +126,7 @@
             this.cmdAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAlterar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.cmdAlterar.Location = new System.Drawing.Point(399, 507);
-            this.cmdAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdAlterar.Name = "cmdAlterar";
             this.cmdAlterar.Size = new System.Drawing.Size(41, 37);
             this.cmdAlterar.TabIndex = 14;
@@ -141,7 +142,7 @@
             this.cmdClose.FlatAppearance.BorderSize = 0;
             this.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdClose.Location = new System.Drawing.Point(1216, 6);
-            this.cmdClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdClose.Margin = new System.Windows.Forms.Padding(2);
             this.cmdClose.Name = "cmdClose";
             this.cmdClose.Size = new System.Drawing.Size(49, 41);
             this.cmdClose.TabIndex = 4;
@@ -189,7 +190,7 @@
             // 
             this.txtEspecializacao.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEspecializacao.Location = new System.Drawing.Point(191, 471);
-            this.txtEspecializacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEspecializacao.Margin = new System.Windows.Forms.Padding(4);
             this.txtEspecializacao.Name = "txtEspecializacao";
             this.txtEspecializacao.Size = new System.Drawing.Size(362, 27);
             this.txtEspecializacao.TabIndex = 12;
@@ -220,7 +221,7 @@
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone.Location = new System.Drawing.Point(191, 383);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(362, 27);
             this.txtTelefone.TabIndex = 10;
@@ -247,7 +248,7 @@
             // 
             this.txtNome.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(191, 19);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(362, 27);
             this.txtNome.TabIndex = 1;
@@ -360,7 +361,7 @@
             // 
             this.txtCep.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCep.Location = new System.Drawing.Point(191, 252);
-            this.txtCep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCep.Margin = new System.Windows.Forms.Padding(4);
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(362, 27);
             this.txtCep.TabIndex = 7;
@@ -369,7 +370,7 @@
             // 
             this.txtCidade.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(191, 209);
-            this.txtCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(4);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(362, 27);
             this.txtCidade.TabIndex = 6;
@@ -422,7 +423,7 @@
             // 
             this.txtEndereco.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(191, 168);
-            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(362, 27);
             this.txtEndereco.TabIndex = 5;
@@ -431,7 +432,7 @@
             // 
             this.txtCelular.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelular.Location = new System.Drawing.Point(191, 341);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(4);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(362, 27);
             this.txtCelular.TabIndex = 9;
@@ -440,7 +441,7 @@
             // 
             this.txtCPF.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPF.Location = new System.Drawing.Point(191, 129);
-            this.txtCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(4);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(362, 27);
             this.txtCPF.TabIndex = 4;
@@ -460,7 +461,7 @@
             // 
             this.txtCRO.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCRO.Location = new System.Drawing.Point(191, 428);
-            this.txtCRO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCRO.Margin = new System.Windows.Forms.Padding(4);
             this.txtCRO.Name = "txtCRO";
             this.txtCRO.Size = new System.Drawing.Size(362, 27);
             this.txtCRO.TabIndex = 11;
