@@ -34,7 +34,7 @@ namespace ProjetoSISO
         {
             if (dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
             {
-                agendamento.IdAgendamento = Convert.ToInt32(dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString());
+                agendamento.IdAgendamento = Convert.ToInt32(dgAgenda.Rows[e.RowIndex].Cells["idAgendamento"].Value.ToString());
                 agendamento.ConsultarDadosAgendamentoPorIdPessoa();
                 lbNomeDent.Text = dentista.NomeDentista;
                 lbEspDent.Text = dentista.EspecializacaoDentista;
