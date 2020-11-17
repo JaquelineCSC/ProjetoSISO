@@ -164,5 +164,10 @@ namespace ProjetoSISO
             for (int i = 0; i < date.Columns.Count; i++)
                 date.Columns[i].Visible = false;
         }
+
+        private void cmdAlterar_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
