@@ -70,17 +70,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 497);
+            this.label1.Location = new System.Drawing.Point(778, 373);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 20);
+            this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Paciente";
             // 
             // txtPaciente
             // 
-            this.txtPaciente.Location = new System.Drawing.Point(48, 522);
+            this.txtPaciente.Location = new System.Drawing.Point(783, 411);
+            this.txtPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.Size = new System.Drawing.Size(284, 23);
+            this.txtPaciente.Size = new System.Drawing.Size(354, 26);
             this.txtPaciente.TabIndex = 1;
             this.txtPaciente.TextChanged += new System.EventHandler(this.txtPaciente_TextChanged);
             // 
@@ -90,20 +92,21 @@
             this.dgPaciente.AllowUserToDeleteRows = false;
             this.dgPaciente.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPaciente.Location = new System.Drawing.Point(48, 343);
+            this.dgPaciente.Location = new System.Drawing.Point(783, 449);
+            this.dgPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.dgPaciente.Name = "dgPaciente";
             this.dgPaciente.ReadOnly = true;
             this.dgPaciente.RowHeadersWidth = 62;
             this.dgPaciente.RowTemplate.Height = 28;
-            this.dgPaciente.Size = new System.Drawing.Size(563, 146);
+            this.dgPaciente.Size = new System.Drawing.Size(670, 178);
             this.dgPaciente.TabIndex = 2;
             this.dgPaciente.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPaciente_CellEnter);
             // 
             // Calendar
             // 
             this.Calendar.BackColor = System.Drawing.SystemColors.Menu;
-            this.Calendar.Location = new System.Drawing.Point(385, 142);
-            this.Calendar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Calendar.Location = new System.Drawing.Point(147, 148);
+            this.Calendar.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Calendar.MaxDate = new System.DateTime(2500, 2, 2, 0, 0, 0, 0);
             this.Calendar.MaxSelectionCount = 1;
             this.Calendar.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
@@ -117,12 +120,13 @@
             this.dgDentista.AllowUserToDeleteRows = false;
             this.dgDentista.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgDentista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDentista.Location = new System.Drawing.Point(49, 142);
+            this.dgDentista.Location = new System.Drawing.Point(43, 449);
+            this.dgDentista.Margin = new System.Windows.Forms.Padding(4);
             this.dgDentista.Name = "dgDentista";
             this.dgDentista.ReadOnly = true;
             this.dgDentista.RowHeadersWidth = 62;
             this.dgDentista.RowTemplate.Height = 28;
-            this.dgDentista.Size = new System.Drawing.Size(325, 162);
+            this.dgDentista.Size = new System.Drawing.Size(703, 178);
             this.dgDentista.TabIndex = 4;
             this.dgDentista.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDentista_CellEnter);
             // 
@@ -130,17 +134,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 89);
+            this.label2.Location = new System.Drawing.Point(50, 373);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(83, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dentista";
             // 
             // txtDentista
             // 
-            this.txtDentista.Location = new System.Drawing.Point(48, 112);
+            this.txtDentista.Location = new System.Drawing.Point(49, 402);
+            this.txtDentista.Margin = new System.Windows.Forms.Padding(4);
             this.txtDentista.Name = "txtDentista";
-            this.txtDentista.Size = new System.Drawing.Size(284, 23);
+            this.txtDentista.Size = new System.Drawing.Size(354, 26);
             this.txtDentista.TabIndex = 1;
             this.txtDentista.TextChanged += new System.EventHandler(this.txtDentista_TextChanged);
             // 
@@ -148,9 +154,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(414, 115);
+            this.label3.Location = new System.Drawing.Point(177, 114);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 20);
+            this.label3.Size = new System.Drawing.Size(205, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Data de agendamento";
             // 
@@ -158,9 +165,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(500, 497);
+            this.label4.Location = new System.Drawing.Point(530, 128);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 20);
+            this.label4.Size = new System.Drawing.Size(75, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "Horário";
             // 
@@ -168,9 +176,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(47, 316);
+            this.label5.Location = new System.Drawing.Point(778, 128);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(285, 20);
+            this.label5.Size = new System.Drawing.Size(349, 25);
             this.label5.TabIndex = 0;
             this.label5.Text = "Consultas do dentista no dia informado";
             // 
@@ -182,14 +191,15 @@
             this.dgAgendamentos.AllowUserToResizeRows = false;
             this.dgAgendamentos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgAgendamentos.Location = new System.Drawing.Point(48, 552);
+            this.dgAgendamentos.Location = new System.Drawing.Point(783, 173);
+            this.dgAgendamentos.Margin = new System.Windows.Forms.Padding(4);
             this.dgAgendamentos.MultiSelect = false;
             this.dgAgendamentos.Name = "dgAgendamentos";
             this.dgAgendamentos.RowHeadersWidth = 62;
             this.dgAgendamentos.RowTemplate.Height = 28;
             this.dgAgendamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgAgendamentos.ShowCellErrors = false;
-            this.dgAgendamentos.Size = new System.Drawing.Size(563, 146);
+            this.dgAgendamentos.Size = new System.Drawing.Size(704, 182);
             this.dgAgendamentos.TabIndex = 4;
             // 
             // gbDados
@@ -199,10 +209,13 @@
             this.gbDados.Controls.Add(this.groupBox3);
             this.gbDados.Controls.Add(this.groupBox2);
             this.gbDados.Controls.Add(this.cmdConfirmar);
+            this.gbDados.Controls.Add(this.label13);
             this.gbDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbDados.Location = new System.Drawing.Point(625, 134);
+            this.gbDados.Location = new System.Drawing.Point(39, 651);
+            this.gbDados.Margin = new System.Windows.Forms.Padding(4);
             this.gbDados.Name = "gbDados";
-            this.gbDados.Size = new System.Drawing.Size(475, 425);
+            this.gbDados.Padding = new System.Windows.Forms.Padding(4);
+            this.gbDados.Size = new System.Drawing.Size(1414, 339);
             this.gbDados.TabIndex = 6;
             this.gbDados.TabStop = false;
             // 
@@ -212,10 +225,10 @@
             this.cmdLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cmdLimpar.FlatAppearance.BorderSize = 0;
             this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLimpar.Location = new System.Drawing.Point(270, 351);
+            this.cmdLimpar.Location = new System.Drawing.Point(937, 237);
             this.cmdLimpar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdLimpar.Name = "cmdLimpar";
-            this.cmdLimpar.Size = new System.Drawing.Size(51, 46);
+            this.cmdLimpar.Size = new System.Drawing.Size(64, 58);
             this.cmdLimpar.TabIndex = 9;
             this.cmdLimpar.UseVisualStyleBackColor = true;
             this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
@@ -227,9 +240,11 @@
             this.groupBox4.Controls.Add(this.lbDataAg);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox4.Location = new System.Drawing.Point(13, 250);
+            this.groupBox4.Location = new System.Drawing.Point(1072, 44);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(446, 95);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(334, 119);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             // 
@@ -237,9 +252,10 @@
             // 
             this.lbHora.AutoSize = true;
             this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHora.Location = new System.Drawing.Point(200, 55);
+            this.lbHora.Location = new System.Drawing.Point(205, 69);
+            this.lbHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbHora.Name = "lbHora";
-            this.lbHora.Size = new System.Drawing.Size(81, 20);
+            this.lbHora.Size = new System.Drawing.Size(100, 25);
             this.lbHora.TabIndex = 5;
             this.lbHora.Text = "00000000";
             // 
@@ -247,9 +263,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 55);
+            this.label12.Location = new System.Drawing.Point(8, 69);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(154, 20);
+            this.label12.Size = new System.Drawing.Size(191, 25);
             this.label12.TabIndex = 5;
             this.label12.Text = "Horário da Consulta:";
             // 
@@ -257,9 +274,10 @@
             // 
             this.lbDataAg.AutoSize = true;
             this.lbDataAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDataAg.Location = new System.Drawing.Point(200, 18);
+            this.lbDataAg.Location = new System.Drawing.Point(205, 22);
+            this.lbDataAg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDataAg.Name = "lbDataAg";
-            this.lbDataAg.Size = new System.Drawing.Size(81, 20);
+            this.lbDataAg.Size = new System.Drawing.Size(100, 25);
             this.lbDataAg.TabIndex = 5;
             this.lbDataAg.Text = "00000000";
             // 
@@ -267,9 +285,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 18);
+            this.label11.Location = new System.Drawing.Point(8, 22);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(134, 20);
+            this.label11.Size = new System.Drawing.Size(164, 25);
             this.label11.TabIndex = 5;
             this.label11.Text = "Data da consulta:";
             // 
@@ -280,9 +299,11 @@
             this.groupBox3.Controls.Add(this.lbNomeDent);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.Location = new System.Drawing.Point(13, 159);
+            this.groupBox3.Location = new System.Drawing.Point(16, 44);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(446, 90);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(482, 112);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
@@ -290,9 +311,10 @@
             // 
             this.lbEspDent.AutoSize = true;
             this.lbEspDent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEspDent.Location = new System.Drawing.Point(200, 55);
+            this.lbEspDent.Location = new System.Drawing.Point(189, 69);
+            this.lbEspDent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEspDent.Name = "lbEspDent";
-            this.lbEspDent.Size = new System.Drawing.Size(81, 20);
+            this.lbEspDent.Size = new System.Drawing.Size(100, 25);
             this.lbEspDent.TabIndex = 5;
             this.lbEspDent.Text = "00000000";
             // 
@@ -300,9 +322,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 55);
+            this.label10.Location = new System.Drawing.Point(8, 69);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 20);
+            this.label10.Size = new System.Drawing.Size(149, 25);
             this.label10.TabIndex = 5;
             this.label10.Text = "Especialização:";
             // 
@@ -310,9 +333,10 @@
             // 
             this.lbNomeDent.AutoSize = true;
             this.lbNomeDent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomeDent.Location = new System.Drawing.Point(200, 18);
+            this.lbNomeDent.Location = new System.Drawing.Point(189, 22);
+            this.lbNomeDent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNomeDent.Name = "lbNomeDent";
-            this.lbNomeDent.Size = new System.Drawing.Size(81, 20);
+            this.lbNomeDent.Size = new System.Drawing.Size(100, 25);
             this.lbNomeDent.TabIndex = 4;
             this.lbNomeDent.Text = "00000000";
             // 
@@ -320,9 +344,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 18);
+            this.label9.Location = new System.Drawing.Point(8, 22);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(141, 20);
+            this.label9.Size = new System.Drawing.Size(173, 25);
             this.label9.TabIndex = 4;
             this.label9.Text = "Nome do Dentista:";
             // 
@@ -335,9 +360,11 @@
             this.groupBox2.Controls.Add(this.lbNomePac);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Location = new System.Drawing.Point(13, 21);
+            this.groupBox2.Location = new System.Drawing.Point(526, 44);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(446, 136);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(495, 170);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
@@ -345,9 +372,10 @@
             // 
             this.lbNascPac.AutoSize = true;
             this.lbNascPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNascPac.Location = new System.Drawing.Point(200, 92);
+            this.lbNascPac.Location = new System.Drawing.Point(213, 115);
+            this.lbNascPac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNascPac.Name = "lbNascPac";
-            this.lbNascPac.Size = new System.Drawing.Size(81, 20);
+            this.lbNascPac.Size = new System.Drawing.Size(100, 25);
             this.lbNascPac.TabIndex = 3;
             this.lbNascPac.Text = "00000000";
             // 
@@ -355,9 +383,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 92);
+            this.label8.Location = new System.Drawing.Point(8, 115);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 20);
+            this.label8.Size = new System.Drawing.Size(194, 25);
             this.label8.TabIndex = 3;
             this.label8.Text = "Data de Nascimento:";
             // 
@@ -365,9 +394,10 @@
             // 
             this.lbCpfPac.AutoSize = true;
             this.lbCpfPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCpfPac.Location = new System.Drawing.Point(200, 55);
+            this.lbCpfPac.Location = new System.Drawing.Point(213, 69);
+            this.lbCpfPac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCpfPac.Name = "lbCpfPac";
-            this.lbCpfPac.Size = new System.Drawing.Size(81, 20);
+            this.lbCpfPac.Size = new System.Drawing.Size(100, 25);
             this.lbCpfPac.TabIndex = 2;
             this.lbCpfPac.Text = "00000000";
             // 
@@ -375,9 +405,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 55);
+            this.label7.Location = new System.Drawing.Point(8, 69);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 20);
+            this.label7.Size = new System.Drawing.Size(58, 25);
             this.label7.TabIndex = 2;
             this.label7.Text = "CPF:";
             // 
@@ -385,9 +416,10 @@
             // 
             this.lbNomePac.AutoSize = true;
             this.lbNomePac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomePac.Location = new System.Drawing.Point(200, 18);
+            this.lbNomePac.Location = new System.Drawing.Point(213, 22);
+            this.lbNomePac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNomePac.Name = "lbNomePac";
-            this.lbNomePac.Size = new System.Drawing.Size(81, 20);
+            this.lbNomePac.Size = new System.Drawing.Size(100, 25);
             this.lbNomePac.TabIndex = 1;
             this.lbNomePac.Text = "00000000";
             // 
@@ -395,9 +427,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 18);
+            this.label6.Location = new System.Drawing.Point(8, 22);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 20);
+            this.label6.Size = new System.Drawing.Size(178, 25);
             this.label6.TabIndex = 1;
             this.label6.Text = "Nome do Paciente:";
             // 
@@ -407,9 +440,10 @@
             this.cmdConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cmdConfirmar.FlatAppearance.BorderSize = 0;
             this.cmdConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdConfirmar.Location = new System.Drawing.Point(169, 351);
+            this.cmdConfirmar.Location = new System.Drawing.Point(519, 237);
+            this.cmdConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdConfirmar.Name = "cmdConfirmar";
-            this.cmdConfirmar.Size = new System.Drawing.Size(57, 46);
+            this.cmdConfirmar.Size = new System.Drawing.Size(71, 58);
             this.cmdConfirmar.TabIndex = 0;
             this.cmdConfirmar.UseVisualStyleBackColor = true;
             this.cmdConfirmar.Click += new System.EventHandler(this.cmdConfirmar_Click);
@@ -418,7 +452,7 @@
             // 
             this.cbHora.BackColor = System.Drawing.SystemColors.Control;
             this.cbHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHora.FormattingEnabled = true;
             this.cbHora.Items.AddRange(new object[] {
             "07:00",
@@ -452,9 +486,10 @@
             "21:30",
             "22:00",
             "22:30"});
-            this.cbHora.Location = new System.Drawing.Point(503, 522);
+            this.cbHora.Location = new System.Drawing.Point(497, 237);
+            this.cbHora.Margin = new System.Windows.Forms.Padding(4);
             this.cbHora.Name = "cbHora";
-            this.cbHora.Size = new System.Drawing.Size(108, 24);
+            this.cbHora.Size = new System.Drawing.Size(146, 33);
             this.cbHora.TabIndex = 7;
             this.cbHora.SelectedValueChanged += new System.EventHandler(this.cbHora_SelectedValueChanged);
             // 
@@ -462,9 +497,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(790, 115);
+            this.label13.Location = new System.Drawing.Point(644, 0);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(169, 20);
+            this.label13.Size = new System.Drawing.Size(209, 25);
             this.label13.TabIndex = 0;
             this.label13.Text = "Confirmação de dados";
             // 
@@ -474,22 +510,22 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(49, 17);
+            this.button1.Location = new System.Drawing.Point(61, 21);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 42);
+            this.button1.Size = new System.Drawing.Size(62, 52);
             this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmAgendamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1173, 732);
+            this.ClientSize = new System.Drawing.Size(1466, 917);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbHora);
@@ -499,7 +535,6 @@
             this.Controls.Add(this.Calendar);
             this.Controls.Add(this.dgPaciente);
             this.Controls.Add(this.txtDentista);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -508,6 +543,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAgendamento";
             this.Text = "frmAgendamento";
             this.Load += new System.EventHandler(this.frmAgendamento_Load);
@@ -515,6 +551,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgDentista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgAgendamentos)).EndInit();
             this.gbDados.ResumeLayout(false);
+            this.gbDados.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
