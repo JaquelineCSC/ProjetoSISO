@@ -21,6 +21,10 @@ namespace ProjetoSISO
             cn.ConnectionString = s;
             cn.Open();
         }
+        public void Desconectar()
+        {
+            cn.Close();
+        }
 
         public void Executar(string sql)
         {

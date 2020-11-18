@@ -76,20 +76,28 @@ namespace ProjetoSISO
         //Botão excluir
         private void cmdExcluir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja excluir?", "Projeto SISO", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            try
             {
-                if (tipo == 0)
+                if (MessageBox.Show("Deseja excluir?", "Projeto SISO", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    dentista.ExcluirDadosDentista();
-                    dentista.NomeDentista = "";
-                    dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
+                    if (tipo == 0)
+                    {
+                        dentista.ExcluirDadosDentista();
+                        dentista.NomeDentista = "";
+                        dataGridView1.DataSource = dentista.ListarDadosDentista().Tables[0];
+                    }
+                    else
+                    {
+                        paciente.ExcluirDadosPacientes();
+                        paciente.NomePacientes = "";
+                        dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
+                    }
                 }
-                else
-                {
-                    paciente.ExcluirDadosPacientes();
-                    paciente.NomePacientes = "";
-                    dataGridView1.DataSource = paciente.ListarDadosPacientes().Tables[0];
-                }
+            }catch
+            {
+                MessageBox.Show("Não é possível excluir!\nJá possui agendamento!");
+                paciente.Desconectar();
+                dentista.Desconectar();
             }
         }
 
@@ -223,7 +231,7 @@ namespace ProjetoSISO
             int i = 0;
             foreach (Control item in this.groupBox1.Controls)
             {
-                if ((item is TextBox) && (item.Text == ""))
+                if ((item is TextBox) && (item.Text == "") && (item != txtTelefone))
                     i++;
             }
             if ((radioButton1.Checked == false) && (radioButton2.Checked == false))

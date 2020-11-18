@@ -26,6 +26,10 @@ namespace ProjetoSISO
         public string CelularDentista { get; set; }
         public string EspecializacaoDentista { get; set; }
 
+        public void Desconectar()
+        {
+            c.Desconectar();
+        }
         //Inserção e Remoção
         public void IncluirDadosDentista()
         {
