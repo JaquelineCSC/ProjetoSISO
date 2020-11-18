@@ -57,13 +57,20 @@ namespace ProjetoSISO
 
         private void frmExcluirAgendamento_Load(object sender, EventArgs e)
         {
-            //dgAgenda.Columns[0].HeaderText = "Data";
-            //dgAgenda.Columns[1].HeaderText = "Horário";
-            //dgAgenda.Columns[2].HeaderText = "Paciente";
-            //dgAgenda.Columns[3].HeaderText = "Dentista";
-
             agendamento = new dadosAgendamento(dentista, paciente);
+            paciente.NomePacientes = "";
+            dgAgenda.DataSource = agendamento.ListarDadosPorNome().Tables[0];
             Limpar();
+            dgAgenda.ReadOnly = true;
+            dgAgenda.MultiSelect = false;
+            dgAgenda.Columns[0].Visible = false;
+            dgAgenda.Columns[1].HeaderText = "Paciente";
+            dgAgenda.Columns[2].Visible = false;
+            dgAgenda.Columns[3].HeaderText = "Data";
+            dgAgenda.Columns[4].HeaderText = "Hora";
+            dgAgenda.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
+
         }
 
         private void cmdClose_Click(object sender, EventArgs e)
