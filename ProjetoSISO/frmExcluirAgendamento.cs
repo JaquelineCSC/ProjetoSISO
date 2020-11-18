@@ -27,6 +27,7 @@ namespace ProjetoSISO
             {
                 agendamento.ExcluirAgendamento();
                 dgAgenda.DataSource = agendamento.ListarDadosPorNome().Tables[0];
+                Limpar();
             }
         }
 
@@ -51,20 +52,34 @@ namespace ProjetoSISO
         {
             paciente.NomePacientes = textBox1.Text;
             dgAgenda.DataSource = agendamento.ListarDadosPorNome().Tables[0];
-            dgAgenda.Columns[1].HeaderText = "Paciente";
-            dgAgenda.Columns[2].HeaderText = "Dentista";
-            dgAgenda.Columns[3].HeaderText = "Data";
-            dgAgenda.Columns[4].HeaderText = "Horário";
+            
         }
 
         private void frmExcluirAgendamento_Load(object sender, EventArgs e)
         {
+            dgAgenda.Columns[1].HeaderText = "Paciente";
+            dgAgenda.Columns[2].HeaderText = "Dentista";
+            dgAgenda.Columns[3].HeaderText = "Data";
+            dgAgenda.Columns[4].HeaderText = "Horário";
+
             agendamento = new dadosAgendamento(dentista, paciente);
+            Limpar();
         }
 
         private void cmdClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void Limpar()
+        {
+            lbNomeDent.Text = "";
+            lbNomePac.Text = "";
+            lbCpfPac.Text = "";
+            lbDataAg.Text = "";
+            lbEspDent.Text = "";
+            lblHora.Text = "";
+            lbNascPac.Text = "";
         }
     }
 }
