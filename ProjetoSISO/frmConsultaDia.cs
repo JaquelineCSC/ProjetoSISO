@@ -17,6 +17,7 @@ namespace ProjetoSISO
         dadosPacientes paciente = new dadosPacientes();
         dadosAgendamento agendamento;
         dadosConsulta consulta;
+        int status;
 
         public frmConsultaDia(Panel p)
         {
@@ -47,6 +48,7 @@ namespace ProjetoSISO
             if (dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
             {
                 agendamento.IdAgendamento = Convert.ToInt32(dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString());
+                status = agendamento.Status;
                 agendamento.ConsultarDadosAgendamentoPorIdPessoa();
                 lbNomeDent.Text = dentista.NomeDentista;
                 lbEspDent.Text = dentista.EspecializacaoDentista;
@@ -72,14 +74,18 @@ namespace ProjetoSISO
             if (Conferir())
             {
                 consulta = new dadosConsulta(agendamento, dentista, paciente);
-                consulta.ValorConsulta = Convert.ToDouble(lblValor.Text.ToString());
-                consulta.DescricaoProcedimentoConsulta = txtProcedimento.Text;
-                consulta.InserirConsulta();
-                MessageBox.Show("Agendamento efetuado com sucesso");
-                Limpar();
+                if(agendamento.Status != 1) {
+                    consulta.ValorConsulta = Convert.ToDouble(lblValor.Text.ToString());
+                    consulta.DescricaoProcedimentoConsulta = txtProcedimento.Text;
+                    agendamento.Status = 1;
+                    agendamento.UpdateStatus();
+                    consulta.InserirConsulta();
+                    MessageBox.Show("Consulta efetuada com sucesso");
+                    Limpar();
+                }
+                else MessageBox.Show("Consulta já cadastrada");
             }
-            else
-                MessageBox.Show("Preencha todas as informações");
+            else MessageBox.Show("Preencha todas as informações");
         }
 
         private void cmdBack_Click(object sender, EventArgs e)
@@ -103,9 +109,9 @@ namespace ProjetoSISO
         {
             if ((lbNomeDent.Text == "") || (lbNomePac.Text == "") || (lbCpfPac.Text == "") || (lbDataAg.Text == "") || (lbEspDent.Text == "") || (lblHora.Text == "") || (lbNascPac.Text == ""))
                 return false;
-            else
-                return true;
+            else return true;
         }
+
 
         public void Limpar()
         {

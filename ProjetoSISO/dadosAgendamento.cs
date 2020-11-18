@@ -26,6 +26,7 @@ namespace ProjetoSISO
         public int IdAgendamento { get; set; }
         public DateTime DataAgendamento { get => dataAgendamento; set => dataAgendamento = value; }
         public string HoraAgendamento { get; set; }
+        public int Status { get; set; }
 
         //Consultas
         public void ConsultarDadosAgendamento()
@@ -45,7 +46,7 @@ namespace ProjetoSISO
         public void ConsultarDadosAgendamentoPorIdPessoa()
         {
             string sql = "";
-            sql += "select p.nomePaciente, p.CPFPaciente, p.dataNascPaciente, d.nomeDentista, d.especializacaoDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where idAgendamento = " + IdAgendamento;
+            sql += "select p.nomePaciente, p.CPFPaciente, p.dataNascPaciente, d.nomeDentista, d.especializacaoDentista, a.dataAgendamento, a.horaAgendamento, a.status from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where idAgendamento = " + IdAgendamento;
             c.ConsultarAgendamentosIDPessoa(sql);
             string[] auxiliar = c.Campos.Split(';');
             if (auxiliar[0] != "")
@@ -57,6 +58,9 @@ namespace ProjetoSISO
                 dentista.EspecializacaoDentista = auxiliar[4];
                 DataAgendamento = Convert.ToDateTime(auxiliar[5]);
                 HoraAgendamento = auxiliar[6];
+                if (auxiliar[7] == "")
+                    Status = 0;
+                else Status = 1;
             }
         }
 
@@ -77,7 +81,7 @@ namespace ProjetoSISO
         //Listagens
         public DataSet ListarDadosAgendamentosPorData()
         {
-            string sql = "select a.idAgendamento, p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where a.dataAgendamento = '" + DataAgendamento.ToString() + "'";
+            string sql = "select a.idAgendamento, p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where a.dataAgendamento = '" + DataAgendamento.ToString() + "' AND a.status = NULL";
             return c.Listar(sql);
         }
 
@@ -103,6 +107,12 @@ namespace ProjetoSISO
         public void InserirAgendamento()
         {
             string sql = "insert into Agendamento (dataAgendamento, horaAgendamento, idPaciente, idDentista) values ('" + dataAgendamento + "', '" + HoraAgendamento + "', " + paciente.IdPacientes + "," + dentista.IdDentista + ")";
+            c.Executar(sql);
+        }
+
+        public void UpdateStatus() {
+            string sql = "";
+            sql += "Update Agendamento set status = '" + Status + "'  where idAgendamento = " + IdAgendamento.ToString();
             c.Executar(sql);
         }
 
