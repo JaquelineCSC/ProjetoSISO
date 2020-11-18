@@ -83,7 +83,7 @@ namespace ProjetoSISO
 
         public DataSet ListarDadosAgendamentos()
         {
-            string sql = "select p.nomePaciente, d.nomeDentista, a.dataAgendamento, a.horaAgendamento from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where d.idDentista = " + dentista.IdDentista + " and a.dataAgendamento = '" + DataAgendamento + "'";
+            string sql = "select a.dataAgendamento, a.horaAgendamento, p.nomePaciente from Agendamento a inner join Dentistas d on a.idDentista = d.idDentista inner join Pacientes p on a.idPaciente = p.idPaciente where d.idDentista = " + dentista.IdDentista + " and a.dataAgendamento = '" + DataAgendamento + "'";
             return c.Listar(sql);
         }
 
