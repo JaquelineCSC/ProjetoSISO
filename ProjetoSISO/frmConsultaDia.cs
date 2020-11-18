@@ -41,6 +41,10 @@ namespace ProjetoSISO
 
             dgAgenda.DataSource = agendamento.ListarDadosAgendamentosPorData().Tables[0];
             dgAgenda.Columns[0].Visible = false;
+            dgAgenda.Columns[1].HeaderText = "Paciente";
+            dgAgenda.Columns[2].HeaderText = "Dentista";
+            dgAgenda.Columns[3].HeaderText = "Data";
+            dgAgenda.Columns[4].HeaderText = "Horário";
         }
 
         private void dgAgenda_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -120,6 +124,8 @@ namespace ProjetoSISO
             lblHora.Text = "";
             lbNascPac.Text = "";
             lblValor.Text = "";
+            txtValor.Text = "";
+            txtProcedimento.Text = "";
         }
     }
 }
