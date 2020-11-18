@@ -62,7 +62,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(46, 62);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(534, 22);
             this.textBox1.TabIndex = 16;
@@ -72,12 +72,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(212, 34);
+            this.label4.Location = new System.Drawing.Point(146, 34);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 25);
+            this.label4.Size = new System.Drawing.Size(298, 25);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Pesquisar por nome";
+            this.label4.Text = "Pesquisar por nome do paciente:";
             // 
             // dgAgenda
             // 
@@ -87,7 +87,7 @@
             this.dgAgenda.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgAgenda.Location = new System.Drawing.Point(46, 98);
-            this.dgAgenda.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgAgenda.Margin = new System.Windows.Forms.Padding(5);
             this.dgAgenda.Name = "dgAgenda";
             this.dgAgenda.ReadOnly = true;
             this.dgAgenda.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
@@ -103,7 +103,7 @@
             this.cmdExcluir.FlatAppearance.BorderSize = 0;
             this.cmdExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdExcluir.Location = new System.Drawing.Point(296, 498);
-            this.cmdExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.cmdExcluir.Name = "cmdExcluir";
             this.cmdExcluir.Size = new System.Drawing.Size(60, 55);
             this.cmdExcluir.TabIndex = 17;
@@ -365,7 +365,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgAgenda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmExcluirAgendamento";
             this.Text = "frmExcluirAgendamento";
             this.TopMost = true;
