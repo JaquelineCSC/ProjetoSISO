@@ -21,6 +21,10 @@ namespace ProjetoSISO
             cn.ConnectionString = s;
             cn.Open();
         }
+        public void Desconectar()
+        {
+            cn.Close();
+        }
 
         public void Executar(string sql)
         {
@@ -48,7 +52,7 @@ namespace ProjetoSISO
                 Campos += dr["CEPPaciente"].ToString() + ";";
                 Campos += dr["cidadePaciente"].ToString() + ";";
                 Campos += dr["dataNascPaciente"].ToString() + ";";
-                Campos += dr["sexoPaciente"].ToString() + "; ";
+                Campos += dr["sexoPaciente"].ToString() + ";";
                 Campos += dr["telefonePaciente"].ToString() + ";";
                 Campos += dr["celularPaciente"].ToString() + ";";
                 cn.Close();
@@ -72,7 +76,7 @@ namespace ProjetoSISO
                 Campos += dr["estadoDentista"].ToString() + ";";
                 Campos += dr["cepDentista"].ToString() + ";";
                 Campos += dr["cidadeDentista"].ToString() + ";";
-                Campos += dr["dataNascDentista"].ToString() + "; ";
+                Campos += dr["dataNascDentista"].ToString() + ";";
                 Campos += dr["sexoDentista"].ToString() + ";";
                 Campos += dr["telefoneDentista"].ToString() + ";";
                 Campos += dr["celularDentista"].ToString() + ";";

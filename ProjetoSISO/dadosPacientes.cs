@@ -23,6 +23,12 @@ namespace ProjetoSISO
         public string SexoPacientes { get; set; }
         public string TelefonePacientes { get; set; }
         public string CelularPacientes { get; set; }
+        
+        public void Desconectar()
+        {
+            c.Desconectar();
+        }
+
 
         //inserção e Remoção
         public void IncluirDadosPacientes()

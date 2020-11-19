@@ -17,6 +17,7 @@ namespace ProjetoSISO
         dadosPacientes paciente = new dadosPacientes();
         dadosAgendamento agendamento;
         dadosConsulta consulta;
+        int status;
 
         public frmConsultaDia(Panel p)
         {
@@ -40,6 +41,10 @@ namespace ProjetoSISO
 
             dgAgenda.DataSource = agendamento.ListarDadosAgendamentosPorData().Tables[0];
             dgAgenda.Columns[0].Visible = false;
+            dgAgenda.Columns[1].HeaderText = "Paciente";
+            dgAgenda.Columns[2].HeaderText = "Dentista";
+            dgAgenda.Columns[3].HeaderText = "Data";
+            dgAgenda.Columns[4].HeaderText = "Horário";
         }
 
         private void dgAgenda_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -47,6 +52,7 @@ namespace ProjetoSISO
             if (dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString() != "")
             {
                 agendamento.IdAgendamento = Convert.ToInt32(dgAgenda.Rows[e.RowIndex].Cells[0].Value.ToString());
+                status = agendamento.Status;
                 agendamento.ConsultarDadosAgendamentoPorIdPessoa();
                 lbNomeDent.Text = dentista.NomeDentista;
                 lbEspDent.Text = dentista.EspecializacaoDentista;
@@ -74,12 +80,13 @@ namespace ProjetoSISO
                 consulta = new dadosConsulta(agendamento, dentista, paciente);
                 consulta.ValorConsulta = Convert.ToDouble(lblValor.Text.ToString());
                 consulta.DescricaoProcedimentoConsulta = txtProcedimento.Text;
+                agendamento.Status = 1;
+                agendamento.UpdateStatus();
                 consulta.InserirConsulta();
-                MessageBox.Show("Agendamento efetuado com sucesso");
+                MessageBox.Show("Consulta efetuada com sucesso");
                 Limpar();
             }
-            else
-                MessageBox.Show("Preencha todas as informações");
+            else MessageBox.Show("Preencha todas as informações");
         }
 
         private void cmdBack_Click(object sender, EventArgs e)
@@ -103,9 +110,9 @@ namespace ProjetoSISO
         {
             if ((lbNomeDent.Text == "") || (lbNomePac.Text == "") || (lbCpfPac.Text == "") || (lbDataAg.Text == "") || (lbEspDent.Text == "") || (lblHora.Text == "") || (lbNascPac.Text == ""))
                 return false;
-            else
-                return true;
+            else return true;
         }
+
 
         public void Limpar()
         {
@@ -117,6 +124,8 @@ namespace ProjetoSISO
             lblHora.Text = "";
             lbNascPac.Text = "";
             lblValor.Text = "";
+            txtValor.Text = "";
+            txtProcedimento.Text = "";
         }
     }
 }

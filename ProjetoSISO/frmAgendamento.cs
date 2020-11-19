@@ -59,10 +59,9 @@ namespace ProjetoSISO
             dgPaciente.Columns[6].Visible = true;
             dgPaciente.Columns[6].HeaderText = "Cidade";
 
-            dgAgendamentos.Columns[0].HeaderText = "Paciente";
-            dgAgendamentos.Columns[1].HeaderText = "Dentista";
-            dgAgendamentos.Columns[2].HeaderText = "Data";
-            dgAgendamentos.Columns[3].HeaderText = "Hora";
+            dgAgendamentos.Columns[0].HeaderText = "Data";
+            dgAgendamentos.Columns[1].HeaderText = "Hora";
+            dgAgendamentos.Columns[2].HeaderText = "Paciente";
 
             Limpar();
         }
