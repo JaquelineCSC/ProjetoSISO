@@ -450,9 +450,6 @@ namespace ProjetoSISO
             p.Enabled = true;
         }
 
-        private void FrmRelatório_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
